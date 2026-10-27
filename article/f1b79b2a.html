@@ -1,0 +1,2063 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Derivatives, Yiming Shi&#39;s blog">
+    <meta name="description" content="课程笔记">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Derivatives | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Derivatives</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                <span class="chip bg-color">大三上</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">金融衍生工具</span>
+                            </a>
+                        
+                            <a href="/tags/Derivatives/">
+                                <span class="chip bg-color">Derivatives</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    15 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309011440006.jpg"></p>
+<h2 id="第一章：引言"><a href="#第一章：引言" class="headerlink" title="第一章：引言"></a>第一章：引言</h2><p>TextBook: Options, Futures and other derivatives 10th. Pearson</p>
+<blockquote>
+<p>Derivatives are contracts which depend on varies values of underlying assets.</p>
+</blockquote>
+<ul>
+<li>CCPs: central counterparties</li>
+</ul>
+<p>$$A&lt;-&gt; CCPs &lt;-&gt; B$$</p>
+<ul>
+<li>SEFs: swap executive facilities</li>
+</ul>
+<h3 id="1-1-types-of-traders-in-financial-market-and-their-function"><a href="#1-1-types-of-traders-in-financial-market-and-their-function" class="headerlink" title="1.1 types of traders in financial market and their function"></a>1.1 types of traders in financial market and their function</h3><ol>
+<li>hedgers: hedging strategies using forward&#x2F;future contracts, option</li>
+<li>speculators: same</li>
+<li>arbitrageurs: same traders introduce information into market while trading and help the market evolve to effective market.</li>
+</ol>
+<h2 id="第二章：期货市场和利用期货合约套期保值"><a href="#第二章：期货市场和利用期货合约套期保值" class="headerlink" title="第二章：期货市场和利用期货合约套期保值"></a>第二章：期货市场和利用期货合约套期保值</h2><h3 id="2-1-外汇市场攻击路线"><a href="#2-1-外汇市场攻击路线" class="headerlink" title="2.1 外汇市场攻击路线"></a>2.1 外汇市场攻击路线</h3><h4 id="2-1-1-即期外汇市场攻击路线"><a href="#2-1-1-即期外汇市场攻击路线" class="headerlink" title="2.1.1 即期外汇市场攻击路线"></a>2.1.1 即期外汇市场攻击路线</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072231059.jpg"></p>
+<h4 id="2-1-2-远期外汇市场和外汇期货市场的攻击路线"><a href="#2-1-2-远期外汇市场和外汇期货市场的攻击路线" class="headerlink" title="2.1.2 远期外汇市场和外汇期货市场的攻击路线"></a>2.1.2 远期外汇市场和外汇期货市场的攻击路线</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072232365.jpg"></p>
+<h4 id="2-1-3-汇市和股市发动联合攻击的路线"><a href="#2-1-3-汇市和股市发动联合攻击的路线" class="headerlink" title="2.1.3 汇市和股市发动联合攻击的路线"></a>2.1.3 汇市和股市发动联合攻击的路线</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072233962.jpg"></p>
+<h3 id="2-2-期货交易流程"><a href="#2-2-期货交易流程" class="headerlink" title="2.2 期货交易流程"></a>2.2 期货交易流程</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072234082.jpg"></p>
+<h3 id="2-3-The-Specification-of-the-Futures-Contract"><a href="#2-3-The-Specification-of-the-Futures-Contract" class="headerlink" title="2.3 The Specification of the Futures Contract"></a>2.3 The Specification of the Futures Contract</h3><ul>
+<li>Key Concept<ul>
+<li>Daily price Movement Limits<ul>
+<li>Limit down（跌停板）</li>
+<li>Limit up（涨停板）</li>
+<li>A limit move（涨停板变动）</li>
+<li>The purpose of daily price limits is to prevent large price movements from occurring because of speculative excesses.</li>
+</ul>
+</li>
+<li>Position Limits<ul>
+<li>The purpose of the limits is to prevent speculators from exercising undue(不适当的) influence on the market.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-Margin"><a href="#2-4-Margin" class="headerlink" title="2.4 Margin"></a>2.4 Margin</h3><p>Terminology</p>
+<ul>
+<li>Margin account（保证金帐户）</li>
+<li>Initial margin（初始保证金）</li>
+<li>Marking to market（盯市）</li>
+<li>Maintenance margin（维持保证金）</li>
+<li>Margin call（保证金催付）</li>
+<li>Variation margin（变动保证金） 规律：</li>
+</ul>
+<ol>
+<li>持仓越多，保证金比率越高</li>
+<li>距离交割日越近，保证金比率越高</li>
+</ol>
+<h4 id="2-4-1-The-Operation-of-Margins"><a href="#2-4-1-The-Operation-of-Margins" class="headerlink" title="2.4.1 The Operation of Margins"></a>2.4.1 The Operation of Margins</h4><ul>
+<li>Price（价格）</li>
+<li>Settlement price（结算价格）</li>
+<li>Lifetime highs and lows（有效期内的最高价和最低价）</li>
+<li>Open interest and volume of trading（未平仓合约数和交易量）</li>
+<li>Patterns of futures prices（期货价格模式）</li>
+</ul>
+<p>Some terminology</p>
+<ul>
+<li>Opening price（开盘价）</li>
+<li>Settlement price（结算价格）</li>
+<li>the price just before the final bell each day used for the daily settlement process</li>
+<li>Open interest(未平仓合约数)</li>
+<li>the total number of contracts outstanding</li>
+<li>equal to number of long positions or number of short positions</li>
+<li>Normal market(正常市场）</li>
+<li>Inverted market（逆转市场）</li>
+</ul>
+<h4 id="2-4-2-Convergence-Of-Futures-Price-to-Spot-Price"><a href="#2-4-2-Convergence-Of-Futures-Price-to-Spot-Price" class="headerlink" title="2.4.2 Convergence Of Futures Price to Spot Price"></a>2.4.2 Convergence Of Futures Price to Spot Price</h4><p>As the delivery month of a futures contract is approached, the futures price （期货价格）converges to the spot price （现货价格）of the underlying asset. When the delivery period is reached, the futures price equals – or is very close to – the spot price.</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072244313.jpg"></p>
+<h3 id="2-5-Basis-Risk"><a href="#2-5-Basis-Risk" class="headerlink" title="2.5 Basis Risk"></a>2.5 Basis Risk</h3><p>$$b &#x3D; S - F$$</p>
+<p>where:</p>
+<ul>
+<li>b : Basis 基差</li>
+<li>S: spot price of asset to be hedged</li>
+<li>F: Futures price of contract used</li>
+</ul>
+<p>Some notation:</p>
+<ul>
+<li>F1 : Futures Price at time t1</li>
+<li>F2 : Futures Price at time t2</li>
+<li>S1 : Spot Price at time t1</li>
+<li>S2 : Spot price at time t2</li>
+<li>b1 : Basis at time t1</li>
+<li>b2 : Basis at time t2</li>
+</ul>
+<blockquote>
+<p>We ignore the time value of money（货币时间价值）</p>
+</blockquote>
+<h4 id="2-5-1-A-Short-Position-Hedger"><a href="#2-5-1-A-Short-Position-Hedger" class="headerlink" title="2.5.1 A Short Position Hedger"></a>2.5.1 A Short Position Hedger</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072248201.jpg"></p>
+<p>The asset that gives rise to the hedger’s exposure is sometimes different from the asset underlying the hedge. The basis risk is then usually greater.</p>
+<p>$$The\ effective\ price &#x3D; S2 + F1 – F2$$</p>
+<p>$$The\ effective\ price &#x3D; F1 + (S2* – F2 ) + (S2 – S2* )$$</p>
+<ul>
+<li>S2* : The price of the asset underlying the futures contract at time $t_2$.</li>
+<li>S2 : The price of the asset being hedged at time $t_2$.</li>
+</ul>
+<h4 id="2-5-2-Minimum-Variance-Hedge-Ratio"><a href="#2-5-2-Minimum-Variance-Hedge-Ratio" class="headerlink" title="2.5.2 Minimum Variance Hedge Ratio"></a>2.5.2 Minimum Variance Hedge Ratio</h4><p>if an investor is to sell one unit of the asset, she has to short h units of the futures. The portfolio position at time $t_0$ is worth</p>
+<p>$$\pi(t_0) &#x3D; S(t_0) - hF(t_0,T)$$</p>
+<p>where position at time $t_1$ will be worth <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072253178.jpg"></p>
+<p>The change in the value of the position will therefore be, and a short position will be</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072255761.jpg"></p>
+<p>In both cases the variance of $\Delta \pi$ is equal to</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072256920.jpg"></p>
+<p>Proportion of the exposure that should optimally be hedged is</p>
+<p>$$h &#x3D; \rho \frac{\sigma_S}{\sigma_F}$$</p>
+<p>Optimal Number of Contracts <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072258385.jpg"></p>
+<h4 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072259598.jpg"></p>
+<h3 id="2-6-The-Capital-Market-Line-CML"><a href="#2-6-The-Capital-Market-Line-CML" class="headerlink" title="2.6 The Capital Market Line(CML)"></a>2.6 The Capital Market Line(CML)</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072300279.jpg"></p>
+<h3 id="2-7-Hedging-an-Equity-Portfolio"><a href="#2-7-Hedging-an-Equity-Portfolio" class="headerlink" title="2.7 Hedging an Equity Portfolio"></a>2.7 Hedging an Equity Portfolio</h3><p>Stock index futures can be used to hedge a well-diversified equity portfolio. Define:</p>
+<ul>
+<li>$V_A$: Current value of the portfolio</li>
+<li>$V_F$ : Current value of one futures contract (the futures price times the contract size)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072312598.jpg"></p>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072313518.jpg"> <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072313688.jpg"><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309072314474.jpg"></p>
+<h2 id="第三章：远期和期货价格-Forward-and-Futures-Price"><a href="#第三章：远期和期货价格-Forward-and-Futures-Price" class="headerlink" title="第三章：远期和期货价格 Forward and Futures Price"></a>第三章：远期和期货价格 Forward and Futures Price</h2><h3 id="3-1-Consumption-vs-Investment-Assets"><a href="#3-1-Consumption-vs-Investment-Assets" class="headerlink" title="3.1 Consumption vs Investment Assets"></a>3.1 Consumption vs Investment Assets</h3><ul>
+<li>Investment assets are held by significant numbers of people purely for investment purposes (Examples: Stocks, Bonds, gold, silver)</li>
+<li>Consumption assets are held primarily for consumption (Examples: copper, oil)</li>
+</ul>
+<h3 id="3-2-Financial-futures-price"><a href="#3-2-Financial-futures-price" class="headerlink" title="3.2  Financial futures price"></a>3.2  Financial futures price</h3><h4 id="3-2-1-Measuring-Interest-Rates"><a href="#3-2-1-Measuring-Interest-Rates" class="headerlink" title="3.2.1 Measuring Interest Rates"></a>3.2.1 Measuring Interest Rates</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309191851793.jpg"></p>
+<h4 id="3-2-2-Continuous-Compounding"><a href="#3-2-2-Continuous-Compounding" class="headerlink" title="3.2.2 Continuous Compounding"></a>3.2.2 Continuous Compounding</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309191852910.jpg"></p>
+<h3 id="3-3-Some-Inference"><a href="#3-3-Some-Inference" class="headerlink" title="3.3 Some Inference"></a>3.3 Some Inference</h3><p>$$\beta_{im} &#x3D; \frac{\sigma_{im}}{\sigma_{m}^2} &#x3D; \rho \frac{\sigma_i \sigma_m}{\sigma_{m}^2} &#x3D;\rho \frac{ \sigma_i}{\sigma_m} &#x3D; h^*$$</p>
+<p>$$N^* &#x3D; \beta_{im}\frac{V_A}{V_F} &#x3D; \frac{h^* V_A}{V_F}$$</p>
+<p>$$R &#x3D; \frac{P_{t+1}-P_t + D}{P_t}$$<br>$$E(ri) &#x3D; r_f + \beta_{im}(E(r_m) -r_f)$$</p>
+<h3 id="3-4-The-Arbitrage-Formula"><a href="#3-4-The-Arbitrage-Formula" class="headerlink" title="3.4 The Arbitrage Formula"></a>3.4 The Arbitrage Formula</h3><h4 id="3-4-1-For-financial-futures"><a href="#3-4-1-For-financial-futures" class="headerlink" title="3.4.1 For financial futures"></a>3.4.1 For financial futures</h4><p>$$ F_0 &#x3D; S_0 e^{rT}$$</p>
+<p>$$ F_0 &#x3D; S_0 e^{(r-q)T}$$<br>where q is the average yield during the life of the contract (expressed with continuous compounding)</p>
+<p>Bond<br>$$ F_0 &#x3D; (S_0-I) e^{rT}$$</p>
+<p>Stock Index<br>$$ F_0 &#x3D; S_0 e^{rT}\ where\ the\ S_0 \ is\ Stock\ Index$$</p>
+<p>Forwards and Futures on Currencies<br>$$ F_0 &#x3D; S_0 e^{(r-r_f)T}$$</p>
+<h4 id="3-4-2-For-physical-futures"><a href="#3-4-2-For-physical-futures" class="headerlink" title="3.4.2 For physical futures"></a>3.4.2 For physical futures</h4><p>Futures on Commodities<br>$$ F_0 &#x3D; (S_0 + u) e^{rT}$$<br>or<br>$$ F_0 &#x3D; S_0 e^{(r+u)T}$$<br>where u is storage cost</p>
+<p>Convenience Yield<br>$$ F_0 &#x3D; S_0 e^{(r+u - y)T}$$</p>
+<p>Carry on Cost(interest rate+storage cost)<br>$$ F_0 &#x3D; S_0 e^{(c-y)T}$$</p>
+<h2 id="第四章：期权价格特征-Option-Price-Characteristics"><a href="#第四章：期权价格特征-Option-Price-Characteristics" class="headerlink" title="第四章：期权价格特征 Option Price Characteristics"></a>第四章：期权价格特征 Option Price Characteristics</h2><p>Question: Is $F_0 &#x3D;^? E(S_T)$</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$F_0e^{-rT}$</th>
+<th>+ long</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T</td>
+<td>$F_0$</td>
+<td>$S_T$</td>
+</tr>
+<tr>
+<td>0</td>
+<td>$F_0e^{-rT}$</td>
+<td>$S_Te^{-kT}$</td>
+</tr>
+</tbody></table>
+<p>$k &#x3D; r_f + \beta(r_m - r_f)$</p>
+<blockquote>
+<p>k is investor’s expected return</p>
+</blockquote>
+<h3 id="4-1-Option"><a href="#4-1-Option" class="headerlink" title="4.1 Option"></a>4.1 Option</h3><h4 id="4-1-1-The-situations-of-option"><a href="#4-1-1-The-situations-of-option" class="headerlink" title="4.1.1 The situations of option"></a>4.1.1 The situations of option</h4><ul>
+<li>Out of money 虚值（若立即执行会亏损）</li>
+<li>In the money 实值</li>
+<li>At the money 两平</li>
+</ul>
+<h3 id="4-2-The-value-of-option"><a href="#4-2-The-value-of-option" class="headerlink" title="4.2 The value of option"></a>4.2 The value of option</h3><ul>
+<li><p>Instrisic Value<br>call option :<br>$$max(S-X,0)$$<br>$$max(S - Xe^{-rT}, 0)$$<br>put option:<br>$$max(X-S,0)$$<br>$$max(Xe^{-rT} - S, 0)$$</p>
+</li>
+<li><p>Time Value</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309231717452.jpg"></p>
+<h4 id="4-2-1-Effect-of-Variables-on-Option-Pricing"><a href="#4-2-1-Effect-of-Variables-on-Option-Pricing" class="headerlink" title="4.2.1 Effect of Variables on Option Pricing"></a>4.2.1 Effect of Variables on Option Pricing</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309231718197.jpg"></p>
+<h2 id="第五章：期权交易策略"><a href="#第五章：期权交易策略" class="headerlink" title="第五章：期权交易策略"></a>第五章：期权交易策略</h2><h3 id="5-1-Upper-and-Lower-Bounds-for-Option-Prices"><a href="#5-1-Upper-and-Lower-Bounds-for-Option-Prices" class="headerlink" title="5.1 Upper and Lower Bounds for Option Prices"></a>5.1 Upper and Lower Bounds for Option Prices</h3><blockquote>
+<p>Assumption:</p>
+<ol>
+<li>There are no transactions costs</li>
+<li>All trading profits(net of trading losses) are subject to the same tax rate</li>
+<li>Borrowing and lending are possible at the risk-free interest rate</li>
+</ol>
+</blockquote>
+<h4 id="5-1-1-Upper-Bounds-for-Call-Option"><a href="#5-1-1-Upper-Bounds-for-Call-Option" class="headerlink" title="5.1.1 Upper Bounds for Call Option"></a>5.1.1 Upper Bounds for Call Option</h4><blockquote>
+<p>For call option, at any case, the option can never be worth more than the stock</p>
+</blockquote>
+<p>$$c ≤  S0 \ and\ C ≤ S0$$<br>For put option</p>
+<p>$P ≤ X$  for American option </p>
+<p>$p ≤ Xe^{-rT}$ for European option</p>
+<h4 id="5-1-2-Lower-Bounds-for-Call-Option"><a href="#5-1-2-Lower-Bounds-for-Call-Option" class="headerlink" title="5.1.2 Lower  Bounds for Call Option"></a>5.1.2 Lower  Bounds for Call Option</h4><blockquote>
+<p>A lower bound （下界）for the price of a European call option  on a non-dividend-paying stock: </p>
+</blockquote>
+<p>$$ c \geq max(S_0  - Xe^{-rt},0)$$</p>
+<ul>
+<li>Portfolio A: one call option with strike price X and an amount of cash equal to $Xe^{-rt}$</li>
+<li>Portfolio B: one share</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309231727174.jpg" alt="Question"></p>
+<h3 id="5-2-Put-Call-Parity"><a href="#5-2-Put-Call-Parity" class="headerlink" title="5.2 Put-Call Parity"></a>5.2 Put-Call Parity</h3><p>$$ C + Xe^{-rT} &#x3D; P + S$$</p>
+<h2 id="第六章：二叉树模型介绍"><a href="#第六章：二叉树模型介绍" class="headerlink" title="第六章：二叉树模型介绍"></a>第六章：二叉树模型介绍</h2><h3 id="6-1-Binomial-Trees-Pricing-Model"><a href="#6-1-Binomial-Trees-Pricing-Model" class="headerlink" title="6.1 Binomial Trees Pricing Model"></a>6.1 Binomial Trees Pricing Model</h3><h4 id="6-1-1-Risk-Neutral-Valuation"><a href="#6-1-1-Risk-Neutral-Valuation" class="headerlink" title="6.1.1 Risk-Neutral Valuation"></a>6.1.1 Risk-Neutral Valuation</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309231732601.jpg"></p>
+<h4 id="6-1-2-Self-Financing"><a href="#6-1-2-Self-Financing" class="headerlink" title="6.1.2 Self-Financing"></a>6.1.2 Self-Financing</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309231733369.jpg"></p>
+<h2 id="第七章：股价行为模型-Model-of-behavior-of-stock-price"><a href="#第七章：股价行为模型-Model-of-behavior-of-stock-price" class="headerlink" title="第七章：股价行为模型 Model of behavior of stock price"></a>第七章：股价行为模型 Model of behavior of stock price</h2><h3 id="7-1-Markov-Property-and-Wiener-Process"><a href="#7-1-Markov-Property-and-Wiener-Process" class="headerlink" title="7.1 Markov Property and Wiener Process"></a>7.1 Markov Property and Wiener Process</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072217273.jpg"></p>
+<blockquote>
+<p>A Markov process （马尔可夫过程）is a particular type of stochastic process where only the present value of a variable is relevant for predicting the future</p>
+</blockquote>
+<h4 id="7-1-1-Weak-Form-Market-Efficiency"><a href="#7-1-1-Weak-Form-Market-Efficiency" class="headerlink" title="7.1.1 Weak-Form Market Efficiency"></a>7.1.1 Weak-Form Market Efficiency</h4><blockquote>
+<p>Weak-Form Market Efficiency(弱市场有效) means that  the set of information only contains history of price and revenue ; that is, the present price reflects the information about all the history record of securities.</p>
+</blockquote>
+<h4 id="7-1-2-A-Wiener-Process"><a href="#7-1-2-A-Wiener-Process" class="headerlink" title="7.1.2 A Wiener Process"></a>7.1.2 A Wiener Process</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072222486.jpg"></p>
+<h5 id="7-1-2-1-Properties-of-a-Wiener-Process"><a href="#7-1-2-1-Properties-of-a-Wiener-Process" class="headerlink" title="7.1.2.1 Properties of a Wiener Process"></a>7.1.2.1 Properties of a Wiener Process</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072223166.jpg"></p>
+<p>$$dz &#x3D; \epsilon \sqrt{dt}$$<br>$E[(dz)] &#x3D; 0$ and $var[(dz)] &#x3D; dt$</p>
+<h3 id="7-2-Process-for-Stock-Price"><a href="#7-2-Process-for-Stock-Price" class="headerlink" title="7.2 Process for Stock Price"></a>7.2 Process for Stock Price</h3><h4 id="7-2-1-Ito-Process"><a href="#7-2-1-Ito-Process" class="headerlink" title="7.2.1 Ito Process"></a>7.2.1 Ito Process</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072231614.jpg"></p>
+<h4 id="7-2-2-An-Ito-Process-for-Stock-Prices"><a href="#7-2-2-An-Ito-Process-for-Stock-Prices" class="headerlink" title="7.2.2 An Ito Process for Stock Prices"></a>7.2.2 An Ito Process for Stock Prices</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072232556.jpg"></p>
+<h3 id="7-3-Ito’s-Lemma"><a href="#7-3-Ito’s-Lemma" class="headerlink" title="7.3 Ito’s Lemma"></a>7.3 Ito’s Lemma</h3><blockquote>
+<p>If we know the stochastic process followed by x, Ito’s lemma tells us the stochastic process followed by some function G (x, t )</p>
+</blockquote>
+<blockquote>
+<p>Since a derivative security is a function of the price of the underlying asset and time, Ito’s lemma plays an important role in the analysis of derivative securities</p>
+</blockquote>
+<p><strong>1 A Taylor’s series expansion of G(x, t) gives</strong><br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072236140.jpg"></p>
+<p><strong>2 Substituting for $\Delta x$</strong></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072237711.jpg"></p>
+<p><strong>3 The $\epsilon^2 \Delta t$ Term</strong></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072239952.jpg"></p>
+<p><strong>4 Taking Limits</strong><br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072240150.jpg"></p>
+<h2 id="第八章：Black-Scholes公式-Black-Scholes-formula"><a href="#第八章：Black-Scholes公式-Black-Scholes-formula" class="headerlink" title="第八章：Black-Scholes公式 Black-Scholes formula"></a>第八章：Black-Scholes公式 Black-Scholes formula</h2><h3 id="8-1-Lognormal-Property"><a href="#8-1-Lognormal-Property" class="headerlink" title="8.1 Lognormal Property"></a>8.1 Lognormal Property</h3><h4 id="8-1-1-The-Stock-Price-Assumption"><a href="#8-1-1-The-Stock-Price-Assumption" class="headerlink" title="8.1.1 The Stock Price Assumption"></a>8.1.1 The Stock Price Assumption</h4><p>$$\Delta S &#x3D; \mu S\Delta t + \sigma S \epsilon \sqrt{\Delta t}$$</p>
+<p>In a short period of time of length $\Delta t$, the return on the stock is normally distributed:<br>$$\frac{\Delta S}{S} &#x2F;~ \phi(\mu \Delta t, \sigma \sqrt{\Delta t})$$</p>
+<h4 id="8-1-2-Application-of-Ito’s-Lemma-to-a-Stock-Price-Process"><a href="#8-1-2-Application-of-Ito’s-Lemma-to-a-Stock-Price-Process" class="headerlink" title="8.1.2 Application of Ito’s Lemma to a Stock Price Process"></a>8.1.2 Application of Ito’s Lemma to a Stock Price Process</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072248620.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072252013.jpg"></p>
+<h4 id="8-1-3-The-lognormal-Distribution"><a href="#8-1-3-The-lognormal-Distribution" class="headerlink" title="8.1.3 The lognormal Distribution"></a>8.1.3 The lognormal Distribution</h4><p>It follows from this assumption that<br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072253489.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072254894.jpg" alt="The Plot of Lognormal Distribution"></p>
+<h3 id="8-2-Derivation-of-The-Black-Scholes-Merton-Differential-Equation"><a href="#8-2-Derivation-of-The-Black-Scholes-Merton-Differential-Equation" class="headerlink" title="8.2 Derivation of The Black-Scholes-Merton Differential Equation"></a>8.2 Derivation of The Black-Scholes-Merton Differential Equation</h3><h4 id="8-2-1-The-Black-Scholes-x2F-Merton-Model-Hedging-Approach"><a href="#8-2-1-The-Black-Scholes-x2F-Merton-Model-Hedging-Approach" class="headerlink" title="8.2.1 The Black-Scholes&#x2F;Merton Model-Hedging Approach"></a>8.2.1 The Black-Scholes&#x2F;Merton Model-Hedging Approach</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072259304.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072300783.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072300885.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072301006.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072301956.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072301501.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072302686.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072302352.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072303040.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072303516.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072303902.jpg"></p>
+<h4 id="8-2-2-Properties-of-Black-Scholes-x2F-Merton-Formula"><a href="#8-2-2-Properties-of-Black-Scholes-x2F-Merton-Formula" class="headerlink" title="8.2.2 Properties of Black-Scholes&#x2F;Merton Formula"></a>8.2.2 Properties of Black-Scholes&#x2F;Merton Formula</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072304032.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310072304618.jpg"></p>
+<h3 id="8-3-Implied-Volatility"><a href="#8-3-Implied-Volatility" class="headerlink" title="8.3 Implied Volatility"></a>8.3 Implied Volatility</h3><blockquote>
+<p>The implied volatility of an option is the volatility for which the Black-Scholes price equals the market price</p>
+</blockquote>
+<h2 id="第九章：股票指数期权和货币期权-Options-On-Stock-Indices-Currencies-and-Futures"><a href="#第九章：股票指数期权和货币期权-Options-On-Stock-Indices-Currencies-and-Futures" class="headerlink" title="第九章：股票指数期权和货币期权 Options On Stock Indices, Currencies, and Futures"></a>第九章：股票指数期权和货币期权 Options On Stock Indices, Currencies, and Futures</h2><h3 id="9-1-Options-on-stock-providing-dividend"><a href="#9-1-Options-on-stock-providing-dividend" class="headerlink" title="9.1 Options on stock providing dividend"></a>9.1 Options on stock providing dividend</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172044599.jpg"></p>
+<h4 id="9-1-1-European-Options-on-Stocks-Providing-a-Dividend-Yield"><a href="#9-1-1-European-Options-on-Stocks-Providing-a-Dividend-Yield" class="headerlink" title="9.1.1 European Options on Stocks Providing a Dividend Yield"></a>9.1.1 European Options on Stocks Providing a Dividend Yield</h4><ul>
+<li>The stock starts at price $S_0$ and provides a dividend yield &#x3D; q</li>
+<li>The stock starts at prices $S_0e^{-qT}$ and provides no income</li>
+</ul>
+<h4 id="9-1-2-Lower-Bounds-For-Option-Prices"><a href="#9-1-2-Lower-Bounds-For-Option-Prices" class="headerlink" title="9.1.2 Lower Bounds For Option Prices"></a>9.1.2 Lower Bounds For Option Prices</h4><ul>
+<li>$c \geq max(S_0 - Xe^{-rT}, 0)$</li>
+<li>$c \geq max(S_0e^{-qT} - Xe^{-rT}, 0)$</li>
+</ul>
+<p>Lower Bound for calls:<br>$$c \geq S_0 e^{-qT} - Xe^{-rT}$$</p>
+<ul>
+<li>$p \geq max(Xe^{-rT} - S_0 , 0)$</li>
+<li>$p \geq max(Xe^{-rT} - S_0e^{-qT}  , 0)$</li>
+</ul>
+<p>Lower Bound for puts:<br>$$p \geq  Xe^{-rT} - S_0 e^{-qT} $$</p>
+<p><strong>Put Call Parity</strong><br>$$c + Xe^{-rT} &#x3D; p + S_0e^{-qT}$$</p>
+<p><strong>American options Put Call Parity</strong><br>$$S_0e^{-qT} - X \leq C - P \leq S_0 - Xe^{-rT}$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172119014.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172120430.jpg"></p>
+<h3 id="9-2-Options-on-stock-indices"><a href="#9-2-Options-on-stock-indices" class="headerlink" title="9.2 Options on stock indices"></a>9.2 Options on stock indices</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172124281.jpg"></p>
+<h3 id="9-3-Currency-Options"><a href="#9-3-Currency-Options" class="headerlink" title="9.3 Currency Options"></a>9.3 Currency Options</h3><h3 id="9-4-Futures-Option"><a href="#9-4-Futures-Option" class="headerlink" title="9.4 Futures Option"></a>9.4 Futures Option</h3><h4 id="9-4-1-Put-Call-Parity-for-Futures-Options"><a href="#9-4-1-Put-Call-Parity-for-Futures-Options" class="headerlink" title="9.4.1 Put-Call Parity for Futures Options"></a>9.4.1 Put-Call Parity for Futures Options</h4><p>$$c + Ke^{-rT} &#x3D; p + F_0e^{-rT}$$<br>$$F_0e^{-rT} - X \leq C - P \leq F_0 - X e^{-rT}$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172133997.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172134257.jpg"></p>
+<p>Value of the portfolio at time T is<br>$$F_0u\Delta - F_0\Delta - f_u &#x3D; -f$$<br>and we obtain $f &#x3D; -(F_0u\Delta - F_0\Delta - f_u)e^{-rT}$</p>
+<p><strong>Generalization</strong></p>
+<p>substituting the $\Delta$ we obtain<br>$$f &#x3D; [pf_u + (1-p)f_d]e^{-rT}$$<br>$p &#x3D; \frac{1-d}{u-d}$</p>
+<h2 id="第十章：希腊字母-Greek-Letters"><a href="#第十章：希腊字母-Greek-Letters" class="headerlink" title="第十章：希腊字母 Greek Letters"></a>第十章：希腊字母 Greek Letters</h2><h3 id="10-1-Common-Strategies-for-Risk"><a href="#10-1-Common-Strategies-for-Risk" class="headerlink" title="10.1 Common Strategies for Risk"></a>10.1 Common Strategies for Risk</h3><h4 id="10-1-1-Stop-Loss-Strategy-止损策略"><a href="#10-1-1-Stop-Loss-Strategy-止损策略" class="headerlink" title="10.1.1 Stop-Loss Strategy 止损策略"></a>10.1.1 Stop-Loss Strategy 止损策略</h4><p>低抛高买</p>
+<h3 id="10-2-Delta-Hedging"><a href="#10-2-Delta-Hedging" class="headerlink" title="10.2 Delta Hedging"></a>10.2 Delta Hedging</h3><blockquote>
+<p>Delta ($\Delta$) （德尔塔对冲）is the rate of change of the option price with respect to the underlying asset. </p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172142154.jpg"></p>
+<h4 id="10-2-1-Example"><a href="#10-2-1-Example" class="headerlink" title="10.2.1 Example"></a>10.2.1 Example</h4><blockquote>
+<p>An investor has sold 20 call option contracts( 2,000 options ) on a certain stock. The option price is $10, the stock price is $100, and the option’s delta is 0.6. The investor wishes to hedge the position.</p>
+</blockquote>
+<p><strong>The strategy</strong></p>
+<p>The investor immediately buys 0.6<em>2000&#x3D;1200 shares. It means that over the next short period of time, the call price will tend to change by 60% of the stock price and the loss (gain) on the call will be offset by the gain (loss) on the stock. As time passes, delta will change and the position in the stock will have to be adjusted. For example, if after three days the delta increases to 0.65, a further 0.05</em>2000&#x3D;100 shares will have to be bought.</p>
+<h4 id="10-2-2-Dynamic-Hedging"><a href="#10-2-2-Dynamic-Hedging" class="headerlink" title="10.2.2 Dynamic Hedging"></a>10.2.2 Dynamic Hedging</h4><p>$$\Pi &#x3D; -f  + nS$$<br>$$\frac{\delta \Pi}{\delta S} &#x3D; -\frac{\delta f}{\delta S} + n &#x3D; 0$$<br>$$n &#x3D; \frac{\delta f}{\delta S}$$</p>
+<ol>
+<li><p>For a European call option on a non-dividend-paying stock<br>$$\Delta &#x3D; N(d_1)$$</p>
+</li>
+<li><p>For a European put option on a non-dividend-paying stock<br>$$\Delta &#x3D; N(d_1) - 1$$</p>
+</li>
+<li><p>The delta of a European call on a stock paying dividends at rate q<br>$$ \Delta &#x3D; \frac{\delta f}{\delta S} &#x3D; N(d_1)e^{-qT}$$</p>
+</li>
+<li><p>The delta of a European put on a stock paying dividends at rate q<br>$$ \Delta &#x3D; \frac{\delta f}{\delta S} &#x3D; [N(d_1)-1]e^{-qT}$$</p>
+</li>
+</ol>
+<h3 id="10-3-Theta-Gamma-Vega-and-Rho"><a href="#10-3-Theta-Gamma-Vega-and-Rho" class="headerlink" title="10.3 Theta, Gamma, Vega and Rho"></a>10.3 Theta, Gamma, Vega and Rho</h3><h4 id="10-3-1-Theta"><a href="#10-3-1-Theta" class="headerlink" title="10.3.1 Theta"></a>10.3.1 Theta</h4><blockquote>
+<p>Theta ($\Theta$ ) of a derivative  (or portfolio of derivatives $\Pi$ ) is the rate of change of the value with respect to the passage of time, it is usually negative</p>
+</blockquote>
+<p>$$\Theta &#x3D; \frac{\delta f}{\delta t}$$<br>or<br>$$\Theta &#x3D; \frac{\delta \pi}{\delta t}$$</p>
+<h4 id="10-3-2-Gamma"><a href="#10-3-2-Gamma" class="headerlink" title="10.3.2 Gamma"></a>10.3.2 Gamma</h4><blockquote>
+<p>Gamma ($\Gamma$ ) is the rate of change of delta ($\Delta$) with respect to the price of the underlying asset</p>
+</blockquote>
+<p>$$\Gamma &#x3D; \frac{\delta^2 \Pi}{\delta S^2}$$</p>
+<p><strong>Gamma Addresses Delta Hedging Errors Caused By Curvature</strong><br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172159784.jpg"></p>
+<h5 id="10-3-2-1-Taylor-Series-Expansions-and-Hedge-Parameters"><a href="#10-3-2-1-Taylor-Series-Expansions-and-Hedge-Parameters" class="headerlink" title="10.3.2.1 Taylor Series Expansions and Hedge Parameters"></a>10.3.2.1 Taylor Series Expansions and Hedge Parameters</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172201810.jpg"></p>
+<h5 id="10-3-2-2-Relationship-Among-Delta-Gamma-and-Theta"><a href="#10-3-2-2-Relationship-Among-Delta-Gamma-and-Theta" class="headerlink" title="10.3.2.2 Relationship  Among Delta, Gamma, and Theta"></a>10.3.2.2 Relationship  Among Delta, Gamma, and Theta</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172203200.jpg"></p>
+<h4 id="10-3-3-Vega"><a href="#10-3-3-Vega" class="headerlink" title="10.3.3 Vega"></a>10.3.3 Vega</h4><blockquote>
+<p>Vega is the rate of change of the value of a derivatives portfolio with respect to volatility</p>
+</blockquote>
+<p>$$V &#x3D; \frac{\delta \Pi}{\delta \sigma}$$<br>Cause $Latex$ not support Vega using V substituting for Vega </p>
+<h4 id="10-3-4-Example-Managing-Delta-Gamma-amp-Vega"><a href="#10-3-4-Example-Managing-Delta-Gamma-amp-Vega" class="headerlink" title="10.3.4 [Example] Managing  Delta, Gamma, &amp; Vega"></a>10.3.4 [Example] Managing  Delta, Gamma, &amp; Vega</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310172210937.jpg"></p>
+<h4 id="10-3-5-Rho"><a href="#10-3-5-Rho" class="headerlink" title="10.3.5 Rho"></a>10.3.5 Rho</h4><blockquote>
+<p>Rho is the rate of change of the value of a derivative with respect to the interest rate</p>
+</blockquote>
+<p>$$\rho &#x3D; \frac{\delta \Pi}{\delta r}$$</p>
+<h2 id="第十一章：Value-at-Risk-VaR-amp-Trading-Strategies-of-Option"><a href="#第十一章：Value-at-Risk-VaR-amp-Trading-Strategies-of-Option" class="headerlink" title="第十一章：Value-at-Risk(VaR) &amp; Trading Strategies of Option"></a>第十一章：Value-at-Risk(VaR) &amp; Trading Strategies of Option</h2><h3 id="10-1-VaR"><a href="#10-1-VaR" class="headerlink" title="10.1 VaR"></a>10.1 VaR</h3><h4 id="10-1-1-Types-of-VaR"><a href="#10-1-1-Types-of-VaR" class="headerlink" title="10.1.1 Types of VaR"></a>10.1.1 Types of VaR</h4><blockquote>
+<p>VaR: 在正常市场条件下和一定的置信水平上，测算出给定时间内预期发生最坏情况的损失</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192241495.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192243098.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192244862.jpg"></p>
+<h4 id="10-1-2-Example-S-D-of-Portfolio"><a href="#10-1-2-Example-S-D-of-Portfolio" class="headerlink" title="10.1.2 Example S.D. of Portfolio"></a>10.1.2 Example S.D. of Portfolio</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192246528.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192247223.jpg"></p>
+<h3 id="10-2-Trading-Strategies-Involving-Options"><a href="#10-2-Trading-Strategies-Involving-Options" class="headerlink" title="10.2 Trading Strategies Involving Options"></a>10.2 Trading Strategies Involving Options</h3><h4 id="10-2-1-Spread-Two-or-more-options-of-the-same-type"><a href="#10-2-1-Spread-Two-or-more-options-of-the-same-type" class="headerlink" title="10.2.1 Spread ( Two or more options of the same type)"></a>10.2.1 Spread ( Two or more options of the same type)</h4><h5 id="10-2-1-1-Bull-Spread-Using-Calls"><a href="#10-2-1-1-Bull-Spread-Using-Calls" class="headerlink" title="10.2.1.1 Bull Spread Using Calls"></a>10.2.1.1 Bull Spread Using Calls</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192249955.jpg"></p>
+<h5 id="10-2-1-2-Bull-Spread-Using-Puts"><a href="#10-2-1-2-Bull-Spread-Using-Puts" class="headerlink" title="10.2.1.2 Bull Spread Using Puts"></a>10.2.1.2 Bull Spread Using Puts</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192250334.jpg"></p>
+<h5 id="10-2-1-3-Bear-Spread-Using-Calls"><a href="#10-2-1-3-Bear-Spread-Using-Calls" class="headerlink" title="10.2.1.3 Bear Spread Using Calls"></a>10.2.1.3 Bear Spread Using Calls</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192251822.jpg"></p>
+<h5 id="10-2-1-4-Bear-Spread-Using-Puts"><a href="#10-2-1-4-Bear-Spread-Using-Puts" class="headerlink" title="10.2.1.4 Bear Spread Using Puts"></a>10.2.1.4 Bear Spread Using Puts</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192251149.jpg"></p>
+<h5 id="10-2-1-5-Butterfly-Spread-Using-Calls"><a href="#10-2-1-5-Butterfly-Spread-Using-Calls" class="headerlink" title="10.2.1.5 Butterfly Spread Using Calls"></a>10.2.1.5 Butterfly Spread Using Calls</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192252358.jpg"></p>
+<h5 id="10-2-1-6-Butterfly-Spread-Using-Puts"><a href="#10-2-1-6-Butterfly-Spread-Using-Puts" class="headerlink" title="10.2.1.6 Butterfly Spread Using Puts"></a>10.2.1.6 Butterfly Spread Using Puts</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192253415.jpg"></p>
+<h5 id="10-2-1-7-Calendar-Spread-Using-Calls"><a href="#10-2-1-7-Calendar-Spread-Using-Calls" class="headerlink" title="10.2.1.7 Calendar Spread Using Calls"></a>10.2.1.7 Calendar Spread Using Calls</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192253707.jpg"></p>
+<h5 id="10-2-1-8-Calendar-Spread-Using-Puts"><a href="#10-2-1-8-Calendar-Spread-Using-Puts" class="headerlink" title="10.2.1.8 Calendar Spread Using Puts"></a>10.2.1.8 Calendar Spread Using Puts</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192253505.jpg"></p>
+<h4 id="10-2-2-Combination-Mixture-of-calls-amp-puts"><a href="#10-2-2-Combination-Mixture-of-calls-amp-puts" class="headerlink" title="10.2.2 Combination ( Mixture of calls &amp; puts )"></a>10.2.2 Combination ( Mixture of calls &amp; puts )</h4><h5 id="10-2-2-1-A-Straddle（跨式）-Combination"><a href="#10-2-2-1-A-Straddle（跨式）-Combination" class="headerlink" title="10.2.2.1 A Straddle（跨式） Combination"></a>10.2.2.1 A Straddle（跨式） Combination</h5><blockquote>
+<p>A straddle is appropriate when an investor is expecting a large move in a stock price but does not know in which direction the move will be</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192256536.jpg"></p>
+<h5 id="10-2-2-2-Strip"><a href="#10-2-2-2-Strip" class="headerlink" title="10.2.2.2 Strip"></a>10.2.2.2 Strip</h5><blockquote>
+<p>A strip consists of a long position in one call and two puts with the same strike price and expiration date</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192257945.jpg"></p>
+<h5 id="10-2-2-3-A-Strangle-（勒式）Combination"><a href="#10-2-2-3-A-Strangle-（勒式）Combination" class="headerlink" title="10.2.2.3 A Strangle （勒式）Combination"></a>10.2.2.3 A Strangle （勒式）Combination</h5><blockquote>
+<p>A strangle is a similar strategy to a straddle. The investor is betting that there will be a large price move, but is uncertain whether it will be an increase or a decrease</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310192258605.jpg"></p>
+<h2 id="第十二章：数值方法"><a href="#第十二章：数值方法" class="headerlink" title="第十二章：数值方法"></a>第十二章：数值方法</h2><h2 id="实验一：期权定价的蒙特卡洛模拟和有限差分方法"><a href="#实验一：期权定价的蒙特卡洛模拟和有限差分方法" class="headerlink" title="实验一：期权定价的蒙特卡洛模拟和有限差分方法"></a>实验一：期权定价的蒙特卡洛模拟和有限差分方法</h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/f1b79b2a">https://skddj.github.io/article/f1b79b2a</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                    <span class="chip bg-color">大三上</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">金融衍生工具</span>
+                                </a>
+                            
+                                <a href="/tags/Derivatives/">
+                                    <span class="chip bg-color">Derivatives</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/53aac4c6">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="金融市场与机构">
+                        
+                        <span class="card-title">金融市场与机构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%87%91%E8%9E%8D%E5%B8%82%E5%9C%BA%E4%B8%8E%E6%9C%BA%E6%9E%84/">
+                        <span class="chip bg-color">金融市场与机构</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/1b5aea18">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="公司金融">
+                        
+                        <span class="card-title">公司金融</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%85%AC%E5%8F%B8%E9%87%91%E8%9E%8D/">
+                        <span class="chip bg-color">公司金融</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>

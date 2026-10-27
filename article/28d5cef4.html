@@ -1,0 +1,2603 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="概率论与数理统计, Yiming Shi&#39;s blog">
+    <meta name="description" content="简要介绍了概率论与数理统计的基础知识。第一章讨论了随机事件及其概率、条件概率、全概率公式、贝叶斯公式和独立性等内容。第二章则介绍了...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>概率论与数理统计 | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">概率论与数理统计</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+                                <span class="chip bg-color">概率论与数理统计</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8A/">
+                                <span class="chip bg-color">大二上</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-12-24
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    8.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    34 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="概率论与数理统计"><a href="#概率论与数理统计" class="headerlink" title="概率论与数理统计"></a>概率论与数理统计</h1><h2 id="第一章-随机事件与概率"><a href="#第一章-随机事件与概率" class="headerlink" title="第一章 随机事件与概率"></a>第一章 随机事件与概率</h2><hr>
+<h3 id="case1-事件运算及概率"><a href="#case1-事件运算及概率" class="headerlink" title="case1 事件运算及概率"></a>case1 事件运算及概率</h3><h4 id="1-1-随机试验与随机事件"><a href="#1-1-随机试验与随机事件" class="headerlink" title="1.1 随机试验与随机事件"></a>1.1 随机试验与随机事件</h4><p>样本空间:所有可能的结果的集合,记为Ω</p>
+<p>样本点:样本空间中的元素</p>
+<p>基本事件:是集合,仅在样本空间中单个结果的事件</p>
+<h4 id="随机事件的关系及运算"><a href="#随机事件的关系及运算" class="headerlink" title="随机事件的关系及运算"></a>随机事件的关系及运算</h4><ol>
+<li>包含关系</li>
+<li>和事件</li>
+<li>积事件</li>
+<li>互不相容事件</li>
+<li>对立事件(逆事件)实际就是补集的概念</li>
+<li>差事件 A-B</li>
+</ol>
+<ul>
+<li>A-B &#x3D; AB-hat &#x3D; A-AB &#x3D; A∪B - B</li>
+</ul>
+<ol>
+<li>随机事件(集合)运算律:</li>
+</ol>
+<ul>
+<li>交换律:A∪B &#x3D; B∪A , A∩B &#x3D; B∩A</li>
+<li>结合律:括号可以随意调整</li>
+<li>分配律:去掉括号,再分配</li>
+<li>德摩根律:去掉hat时长变短开口换方向</li>
+<li>吸收律:…</li>
+</ul>
+<hr>
+<h3 id="case2-概率性质"><a href="#case2-概率性质" class="headerlink" title="case2 概率性质"></a>case2 概率性质</h3><h4 id="概率-Probability"><a href="#概率-Probability" class="headerlink" title="概率(Probability)"></a>概率(Probability)</h4><p>客观存在的常量</p>
+<h4 id="频率"><a href="#频率" class="headerlink" title="频率"></a>频率</h4><p>定义:在相同条件下,进行n次实验,其中出现m次某结果,</p>
+<p>这个比值叫做频率(m&#x2F;n)</p>
+<p>性质:稳定性</p>
+<h4 id="古典概率"><a href="#古典概率" class="headerlink" title="古典概率"></a>古典概率</h4><h4 id="古典概型试验"><a href="#古典概型试验" class="headerlink" title="古典概型试验"></a>古典概型试验</h4><ul>
+<li>仅有__有限多个__基本事件</li>
+<li>每个基本事件发生的__可能性相等__</li>
+</ul>
+<h4 id="概率的公理化定义"><a href="#概率的公理化定义" class="headerlink" title="概率的公理化定义"></a>概率的公理化定义</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241344268.png"></p>
+<h4 id="由公理化定义可以得到很多重要性质"><a href="#由公理化定义可以得到很多重要性质" class="headerlink" title="由公理化定义可以得到很多重要性质:"></a>由公理化定义可以得到很多重要性质:</h4><ol>
+<li>不可能事件的概率为0,即$P(\phi)&#x3D;0$ #逆命题不真</li>
+<li>有限可加性</li>
+<li>对立事件概率和为1,$P(A)+P(A_hat)&#x3D;1$</li>
+<li>概率单调性</li>
+</ol>
+<h4 id="概率加法定理"><a href="#概率加法定理" class="headerlink" title="概率加法定理"></a>概率加法定理</h4><p>又名 多除少补原理</p>
+<p>$P\left(A_1\cup A_2\cup\ldots\cup A_n\right)&#x3D;\sum_{i&#x3D;1}^n P\left(A_n\right)-\sum_{1\leq i&lt;j\leq n}P\left(A_i A_j\right)+\sum_{1\leq i&lt;j&lt;k\leq n}P\left(A_i A_j A_k\right)-\ldots+(-1)^{n-1}P\left(A_1 A_2\ldots A_n\right)$</p>
+<h4 id="做题过程"><a href="#做题过程" class="headerlink" title="做题过程"></a>做题过程</h4><ul>
+<li>定义事件ABC…</li>
+<li>交代是什么问题(e.g. 这是个古典概型问题)</li>
+<li>Attention:摸球分类模型不需要过程,直接算就行(超几何分布适用)</li>
+</ul>
+<hr>
+<h3 id="case3-条件概率"><a href="#case3-条件概率" class="headerlink" title="case3 条件概率"></a>case3 条件概率</h3><p>条件概率满足概率定义的三个公理</p>
+<h4 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h4><p>内容：如果事件$B1、B2、B3…Bi$构成一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AE%8C%E5%A4%87%E4%BA%8B%E4%BB%B6%E7%BB%84/6451190?fromModule=lemma_inlink">完备事件组</a>，即它们两两互不相容，其和为全集；并且$P(Bi)$大于0，则对任一事件A有</p>
+<p>$$<br>P(A)&#x3D;P(A|B1)P(B1) + P(A|B2)P(B2) + … + P(A|Bi)P(Bi)<br>$$</p>
+<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>用来解决<em><strong>事后问题</strong></em>,结果已经发生,求哪个原因导致的</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241346990.png"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241347006.png"></p>
+<h4 id="独立的定义和证明"><a href="#独立的定义和证明" class="headerlink" title="独立的定义和证明"></a>独立的定义和证明</h4><p>$P(AB)&#x3D;P(A)P(B)$</p>
+<h4 id="三个相互独立的证明"><a href="#三个相互独立的证明" class="headerlink" title="三个相互独立的证明:"></a>三个相互独立的证明:</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241347058.png"></p>
+<hr>
+<h2 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241351878.png" alt="image-20221224135157803"></p>
+<h4 id="随机变量的定义"><a href="#随机变量的定义" class="headerlink" title="随机变量的定义"></a>随机变量的定义</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241352318.png"></p>
+<h4 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h4><p>实际也是个函数,至少我觉得</p>
+<p>事件E的样本空间为$\omega$,对于每一个样本点$\omega$∈$\omega$,都有一个唯一的实数x($\omega$)与之对应,那么x就是随机变量,是个可测函数,挺好用的,找个实数对应</p>
+<h4 id="分布函数"><a href="#分布函数" class="headerlink" title="分布函数"></a>分布函数</h4><p>设X是一个随机变量,x是任意的实数,称函数</p>
+<p>F(x) &#x3D; P{X&lt;&#x3D;x} &#x3D; P{$\omega$: X($\omega$) &lt;&#x3D; x}</p>
+<p>为随机变量X的分布函数</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241352465.png"></p>
+<h4 id="分布函数三条性质"><a href="#分布函数三条性质" class="headerlink" title="分布函数三条性质:"></a>分布函数三条性质:</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241352667.png"></p>
+<p>最后讲<strong>混合型随机变量</strong>，一个陀螺，一半刻1，一半刻0-1连续的数字，落地数字的分布律，要证明分布函数既不连续也不离散：</p>
+<p>不连续，因为图像不连续，由连续型随机变量分布函数的逆否命题可得，不离散，因为图像不是阶梯形</p>
+<h4 id="六个常见的离散型随机变量分布："><a href="#六个常见的离散型随机变量分布：" class="headerlink" title="六个常见的离散型随机变量分布："></a>六个常见的离散型随机变量分布：</h4><ul>
+<li><p>几何分布 k次实验才成功的概率(也就是前面k-1次都失败了)</p>
+</li>
+<li><p>超几何分布 不放回，用A排列去算(抽球)</p>
+</li>
+<li><p>负二项分布（帕斯卡分布）eg n次成功前失败x的次数分布</p>
+<ul>
+<li>可以看成几何分布的推广(很多个几何分布加起来)</li>
+</ul>
+</li>
+<li><p>二项分布（超几何分布的极限情况，样本空间足够大）</p>
+</li>
+<li><p>两点分布 (伯努利分布,就是二项分布的n&#x3D;1时的情况)</p>
+</li>
+<li><p>柏松分布（小概率事件发生的次数）</p>
+</li>
+</ul>
+<h4 id="三个连续型随机变量"><a href="#三个连续型随机变量" class="headerlink" title="三个连续型随机变量"></a>三个连续型随机变量</h4><ul>
+<li>均匀分布</li>
+<li>指数分布</li>
+<li>正态分布</li>
+</ul>
+<hr>
+<h3 id="case1-离散型随机变量"><a href="#case1-离散型随机变量" class="headerlink" title="case1 离散型随机变量"></a>case1 离散型随机变量</h3><p>remember 超几何分布(不放回)的极限条件就是二项分布</p>
+<h3 id="独立重复实验"><a href="#独立重复实验" class="headerlink" title="独立重复实验"></a>独立重复实验</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241353321.png"></p>
+<h3 id="伯努利概型"><a href="#伯努利概型" class="headerlink" title="伯努利概型"></a>伯努利概型</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241354330.png" alt="image-20221224135403194"></p>
+<h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241354236.png" alt="image-20221224135412126"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241354236.png"></p>
+<p>这个性质个人理解就是每个事件相互独立互不影响,因此就没有所谓的”后效性”</p>
+<h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>后面有详细介绍（五种重要分布那章）</p>
+<hr>
+<h3 id="case2-一维随机变量"><a href="#case2-一维随机变量" class="headerlink" title="case2 一维随机变量"></a>case2 一维随机变量</h3><h4 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h4><ul>
+<li>分布律,分布函数</li>
+<li>函数的分布</li>
+</ul>
+<h4 id="连续性随机变量"><a href="#连续性随机变量" class="headerlink" title="连续性随机变量"></a>连续性随机变量</h4><ul>
+<li>概率密度,分布函数(必考)</li>
+<li>函数的分布</li>
+</ul>
+<h4 id="离散型随机变量分布律-分布函数"><a href="#离散型随机变量分布律-分布函数" class="headerlink" title="离散型随机变量分布律,分布函数"></a>离散型随机变量<em>分布律,分布函数</em></h4><h5 id="分布律"><a href="#分布律" class="headerlink" title="分布律"></a>分布律</h5><h4 id="例一-抽球-6个球-4白2黑-随机抽两个-求-1-抽到白球X的分布律-2-随机变量X的分布函数"><a href="#例一-抽球-6个球-4白2黑-随机抽两个-求-1-抽到白球X的分布律-2-随机变量X的分布函数" class="headerlink" title="$例一:抽球,6个球,4白2黑,随机抽两个,求(1)抽到白球X的分布律 (2)随机变量X的分布函数$"></a>$例一:抽球,6个球,4白2黑,随机抽两个,求(1)抽到白球X的分布律 (2)随机变量X的分布函数$</h4><p>$例二:给出随机变量X的分布函数,求X的分布律和P{-1 &lt; X &lt;&#x3D; 3}$</p>
+<h5 id="函数的分布"><a href="#函数的分布" class="headerlink" title="函数的分布"></a>函数的分布</h5><p>例一$给出随机变量X的分布律,求U&#x3D;X- 1的分布律,W&#x3D;X^2的分布律$</p>
+<p>这个很简单,合并同类项就可以了</p>
+<h4 id="连续型随机变量的概率密度-分布函数"><a href="#连续型随机变量的概率密度-分布函数" class="headerlink" title="连续型随机变量的概率密度,分布函数"></a>连续型随机变量的<em>概率密度,分布函数</em></h4><p>$例一:给出连续型随机变量X的概率密度函数f(x),求里面的常数,P(X&gt;&#x3D;0.5),分布函数F(x)$</p>
+<p>需要知道概率密度f(x)的性质有:</p>
+<ul>
+<li>归一性:从-∞到+∞积分是1</li>
+<li>$F(x)&#x3D;P{X\leq x}&#x3D;\int_{-\infty}^{x}f(x)dx$</li>
+<li>****$P{a\leq X\leq b}&#x3D;F(b)- F(a)&#x3D;\int_{a}^{b}f(x)dx$</li>
+</ul>
+<p>$例二:给出连续型随机变量的分布函数F(x)&#x3D;A+Barctanx,-∞&lt;x&lt;+∞,求:系数AB,P{-1&lt;X&lt;1},X的概率密度f(x)$</p>
+<p>需要知道分布函数的性质:</p>
+<ul>
+<li>F(x) &#x3D; P{X&lt;x}</li>
+<li>0 &lt;&#x3D; F(x) &lt;&#x3D; 1</li>
+<li>F’(x) &#x3D; f(x)</li>
+<li>右连续</li>
+<li>归一性：在定义域范围内积分后得到1</li>
+</ul>
+<p>P{X &#x3D;x_0} &#x3D; 0 ,这也可以推出一个好玩的事实：</p>
+<p>即概率为零不一定是不可能事件，因为连续型概率密度上每个点的概率都是0，但是也有可能发生。</p>
+<p>因此，求开区间，闭区间，半开半闭区间上的分布函数最后得到的都一样</p>
+<p>补充一道题目：</p>
+<p>证明标准正态分布的函数是概率密度函数</p>
+<p>（1）非负性       这玩意不用证明，一眼定真</p>
+<p>（2）归一性       这玩意没法直接积分，需要先平方化成二重积分，再换元转换极坐标，然后积分</p>
+<hr>
+<h3 id="case3-五种重要分布"><a href="#case3-五种重要分布" class="headerlink" title="case3 五种重要分布"></a>case3 五种重要分布</h3><h4 id="离散型"><a href="#离散型" class="headerlink" title="离散型"></a>离散型</h4><ul>
+<li>二项分布</li>
+<li>泊松分布</li>
+</ul>
+<h4 id="连续型"><a href="#连续型" class="headerlink" title="连续型"></a>连续型</h4><ul>
+<li>均匀分布</li>
+<li>指数分布</li>
+<li>正态分布</li>
+</ul>
+<ol>
+<li><strong>离散型--二项分布</strong></li>
+</ol>
+<p>记作:$X~b(n,p)分布律:P{X&#x3D;k}&#x3D;C^k_np^k(1-p)^(n-k)$ ——n是样本个数,p是发生概率</p>
+<blockquote>
+<p>例一:5台机器,每台使用相互独立,每台同时被使用概率为0.1,问:(1)恰有两台被使用概率(2)至少有两台被使用</p>
+</blockquote>
+<ol start="2">
+<li><strong>离散型--泊松分布</strong></li>
+</ol>
+<p>记作:$X~\pi(\lambda)$ 分布律:$P(X&#x3D;k)&#x3D;\frac{\lambda^k}{k!}e^{-\lambda},k&#x3D;0,1,\cdots$</p>
+<p>计算小概率事件就用泊松分布</p>
+<p>泊松与二项之间的关系:通常$n\geq 20,p\leq 0.05$时就可以用泊松分布近似计算了</p>
+<p>泊松中的$\lambda&#x3D;np$,事实上泊松由二项推导出来</p>
+<ol start="3">
+<li><strong>连续型--均匀分布（Uniform）</strong></li>
+</ol>
+<p>记作:$X\sim U(a,b)$<br>概率密度:</p>
+<p>$f(x)&#x3D;\frac{1}{b-a},\quad a&lt;x&lt;b$</p>
+<p>$f(x)&#x3D;0$, else</p>
+<p>应用：计算机上面的伪随机数一般用均匀分布生成</p>
+<ol start="4">
+<li><strong>连续型--指数分布（Exponent）</strong></li>
+</ol>
+<p>记作:$X E(λ)$ 概率密度:</p>
+<p>$f(x)&#x3D;\lambda e^{-\lambda x},\quad x&gt;0$</p>
+<p>$ f(x) &#x3D; 0 , x \leqslant0$</p>
+<p>没有分布函数，该补充</p>
+<p>指数函数的无记忆性:</p>
+<p>$P{X&gt;s+t|X&gt;s}&#x3D;P{X&gt;t},\quad P{X&gt;s}&gt;0$</p>
+<p>其中 $X$ 是一个随机变量，$s$ 和 $t$ 是实数。</p>
+<p>举个简单的例子便于理解:</p>
+<p>一个灯泡用了s个小时,求再用t 小时报废的概率,和从0开始计时, 用了t小时报废的概率相同</p>
+<ol start="5">
+<li><strong>连续型--正态分布（Gauss）</strong></li>
+</ol>
+<p>记作:$X~N(μ,σ^2)$ ,</p>
+<p>概率密度: $f(x)&#x3D;\frac{1}{\sqrt{2\pi}σ}e^{-\frac{x-μ^2}{2σ^2}$</p>
+<p>$f(x)&#x3D;\frac{1}{\sqrt{2\pi} \sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
+<p>标准正态分布：X～N（0，1）</p>
+<p><strong>特征</strong>：</p>
+<ul>
+<li>归一性：不必多说</li>
+<li>曲线关于$x &#x3D; \mu $对称</li>
+<li>最大值$ \frac{1}{\sigma \sqrt{2\pi }}$在$ x &#x3D; \mu $ 处取得</li>
+</ul>
+<h5 id="正态分布概率的计算"><a href="#正态分布概率的计算" class="headerlink" title="正态分布概率的计算"></a>正态分布概率的计算</h5><p>关于正态分布的分布函数：用大$\phi$表示</p>
+<p>$\phi(x;\mu,\sigma^2)$</p>
+<p>听说处有16个公式需要记忆</p>
+<p>由于不符合牛顿莱布尼兹公式，所以查表寻值（参考附录给出的表格）</p>
+<h4 id="公式如下："><a href="#公式如下：" class="headerlink" title="公式如下："></a>公式如下：</h4><ul>
+<li>标准正态分布有： $\phi(-x) &#x3D; 1 - \phi(x)$</li>
+<li>对于非规则的（$\mu , \sigma$不为0） ：有$\phi(x;\mu,\sigma^2) &#x3D; \phi(\frac{x - \mu}{\sigma})$</li>
+<li>此处有标准化变换：令$y &#x3D; \frac{t - \mu}{\sigma}$</li>
+<li>$\phi(u_\alpha) &#x3D; 1 - \alpha$</li>
+</ul>
+<h5 id="还有个挺常用的公式："><a href="#还有个挺常用的公式：" class="headerlink" title="还有个挺常用的公式："></a>还有个挺常用的公式：</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241403177.png"></p>
+<hr>
+<h2 id="第三章-二维随机变量及其分布"><a href="#第三章-二维随机变量及其分布" class="headerlink" title="第三章 二维随机变量及其分布"></a>第三章 二维随机变量及其分布</h2><h4 id="联合分布函数"><a href="#联合分布函数" class="headerlink" title="联合分布函数"></a>联合分布函数</h4><p>定义：设随机试验E的样本空间为$\Omega$，对于每一个样本点$\omega$属于$\Omega$，有两个实数$X(\omega)Y(\omega)$，与之对应，则称它们组成的有序数组（X，Y）为二维随机变量。</p>
+<p>注：X，Y都是定义在$\Omega$上的随机变量</p>
+<p>$F_X(x)&#x3D;P{X\leq x}$</p>
+<p>$F_Y(y)&#x3D;P{Y\leq y}$</p>
+<p>$$<br>F(x,y) &#x3D; P{X \leq x , Y \leq y}<br>$$</p>
+<p>说明是以（x，y）为顶点的左下方的无穷矩形的面积</p>
+<p><strong>联合分布函数</strong>和<strong>边缘分布函数</strong>的概念:</p>
+<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%81%94%E5%90%88%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0/18885427">联合分布函数</a></p>
+<ul>
+<li>其实有点条件概率的那个感觉</li>
+</ul>
+<p>有了联合分布函数可以求边缘分布函数，反过来却不行，因为不能保证两个变量相互独立</p>
+<h4 id="联合分布函数的性质"><a href="#联合分布函数的性质" class="headerlink" title="联合分布函数的性质"></a>联合分布函数的性质</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241406754.png"></p>
+<p>最后一条还挺重要的，叫做相容性。</p>
+<p>然后讲课就推广到了n维</p>
+<h4 id="联合分布律"><a href="#联合分布律" class="headerlink" title="联合分布律"></a>联合分布律</h4><h5 id="可能的考点"><a href="#可能的考点" class="headerlink" title="可能的考点"></a>可能的考点</h5><p>元件组寿命</p>
+<ol>
+<li><p>并联</p>
+<p>a. $T &#x3D; max(x_1,x_2,…,x_n)$</p>
+</li>
+<li><p>串联</p>
+<p>a. $T &#x3D; min(x_1,x_2,…,x_n)$</p>
+</li>
+</ol>
+<h4 id="求T的分布"><a href="#求T的分布" class="headerlink" title="求T的分布?"></a><strong>求T的分布?</strong></h4><p>一.,</p>
+<p><strong>1.1</strong></p>
+<p>$$<br>F_Z(z) &#x3D; P{max(x_1,…,x_n) \leq z}<br>$$</p>
+<p>$$<br>&#x3D; P{x_1 \leq z,x_2 \leq z,…,x_n \leq z}<br>$$</p>
+<p>$$<br>&#x3D; F(z,z,…,z)<br>$$</p>
+<p>加个条件 —- 若$x_1,x_2,…,x_n$<strong>相互独立</strong>,则:</p>
+<p>$$&#x3D; F_{x_1}(z)…F_{x_n}(z)$$</p>
+<p>再加个条件$x_1,..,x_n$<strong>独立且同分布</strong>,则:</p>
+<p>$$F_{x_1}^n(z)$$</p>
+<p>此时</p>
+<p>$$f_Z(z) &#x3D; nF_{x_1}^{n-1}(z)f_{x_1}(z)$$</p>
+<p><strong>1.2</strong></p>
+<p>$F_Z(z)&#x3D;P{min(z_1,z_2,…,z_n)\leq z}$</p>
+<p>$$&#x3D; P{Z_1 \leq z \cup Z_2 \leq z \cup … \cup Z_n \leq z}$$</p>
+<p>$$&#x3D; 1-P{Z_1 &gt; z , Z_2 &gt; z , …,Z_n &gt; z}$$</p>
+<p>若$x_1,…,x_n$<strong>独立同分布</strong>:</p>
+<p>$$&#x3D; 1 - P^n{Z_1 &gt; z } &#x3D; 1 - [ 1 - F_Z(z)]^n$$</p>
+<p>则:</p>
+<p>$$f_Z(z) &#x3D; n[1-F_Z(z)]^{n-1}f_Z(z)$$</p>
+<p>二.</p>
+<p>已知(X,Y)联合密度f(x,y),求Z &#x3D; X + Y 的密度$f_Z(z)$</p>
+<p>1 求$F_Z(z) &#x3D; P{ X + Y \leq z}$</p>
+<p>$$&#x3D;\iint\limits_{x+y\leq z}f(x,y)d\delta$$</p>
+<p>$$&#x3D;\int_{-\infty}^{+\infty} [\int_{-\infty}^{z-x}f(x,y)dy]dx$$</p>
+<p>not equal(不要随便换)</p>
+<p>$$\int_{-\infty}^{z-x}[\int_{-\infty}^{+\infty}f(x,y)dx]dy$$</p>
+<p><em><strong><strong>令u &#x3D;y + x y &#x3D; u - x</strong></strong></em></p>
+<p>$$&#x3D; \int_{-\infty}^{+\infty} [\int_{-\infty}^{z}f(x,u-x)du]dx$$</p>
+<p>$$&#x3D;\int_{-\infty}^{z} [\int_{-\infty}^{+\infty}f(x,u-x)dx]du$$</p>
+<p>$$f’<em>Z(z) &#x3D; \int</em>{-\infty}^{+\infty}f(x,z-x)dx$$</p>
+<p>$$&#x3D;\int_{-\infty}^{+\infty}f(z-y,y)dy$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241407561.png"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241407936.png"></p>
+<hr>
+<h3 id="case1-二维离散型随机变量"><a href="#case1-二维离散型随机变量" class="headerlink" title="case1 二维离散型随机变量"></a>case1 二维离散型随机变量</h3><h4 id="下面例题看懂就行"><a href="#下面例题看懂就行" class="headerlink" title="下面例题看懂就行"></a>下面例题看懂就行</h4><p>例题：</p>
+<p>已知二维离散型随机变量（X，Y）的联合分布律为下：</p>
+<blockquote>
+<p>balabala</p>
+</blockquote>
+<ol>
+<li>P{x &#x3D; -1 , Y &#x3D;2} and P{X&lt;&#x3D; Y }（没什么说的，顾名思义）</li>
+<li>X和Y的边缘分布律（就是不考虑另外一个变量）</li>
+<li>X和Y是否独立（独立条件：P{X &#x3D; x_i,Y &#x3D; y_i} &#x3D; P{X &#x3D;x_i}*P{Y&#x3D;y_i} ，注：一般都不独立，所以找个反例就ok）</li>
+<li>Z &#x3D; X + Y ，W &#x3D; max{X , Y } 的分布律（还是那会事，合并同类项就行）</li>
+<li>P{X &#x3D; -1|Y &#x3D; 1} （条件概率，利用那个啥，条件概率公式就可）</li>
+</ol>
+<p>此处可以有二维离散型随机变量的定义：略。</p>
+<h4 id="二维的两点分布"><a href="#二维的两点分布" class="headerlink" title="二维的两点分布"></a>二维的两点分布</h4><p>举个简单的例子：用剪刀剪一个悬挂小球的细绳，剪中绳子记为X，小球坠落记为Y，那么F（x，y）就是了</p>
+<p>实际上X是因Y是果，但是符合两点分布。</p>
+<h4 id="联合概率密度"><a href="#联合概率密度" class="headerlink" title="联合概率密度"></a>联合概率密度</h4><p>最重要的性质：<strong>必考</strong></p>
+<p>性质四：</p>
+<p>$$p{(X,Y)\in  G}  &#x3D; \iint_G f(x,y)d\sigma$$</p>
+<p>性质五：</p>
+<p>$$f_X(x) &#x3D; \int_{-∞}^{+∞}f(x,y)dy$$</p>
+<p>反过来$f_Y(y)$也是如此</p>
+<p>$$f_Y(y) &#x3D; \int_{-∞}^{+∞} f(x,y)dx$$</p>
+<hr>
+<h3 id="case2-连续型二维随机变量"><a href="#case2-连续型二维随机变量" class="headerlink" title="case2 连续型二维随机变量"></a>case2 连续型二维随机变量</h3><p>用到了二重积分</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241412037.png"></p>
+<p>$$P{a&lt;x\leq b | Y &#x3D; y} &#x3D; \int_a^b f_{X|Y}(x|y)dx$$</p>
+<h5 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h5><p>$设二维随机变量(X,Y)的概率密度为f(x,y)&#x3D;Cxy0&lt;x&lt;10&lt;y&lt;1(else为0)$</p>
+<p>求:</p>
+<p>$(1)常数C和P{X+Y&lt;1}$}</p>
+<p>$(2)(X,Y)的边缘概率密度$ *实际上就是求带参函数的积分,难点就是上下限的确定,可以画图解决</p>
+<p>$(3) f_{X|Y}(x|y) 和 f_{Y|X}(y|x)$</p>
+<p>$(4) 判定X和Y是否相互独立 $</p>
+<p>(1) 归一性的应用,还有二重积分的应用</p>
+<p>(2)边缘概率密度直接套公式,XY分开求,另一个从负无穷积到正无穷</p>
+<p>(3)条件概率的计算而已,套条件密度概率公式</p>
+<p>(4) 独立性检验直接检测交集是不是概率相乘,还是套上图公式</p>
+<p><em>有些题目换坐标轴即可</em></p>
+<h5 id="二维均匀分布的例题-约会问题"><a href="#二维均匀分布的例题-约会问题" class="headerlink" title="二维均匀分布的例题(约会问题)"></a>二维<em>均匀分布</em>的例题(约会问题)</h5><p>甲乙两艘船要停泊,24小时内到达的概率都是等可能的,且相互独立,如果甲停1小时,乙停2小时,那么求两个中任何一个都不需要等待的概率</p>
+<p>分析:</p>
+<p>X,Y分别表示甲乙船到达时刻,则它们符合均匀分布,$x<del>U(0,24)Y</del>U(0,24)$</p>
+<p>且相互独立,</p>
+<p>若</p>
+<p>$ X&lt; Y \to  X + 1 &lt; Y$</p>
+<p>$ X&gt;Y  \to X &gt; Y +2$</p>
+<p>求</p>
+<p>$P{X+1&lt;Y或X&gt;Y+2}$</p>
+<h5 id="二维正态分布"><a href="#二维正态分布" class="headerlink" title="二维正态分布"></a>二维正态分布</h5><p>有一个看起来很复杂的公式:</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241412299.png"></p>
+<p>然后有(X,Y)服从二维正态分布,记为$(X,Y)~N(\mu_1,\sigma_1^2;\mu_2,\sigma_2^2;ρ)$</p>
+<p>注:|ρ|&lt;1</p>
+<p>推论: <del>据说会考推论的使用</del></p>
+<ul>
+<li><p>$X<del>N(\mu_1,\sigma_1^2)Y</del>N(\mu_2,\sigma_2^2)$</p>
+</li>
+<li><p>独立性balabala,求X,Y的边缘概率密度非常的巧妙,中间凑出来了一个正态分布的标准式子(通过对二次的配项)</p>
+</li>
+<li><p>详细证明可以看百科</p>
+<ul>
+<li><a href="ahref=%22https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/2951835%22">ahref&#x3D;&amp;#34;https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83/2951835&#34;</a>二维正态分布_百度百科 (baidu.com)<code>&lt;/a&gt;</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="case3-二维连续型函数的分布"><a href="#case3-二维连续型函数的分布" class="headerlink" title="case3 二维连续型函数的分布"></a>case3 二维连续型函数的分布</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241413912.png"></p>
+<h4 id="两个结论↑"><a href="#两个结论↑" class="headerlink" title="两个结论↑"></a>两个结论↑</h4><p>替换:Y&#x3D;Z - X</p>
+<ol>
+<li><p>替换:Y&#x3D;Z - X</p>
+<p>a. $f_Z(z) &#x3D; \int_{-∞}^{＋∞}f(x,z-x)dx$</p>
+<p>b. 确定被积函数:f(x,z-x)dx</p>
+<p>c. 确定x的积分范围</p>
+<p>d. 分情况,带入公式</p>
+</li>
+<li><p>替换:X &#x3D; Z - Y</p>
+<p>a. $f_Z(z) &#x3D; \int_{-\infty}^{+\infty}f(z-y,y)$</p>
+<p>b. 确定被积函数:f(z-y,y)dy</p>
+<p>c. 确定y的积分范围</p>
+<p>d. 分情况,带入公式</p>
+</li>
+</ol>
+<h4 id="Z-x3D-XY分布-替换-Y-x3D-frac-Z-X"><a href="#Z-x3D-XY分布-替换-Y-x3D-frac-Z-X" class="headerlink" title="Z &#x3D; XY分布  替换 : $Y &#x3D; \frac{Z}{X}$"></a>Z &#x3D; XY分布  替换 : $Y &#x3D; \frac{Z}{X}$</h4><ol>
+<li>$f_{XY}(z) &#x3D; \int_{-\infty}^{+\infty} \frac{1}{|x|}f(x,\frac{z}{x})dx$</li>
+<li>确定被积函数:$\frac{1}{|x|}f(x,\frac{z}{x})$</li>
+<li>确定x的积分范围</li>
+<li>分情况,代入公式</li>
+</ol>
+<h4 id="Z-x3D-max分布"><a href="#Z-x3D-max分布" class="headerlink" title="Z &#x3D; max分布"></a>Z &#x3D; max分布</h4><ol>
+<li>$F_{max}(z) &#x3D; F_X(z) \times F_Y(z)$</li>
+<li>$f_{max}(z) &#x3D; F&#96;_{max}(z)$</li>
+</ol>
+<p>若X,Y独立同分布</p>
+<ol>
+<li>$F_{max}(z) &#x3D; [F_X(z)]^2$</li>
+<li>$ f_{max}(z) &#x3D; F&#96;_{max}(z)$</li>
+</ol>
+<hr>
+<h3 id="case4-二维独立性"><a href="#case4-二维独立性" class="headerlink" title="case4 二维独立性"></a>case4 二维独立性</h3><h4 id="二维随机变量的独立性"><a href="#二维随机变量的独立性" class="headerlink" title="二维随机变量的独立性"></a>二维随机变量的独立性</h4><p>随机变量A与B相互独立,则</p>
+<p> $ P(AB) &#x3D; P(A)P(B)$</p>
+<p>定义: 设(X,Y)是二维随机变量,若对任何实数对(x,y)均有</p>
+<p>$$P{X\leq x,Y\leq y} &#x3D; P{X\leq x}P{Y\leq y}$$</p>
+<ul>
+<li>实际做题应该只考察证明不独立,找出一个<strong>反例</strong>即可</li>
+</ul>
+<p>连续型XY相互独立</p>
+<p>$$<br>f(x,y) &#x3D; f_X(x)f_Y(y)<br>$$</p>
+<p>推广到n个的情况也是如此，如果只求有限个则令其余部分趋向正无穷</p>
+<ul>
+<li>m维随机向量和n维随机向量相互独立</li>
+<li>随机变量h（x1，x2…)和g（xm,x…)也是相互独立</li>
+</ul>
+<p>例：3维随机变量x1，x2，x3相互独立，则</p>
+<table>
+<thead>
+<tr>
+<th>3维随机变量</th>
+<th>相互独立关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$x_1^2,x_2^2,x_3^2$</td>
+<td>相互独立</td>
+</tr>
+<tr>
+<td>$x_1+x_2$与$x_3$</td>
+<td>相互独立</td>
+</tr>
+<tr>
+<td>$\sin x_1$与$x_2$</td>
+<td>相互独立</td>
+</tr>
+<tr>
+<td>$x_1-x_2$与$x_1+x_2$</td>
+<td>无法判断相互独立关系</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241408235.png" alt="image-20221224140854803"></p>
+<hr>
+<h3 id="case5-二维条件分布"><a href="#case5-二维条件分布" class="headerlink" title="case5 二维条件分布"></a>case5 二维条件分布</h3><p>$P{Y\geq y|X  &#x3D; x}$为“当X &#x3D; x”时，Y的条件分布函数，记为$F_{Y|X}(y|x)$</p>
+<ul>
+<li>注：$F_X(x)$是一元函数，$F(x,y)$是二元函数，$F_{Y|X}(y|x)$是一元函数,x当成常量处理（x是参量），y是变量</li>
+</ul>
+<p>离散两个公式，连续两个公式：</p>
+<p>条件密度概率公式的推导中间用了拉格朗日定理：</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241414490.png"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241415658.png"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241415582.png"></p>
+<hr>
+<h3 id="case6-随机变量的函数及其分布"><a href="#case6-随机变量的函数及其分布" class="headerlink" title="case6 随机变量的函数及其分布"></a>case6 随机变量的函数及其分布</h3><p>主要内容: $h(x_1,x_2,…,x_n)$确定Y</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241416575.png"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241416874.png"></p>
+<p>区间的开闭需要注意</p>
+<h4 id="离散型随机变量的函数与分布律"><a href="#离散型随机变量的函数与分布律" class="headerlink" title="离散型随机变量的函数与分布律"></a>离散型随机变量的函数与分布律</h4><p>$Y &#x3D; g(X) $是随机变量,则:</p>
+<p>$$P{Y &#x3D; y_j} &#x3D; P{g(X) &#x3D; y_j} &#x3D; \sum_{x_i \in S_j}P{X &#x3D; x_i} , j &#x3D; 1,2,…$$</p>
+<h5 id="离散卷积公式"><a href="#离散卷积公式" class="headerlink" title="离散卷积公式"></a>离散卷积公式</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241417612.png"></p>
+<p>p一样,相互独立的二项分布加在一起也是二项分布,所以二项分布是具有可加性的分布</p>
+<p>具有可加性的分布还有泊松分布</p>
+<p>关于如何证明具有可加性,二项见上,剩下的可以根据<em>两个条件</em>推导</p>
+<h4 id="连续型随机变量的函数及其分布"><a href="#连续型随机变量的函数及其分布" class="headerlink" title="连续型随机变量的函数及其分布"></a>连续型随机变量的函数及其分布</h4><ul>
+<li>设X是连续型随机变量,若Y &#x3D; g(X)也是连续型随机变量,则:</li>
+</ul>
+<p>$$F_Y(y) &#x3D; P{g(X) \leq y } &#x3D; \int_{X|g(x) \leq y} f_X(x)dx$$</p>
+<ul>
+<li><p>从前有个人,想研究标准正态分布的平方,还有更多的推导,所以有了以下内容:</p>
+<ul>
+<li>自由度为1的$\chi ^2$分布</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h2><hr>
+<h3 id="case1-数学期望-方差"><a href="#case1-数学期望-方差" class="headerlink" title="case1 数学期望,方差"></a>case1 数学期望,方差</h3><h4 id="常见分布的期望与方差"><a href="#常见分布的期望与方差" class="headerlink" title="常见分布的期望与方差"></a>常见分布的期望与方差</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241418058.png"></p>
+<hr>
+<h4 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p>设连续型随机变量X的概率密度为f(,x),若$\int_{-\infty}^{+\infty}|x|f(x)dx&lt;+\infty$ 绝对收敛确保数学期望有唯一的数值</p>
+<p>则称$E(X) &#x3D; \int_{-\infty}^{+\infty} xf(x) dx$</p>
+<p>为X的数学期望</p>
+<p>注:</p>
+<ul>
+<li>期望时所有可能取值的加权平均值</li>
+<li>部分随机变量X的数学期望不存在,比如后面的柯西分布</li>
+</ul>
+<h5 id="一个核心定理"><a href="#一个核心定理" class="headerlink" title="一个核心定理"></a>一个核心定理</h5><h5 id="设X是随机变量-Y-x3D-g-X-也是随机变量-计算E-g-X"><a href="#设X是随机变量-Y-x3D-g-X-也是随机变量-计算E-g-X" class="headerlink" title="设X是随机变量,Y&#x3D; g(X)也是随机变量,计算E[g(X)]"></a>设X是随机变量,Y&#x3D; g(X)也是随机变量,计算E[g(X)]</h5><ol>
+<li>若X是离散型随机变量,分布律为</li>
+</ol>
+<p>$P{X &#x3D; x_i} &#x3D; p_i, i &#x3D; 1,2,3..$</p>
+<p>若:$\sum_{i&#x3D;1}^{+\infty}g(x_i)p_i$绝对收敛,则有</p>
+<p>$E(Y) &#x3D; E[g(X)] &#x3D; \sum_{i&#x3D;1}^{+\infty}g(x_i)p_i$</p>
+<p>X是连续型随机变量,概率密度为$f_X(x)$</p>
+<ol start="2">
+<li>X是连续型随机变量,概率密度为$f_X(x)$</li>
+</ol>
+<p>若$\int_{-\infty}^{+\infty}|g(x)|f(x)&lt;+\infty $</p>
+<p>则</p>
+<p>$E(Y) &#x3D; E[g(X)] &#x3D; \int_{-\infty}^{+\infty}g(x)f_X(x)dx$</p>
+<ul>
+<li><p>有些分布期望不存在</p>
+</li>
+<li><p>柯西分布$f(x)&#x3D;\frac{1}{\pi(1+x^2)}$</p>
+<ul>
+<li>因为不满足xf(x)条件收敛</li>
+</ul>
+</li>
+</ul>
+<p>如果随机变量相互独立,不仅$f(x,y) &#x3D; f_X(x)f_Y(y)$,而且期望$E(XY) &#x3D; E(X)E(Y)$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241420926.png"></p>
+<h4 id="随机变量期望的性质"><a href="#随机变量期望的性质" class="headerlink" title="随机变量期望的性质"></a>随机变量期望的性质</h4><ul>
+<li><p>常数的期望为本身$E(c) &#x3D; c$</p>
+</li>
+<li><p>线性性: $E(cX) &#x3D; cE(X)$</p>
+<ul>
+<li>$E(aX + b) &#x3D; aE(X) + b$</li>
+</ul>
+</li>
+<li><p>$E(\sum_{i&#x3D;1}^{n}X_i) &#x3D; \sum_{i &#x3D; 1}^{n}E(X_i)$</p>
+</li>
+<li><p>若$X_1,X_2,…,X_n$相互独立,则$E(\prod_{i&#x3D;1}^{n}X_i)&#x3D;\prod_{i&#x3D;1}^{n}E(X_i)$</p>
+</li>
+</ul>
+<hr>
+<p>刻画了随机变量X相对数学期望的偏离程度</p>
+<ul>
+<li>刻画了随机变量X相对数学期望的偏离程度</li>
+<li>方差是随机变量X关于任何值的偏离程度的最小值(当然,关于自身数学期望的偏离程度最小)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241419858.png"></p>
+<ul>
+<li>$D(X)\geq0$</li>
+</ul>
+<h4 id="关于离散型和连续型的计算"><a href="#关于离散型和连续型的计算" class="headerlink" title="关于离散型和连续型的计算"></a>关于离散型和连续型的计算</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241420968.png"></p>
+<h4 id="常用计算公式"><a href="#常用计算公式" class="headerlink" title="常用计算公式"></a>常用计算公式</h4><p>$$D(X) &#x3D; E(X^2) - [E(X)]^2$$</p>
+<h4 id="方差的性质"><a href="#方差的性质" class="headerlink" title="方差的性质"></a>方差的性质</h4><ul>
+<li><p>$E(c) &#x3D; c, D(c) &#x3D; 0$</p>
+</li>
+<li><p>$E(cX) &#x3D; cE(X), D(cX) &#x3D; c^2D(X)$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241421030.png"></p>
+</li>
+<li><p>$D(X)&#x3D;0\iff P{X&#x3D;E(X)}&#x3D;1$</p>
+</li>
+</ul>
+<h4 id="Chebyshev不等式"><a href="#Chebyshev不等式" class="headerlink" title="Chebyshev不等式"></a>Chebyshev不等式</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241421067.png"></p>
+<ul>
+<li>证明倒很简单,就一个简单的放缩</li>
+</ul>
+<h4 id="随机变量X的标准化变形"><a href="#随机变量X的标准化变形" class="headerlink" title="随机变量X的标准化变形"></a>随机变量X的标准化变形</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241421749.png"></p>
+<hr>
+<h5 id="必考补充定理"><a href="#必考补充定理" class="headerlink" title="必考补充定理"></a>必考补充定理</h5><p>设$X~N(0,\sigma^2)$ , 则$E[X^n]&#x3D;(n-1)!!\sigma^n$ 当n为偶数</p>
+<p>注:</p>
+<ul>
+<li>n为奇数时,结果是0</li>
+<li>双阶乘是隔一个相乘</li>
+</ul>
+<p><strong>证明:</strong></p>
+<p>令</p>
+<p>$$I(n) &#x3D; E[X^n] &#x3D; \int_{-\infty}^{+\infty} x^n \frac{1}{\sqrt{2\pi}\sigma }e^{-\frac{x^2}{2\sigma ^2}}dx$$</p>
+<ul>
+<li>n为奇数时,该函数为奇函数在对称区间上的积分,为0</li>
+<li>n为偶数时,可以利用分布积分得到一个递推式,最终得到结论</li>
+</ul>
+<hr>
+<p>关于正态分布:</p>
+<ul>
+<li><p>若X是n维非退化(|C_x|!&#x3D;0)则Y<strong>不可能</strong>是m维非退化正态分布(m&#x3D;n+1)</p>
+</li>
+<li><p>当m&lt;&#x3D;n时,Y是非退化(r(k)&#x3D;m)那么</p>
+<ul>
+<li>非退化正态随机变量的行满秩线性变换为非退化正态分布</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="case2-协方差-相关系数与矩"><a href="#case2-协方差-相关系数与矩" class="headerlink" title="case2 协方差,相关系数与矩"></a>case2 协方差,相关系数与矩</h3><p>协方差</p>
+<p>协方差,相关系数就是描述随机变量之间相互关系的数字特征</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241424102.png"></p>
+<h4 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h4><p>若$E{[X-E(X)][Y-E(Y)]}$存在,称:</p>
+<p>$$Cov(X,Y) &#x3D; E{[X-E(X)][Y-E(Y)]}$$</p>
+<p>为X,Y的协方差</p>
+<p><em><strong>特别的</strong></em></p>
+<p>有$D(X) &#x3D; Cov(X,X)$</p>
+<p>$D(X\pm Y) &#x3D; D(X) + D(Y)\pm2Cov(X,Y)$</p>
+<p><strong>计算公式</strong></p>
+<p>$$Cov(X,Y) &#x3D; E(XY)-E(X)E(Y)$$</p>
+<p><strong>协方差的性质</strong></p>
+<ul>
+<li>$Cov(X,Y) &#x3D; Cov(Y,X)$</li>
+<li>$Cov(aX,bY) &#x3D; abCov(X,Y)$</li>
+<li>$Cov(X_1+X_2,Y) &#x3D; Cov(X_1,Y) + Cov(X_2,Y)$</li>
+</ul>
+<hr>
+<p>相关系数是衡量两个随机变量之间_线性相关程度_的数字特征</p>
+<ul>
+<li>相关系数是衡量两个随机变量之间<strong>线性相关程度</strong>的数字特征</li>
+<li>$\rho_{XY}&#x3D;0$仅说明X,Y之间没有线性关系,但是可以有其他非线性关系</li>
+</ul>
+<p>$设二维随机变量X,Y的D(X)&gt;0,D(Y)&gt;0,称$</p>
+<p>$$\rho_{XY} &#x3D; \frac{Cov(X,Y)}{\sqrt{D(X)} \sqrt{D(Y)}}$$</p>
+<p>为随机变量X与Y的<strong>相关系数</strong></p>
+<p><strong>注:</strong></p>
+<ul>
+<li>$\rho_{XY}$是一个无量纲的量</li>
+<li>$\rho_{XY}&#x3D;E[\frac{X-E(X)}{\sqrt{D(X)}}\frac{Y-E(Y)}{\sqrt{D(Y)}}]&#x3D;E[X^{∗}Y^{∗}]&#x3D;Cov(X^{∗},Y^{∗})$</li>
+</ul>
+<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><ul>
+<li><p>设随机变量X,Y的相关系数$\rho$存在,则:</p>
+<ul>
+<li><p>$|\rho|\leq1$</p>
+</li>
+<li><p>$|\rho|&#x3D;1\iff X与Y依概率为1线性相关,即$</p>
+<ul>
+<li>存在$\alpha,\beta,(\alpha\neq 0),有P{Y&#x3D;\alpha X+\beta}&#x3D;1$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>定理</strong>:</p>
+<ul>
+<li><p>若随机变量X与Y相互独立,则X与Y不相关,即有$\rho_{XY}&#x3D;0$</p>
+<ul>
+<li><p>逆定理不成立</p>
+<ul>
+<li><em>但是正态分布中,相互独立和</em>$\rho_{XY}&#x3D;0$<em>是等价的</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="协方差矩阵"><a href="#协方差矩阵" class="headerlink" title="协方差矩阵"></a>协方差矩阵</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241424469.png"></p>
+<p>性质:</p>
+<ul>
+<li>$c_{ii}&#x3D;D(X_i)i&#x3D;1,2,3,…n;$</li>
+<li>$c_{ij}&#x3D;c_{ji}i,j&#x3D;1,2,…,n;$对称阵</li>
+<li>C是非负定矩阵</li>
+<li>$c_{ij}^2\leq c_{ii}c_{jj}$, $i,j&#x3D;1,2,\ldots,n$</li>
+</ul>
+<h4 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h4><p>定义1:设X为随机变量,若$E(|X|^k)&lt;+\infty$,称</p>
+<p>$$\gamma_k &#x3D; E(X^k)    k &#x3D; 1,2,3…$$</p>
+<p>为X的<em>k阶原点矩</em></p>
+<p>称$\alpha_k&#x3D;E(|X|^k),k&#x3D;1,2,3…..$为X的<em>k阶绝对原点矩</em></p>
+<p>定义2:设X为随机变量,若$E[|X-E(X)|^k]&lt;+\infty$,称</p>
+<p>$$\mu_k &#x3D; E{[X-E(X)]^k}\ k &#x3D;1,2,3…$$</p>
+<p>为X的<em>k阶中心矩</em></p>
+<p>称</p>
+<p>$$\beta_k &#x3D; E[|X-E(X)|^k]  \\ k &#x3D; 1,2,3…$$</p>
+<p>为X的<em>k阶绝对中心矩</em></p>
+<p>然后观察得到结论—-<strong>随机变量的矩是数!</strong></p>
+<hr>
+<h3 id="补充内容-分布函数的收敛"><a href="#补充内容-分布函数的收敛" class="headerlink" title="补充内容 分布函数的收敛"></a>补充内容 分布函数的收敛</h3><p><strong>一.r.v.序列的收敛性(random variable&#x2F;vector)</strong></p>
+<p>[又叫理想中的爱情]</p>
+<p>回顾:$a_n\to a,如a_n&#x3D;\frac{1}{n}a_n\to0(when n\to\infty)$</p>
+<p>$\forall\epsilon&gt;0,\exists N,当n&gt;N时,有|a_n-a|&lt;\epsilon$</p>
+<p>引例1:</p>
+<p>[现实中的爱情]</p>
+<p>设</p>
+<table>
+<thead>
+<tr>
+<th>$X_n$</th>
+<th>0</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>$1-\frac{1}{n}$</td>
+<td>$\frac{1}{n}$</td>
+</tr>
+</tbody></table>
+<p>那么$|X_n-0|&lt;\epsilon不等价于X_n&#x3D;0$</p>
+<p>但是</p>
+<p>当$X_n\to X$ $X:\Omega\to R$ $X(\omega)&#x3D;x$</p>
+<p>$X_n,X$均定义在$\Omega$上</p>
+<ol>
+<li>若对$\forall\omega\in\Omega:|X_n(\omega)- X(\omega)|&lt;\epsilon$等价于${\omega:|X_n(\omega)-X(\omega)|&lt;\epsilon}&#x3D;\Omega$等价于${|X_n - X|&lt;\epsilon}&#x3D;\Omega$</li>
+</ol>
+<p>称$X_n$处处收敛于$X$,或$X_n$必然收敛于$X$</p>
+<p>证为$X_n\to X(everywhere)或者X_n\to X(sure)$</p>
+<ol>
+<li>若$P{|X_n - X|&lt;\epsilon}&#x3D;1$等价于$P{\lim_{n\to\infty}X_n&#x3D;X}&#x3D;1$</li>
+</ol>
+<p>称$X_n$几乎处处收敛于$X$,或$X_n$几乎必然处处收敛于$X$ 或$X_n$以概率1收敛于$X$</p>
+<p>证为$X_n\to X(almost everwhere)$或$X_n\to X(a.s.)$或$X_n\to X(w.P.1)$</p>
+<p>继续放宽</p>
+<ol>
+<li>若$\lim_{n\to\infty}P{|X_n - X|&lt;\epsilon}&#x3D;1$</li>
+</ol>
+<p>称$X_n$依概率收敛于$X$</p>
+<p>证为$X_n\to X(P)$</p>
+<p>再放宽</p>
+<ol>
+<li>设$X_n,X$的分布函数为$F_n(X),F(X)$</li>
+</ol>
+<p>若$F_n(X)\to F(X)$</p>
+<p>仅在$F(X)$连续点成立</p>
+<p>则称$F_n(X)\to F(X)(函数列的收敛)$或$X_n\to^{L}_{F}X$</p>
+<p>$$<br>处处收敛\to 几乎处处收敛 \to 依概率收敛 \to 依分布收敛<br>$$</p>
+<hr>
+<h2 id="第五章-随机变量序列的极限"><a href="#第五章-随机变量序列的极限" class="headerlink" title="第五章 随机变量序列的极限"></a>第五章 随机变量序列的极限</h2><hr>
+<h3 id="case1-大数-中心极限定理"><a href="#case1-大数-中心极限定理" class="headerlink" title="case1 大数,中心极限定理"></a>case1 大数,中心极限定理</h3><h4 id="大数定理"><a href="#大数定理" class="headerlink" title="大数定理"></a>大数定理</h4><p><strong>二.Markov不等式(马尔可夫不等式)</strong></p>
+<p>$$<br>P{|X| &lt; \epsilon} \geq \frac{E(|X|^k)}{\epsilon^k}<br>$$</p>
+<p>证设$X$密度为$f(x)$</p>
+<p>$$<br>P{|X| &gt; \epsilon} &#x3D; \int_{|X| &gt; \epsilon}f(x)dx \leq \int_{|x| &gt; \epsilon} \frac{|X|^k|}{\epsilon^k}f(x)dx\leq \frac{1}{\epsilon^k} \int_{-\infty}^{+\infty}|X|^kf(x)dx &#x3D; \frac{1}{\epsilon^k}E(|X|^k)<br>$$</p>
+<ul>
+<li><strong>特别的,当k&#x3D;2,令Y&#x3D;X-E(X) ,E{|Y|^2}&#x3D;D(X)存在,有</strong></li>
+</ul>
+<p><strong>切比雪夫不等式</strong></p>
+<p>$$<br>P{|X-E(X)|\geq\epsilon}\leq\frac{D(X)}{\epsilon ^2}<br>$$</p>
+<p>或者</p>
+<p>$$<br>P{|X-E(X)|&lt;\epsilon} \geq 1-\frac{D(X)}{\epsilon ^2}<br>$$</p>
+<h5 id="大数定理-1"><a href="#大数定理-1" class="headerlink" title="大数定理"></a>大数定理</h5><p>设${X_n}$是一个随机变量序列,其数学期望都存在,若对任意的$\epsilon&gt;0$有</p>
+<p>$$<br>\lim_{n\to \infty} P{|\frac{1}{n}\sum_{i&#x3D;1}^{n}X_i - \frac{1}{n} \sum_{i&#x3D;1}^{n}E(X_i)|&lt;\epsilon} &#x3D; 1<br>$$</p>
+<p>称随机变量序列${X_n}$服从大数定理</p>
+<p><strong>注</strong>:</p>
+<ol>
+<li>${X_k}$服从大数定律是指</li>
+</ol>
+<p>$$<br>\frac{1}{n}\sum_{i&#x3D;1}^{n}X_i \stackrel{p}{\longrightarrow} \frac{1}{n}\sum_{i&#x3D;1}^{n}E(X_i)<br>$$</p>
+<ol start="2">
+<li>服从大数定律即是${X_k}$的前n项算术平均将紧密的聚集在数学期望的附近</li>
+</ol>
+<h4 id="常见的大数定律"><a href="#常见的大数定律" class="headerlink" title="常见的大数定律"></a>常见的大数定律</h4><h5 id="切比雪夫大数定律"><a href="#切比雪夫大数定律" class="headerlink" title="切比雪夫大数定律"></a>切比雪夫大数定律</h5><ul>
+<li><p>设{X_k}是相互独立的随机变量序列,期望方差都存在,则存在常数C,满足</p>
+<p>$$<br>D(X_K)&lt;C \\ k&#x3D;1,2…<br>$$</p>
+</li>
+</ul>
+<p>说明{X_k}服从大数定律</p>
+<h5 id="独立同分布大数定律"><a href="#独立同分布大数定律" class="headerlink" title="独立同分布大数定律"></a>独立同分布大数定律</h5><ul>
+<li>设{X_k}是相互独立且同分布的随机变量序列,且$E(X_k)&#x3D;\mu,D(X_k)&#x3D;\sigma^2,k&#x3D;1,2,3..$,则{X_k}服从大数定律,有:</li>
+</ul>
+<p>$$<br>\lim_{n\to \infty}P{|\frac{1}{n}\sum_{k&#x3D;1}^{n}X_k-\mu|&lt;\epsilon}&#x3D;1<br>$$</p>
+<ul>
+<li>此定理为切比雪夫大数定理的推论</li>
+<li>为实际应用中大量重复测算值得算术平均值作为精确值得计算提供理论依据</li>
+<li>有更一般的结论</li>
+</ul>
+<h5 id="辛钦大数定律"><a href="#辛钦大数定律" class="headerlink" title="辛钦大数定律"></a>辛钦大数定律</h5><ul>
+<li><em><strong>不要求掌握,了解就行</strong></em></li>
+<li>设{X_k}独立同分布,X_k若有有限的数学期望a,则{X_K}服从大数定律</li>
+</ul>
+<h5 id="伯努利-Bernulli-大数定律"><a href="#伯努利-Bernulli-大数定律" class="headerlink" title="伯努利(Bernulli)大数定律"></a>伯努利(Bernulli)大数定律</h5><ul>
+<li>设$\frac{m}{n}$是n次重复独立试验中事件A发生的频率,p是事件A在每次试验中发生的概率,则对$\forall\epsilon&gt;0$,有</li>
+</ul>
+<p>$$<br>\lim_{n\to \infty}P{|\frac{m}{n}-p|&lt;\epsilon } &#x3D; 1<br>$$</p>
+<ul>
+<li>此定理为切比雪夫大数定律的推论之一</li>
+<li>严格的数学形式描述了频率的稳定性</li>
+<li>小概率事件在实际中可以看作不可能事件(买彩票中奖)</li>
+</ul>
+<h4 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h4><p><strong>定义</strong>:依分布收敛</p>
+<p>设随机变量$X,X_1,X_2,…$的分布函数分别为$F(x),F(x_1),…$,若</p>
+<p>$$<br>\lim_{n\to \infty} F_n(x) &#x3D; F(x)<br>$$</p>
+<p>在F(x)的每一个连续点上都成立,则称随机变量序列${X_k},k&#x3D;1,2,…$依分布收敛于X.并记为</p>
+<p>$$<br>X_n \stackrel{L}{\longrightarrow}X<br>$$</p>
+<p><strong>定义</strong>:中心极限定理</p>
+<p>设随机变量$X~N(0,1),{X_k} , k&#x3D;1,2,…$相互独立,且数学期望和方差都存在,若标准化随机变量序列</p>
+<p>$$<br>\frac{\sum_{k&#x3D;1}^{n}X_k-\sum_{k&#x3D;1}^{n}E(X_k)}{\sqrt{\sum_{k&#x3D;1}^{n}D(X_k)}}<br>$$</p>
+<p>依分布收敛于X,则称随机变量序列{X_k},k&#x3D;1,2,3…服从中心极限定理</p>
+<p>注:</p>
+<ul>
+<li>解释了现实中哪些随机变量可以看为服从正态分布</li>
+<li>给出了概率的近似计算公式</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241429884.png"></p>
+<h5 id="独立同分布中心极限定理"><a href="#独立同分布中心极限定理" class="headerlink" title="独立同分布中心极限定理"></a>独立同分布中心极限定理</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241429876.png"></p>
+<ul>
+<li><p>产品检验</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241429470.png"></li>
+</ul>
+</li>
+<li><p>产品测重</p>
+<ul>
+<li><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241430151.png"></li>
+</ul>
+</li>
+</ul>
+<h5 id="棣莫佛-拉普拉斯中心极限定理"><a href="#棣莫佛-拉普拉斯中心极限定理" class="headerlink" title="棣莫佛-拉普拉斯中心极限定理"></a>棣莫佛-拉普拉斯中心极限定理</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241430965.png"></p>
+<ul>
+<li>航船的稳定性</li>
+<li>报亭售报问题</li>
+</ul>
+<hr>
+<h2 id="第六章-数理统计的基本概念"><a href="#第六章-数理统计的基本概念" class="headerlink" title="第六章 数理统计的基本概念"></a>第六章 数理统计的基本概念</h2><h4 id="总体-样本与统计量"><a href="#总体-样本与统计量" class="headerlink" title="总体,样本与统计量"></a>总体,样本与统计量</h4><h5 id="总体与个体"><a href="#总体与个体" class="headerlink" title="总体与个体"></a>总体与个体</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241430001.png"></p>
+<p><strong>总体分布</strong>是指__数量指标__<strong>X</strong>的分布</p>
+<h4 id="样本"><a href="#样本" class="headerlink" title="样本"></a>样本</h4><p>按照__一定规则__从总体中抽取的一部分个体</p>
+<p><strong>是一组随机变量</strong></p>
+<p>$$<br>(X_1,X_2,…,X_n)<br>$$</p>
+<p>满足:</p>
+<ul>
+<li>$X_i$与总体同分布</li>
+<li>$X_1,X_2,…,X_n$相互独立</li>
+</ul>
+<p>以上两点要求的是<strong>简单随机样本</strong>,以后的样本都是这样的样本.</p>
+<p><strong>抽样</strong>:抽取样本的过程</p>
+<p><strong>样本容量</strong>:样本中个体的数目n</p>
+<p>**样本值(样本观测值):**具体观察数值记作$x_1,x_2,…,x_n$</p>
+<h4 id="统计量"><a href="#统计量" class="headerlink" title="统计量"></a>统计量</h4><p>不包含未知参数的样本的函数</p>
+<p>$$<br>T &#x3D; g(X_1,X_2,…,X_n)<br>$$</p>
+<p>对于相应的样本值$(x_1,x_2,…,x_n)$,称</p>
+<p>$$<br>t &#x3D; g(x_1,x_2,…,x_n)<br>$$</p>
+<p>为统计量的<strong>统计值</strong></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241431315.png"></p>
+<hr>
+<h3 id="case1-常用四种统计分布"><a href="#case1-常用四种统计分布" class="headerlink" title="case1 常用四种统计分布"></a>case1 常用四种统计分布</h3><p>标准正态分布</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241431614.png"></p>
+<h4 id="chi-2-卡方-分布"><a href="#chi-2-卡方-分布" class="headerlink" title="$\chi^2$(卡方)分布"></a>$\chi^2$(卡方)分布</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241431539.png"></p>
+<p>上面的两个不用记,当然也记不住,<em><strong><strong>重要的看下面</strong></strong></em></p>
+<h4 id="卡方分布的一个定理"><a href="#卡方分布的一个定理" class="headerlink" title="卡方分布的一个定理"></a>卡方分布的一个定理</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241432078.png"></p>
+<h4 id="卡方分布的三条性质"><a href="#卡方分布的三条性质" class="headerlink" title="卡方分布的三条性质"></a>卡方分布的三条性质</h4><h5 id="性质一-数字特征"><a href="#性质一-数字特征" class="headerlink" title="性质一:数字特征"></a>性质一:数字特征</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241432194.png"></p>
+<h5 id="性质二-可加性"><a href="#性质二-可加性" class="headerlink" title="性质二:可加性"></a>性质二:可加性</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241432179.png"></p>
+<h5 id="性质三-大样本分位数-chi-2-alpha"><a href="#性质三-大样本分位数-chi-2-alpha" class="headerlink" title="性质三:大样本分位数$\chi^2_\alpha$"></a>性质三:大样本分位数$\chi^2_\alpha$</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241432208.png"></p>
+<h4 id="自由度为n的t分布-T-t-n"><a href="#自由度为n的t分布-T-t-n" class="headerlink" title="自由度为n的t分布 T~t(n)"></a>自由度为n的t分布 T~t(n)</h4><p>又名学生氏分布–第一个研究者笔名是Student</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241432594.png"></p>
+<p>服从标准正态分布的随机变量与 &#x2F;符合卡方分布的随机变量自己的自由度的开方 的比值，符合T分布</p>
+<h4 id="F分布-F-F-n1-n2"><a href="#F分布-F-F-n1-n2" class="headerlink" title="F分布  F~F(n1,n2)"></a>F分布  F~F(n1,n2)</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241433363.png"></p>
+<p>两个服从标准正态分布的随机变量除以各自的自由度的商，符合F分布</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241433288.png"></p>
+<hr>
+<h3 id="case2-抽样分布"><a href="#case2-抽样分布" class="headerlink" title="case2 抽样分布"></a>case2 抽样分布</h3><p>单正态总体的分布定理</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241433630.png"></p>
+<p>定理1和3不做要求，用到矩阵变化</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241434708.png"></p>
+<hr>
+<h2 id="第七章-参数估计"><a href="#第七章-参数估计" class="headerlink" title="第七章 参数估计"></a>第七章 参数估计</h2><p>定义: <strong>参数估计</strong>是对已知分布类型的总体,利用样本对其未知参数做出估计</p>
+<p>参数估计</p>
+<ul>
+<li><p>参数估计</p>
+<ul>
+<li><p>点估计</p>
+<ul>
+<li>矩估计</li>
+<li>极大似然估计</li>
+</ul>
+</li>
+<li><p>区间估计</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="矩估计思路过程"><a href="#矩估计思路过程" class="headerlink" title="矩估计思路过程"></a>矩估计思路过程</h4><table>
+<thead>
+<tr>
+<th>$X\sim P(\lambda)$</th>
+<th>比如泊松分布</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\lambda$未知</td>
+<td>条件:样本X1,X2,…,Xn</td>
+</tr>
+<tr>
+<td>建立</td>
+<td>$\hat\lambda&#x3D;h(x_1,x_2,…,x_n)$</td>
+</tr>
+<tr>
+<td>建立</td>
+<td>未知参数与样本的某个方程</td>
+</tr>
+<tr>
+<td>如果建立方程(组)</td>
+<td>依据是什么?</td>
+</tr>
+<tr>
+<td>$(x_1,x_2,…,x_n)$独立同分布</td>
+<td>联想大数定律</td>
+</tr>
+<tr>
+<td>$\frac{1}{n}\sum_{i&#x3D;1}^{n}x_i^k\to{p}E(x^k)$ 依照概率p</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>如果题目中没有样本,需要加上这句话:</p>
+<ul>
+<li>设$x_1,..,x_n$是来自总体X的样本</li>
+</ul>
+<p>令,…..</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241434441.png"></p>
+<h4 id="极大似然估计-M-L-E"><a href="#极大似然估计-M-L-E" class="headerlink" title="极大似然估计(M.L.E.)"></a>极大似然估计(M.L.E.)</h4><p>maximum likelihood estimation</p>
+<p>按最大可能性准则推断小概率事件原理</p>
+<p>做一次试验,事件A发生了,由小概率事件原理,$P(A) &#x3D; L(\theta)$不应该小;</p>
+<p>现确定$P(A)$,由最大可能性准则,令$P(A) &#x3D; maxL(\theta)$等价的,令$\theta$为$L(\theta)$的最大值点</p>
+<p>一般的,$A&#x3D; (X_1 &#x3D; x_1, …,X_n &#x3D; x_n)$</p>
+<ul>
+<li>离散型总体分布</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241435823.png"></p>
+<ul>
+<li>连续型总体分布</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241435676.png"></p>
+<hr>
+<h3 id="case1-估计量的优良性准则"><a href="#case1-估计量的优良性准则" class="headerlink" title="case1 估计量的优良性准则"></a>case1 估计量的优良性准则</h3><p>无偏性</p>
+<p>有效性</p>
+<p>相合性</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241435907.png"></p>
+<hr>
+<h3 id="case2-置信区间"><a href="#case2-置信区间" class="headerlink" title="case2 置信区间"></a>case2 置信区间</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241436835.png"></p>
+<p>一个例子搞定7，3和第八章</p>
+<p>这个方法叫做–枢轴变量法</p>
+<p>因为$\mu$是一个数（总体矩是个数），没办法求概率</p>
+<p>所以找X的算数平均值来曲线救国，最后对X的算数平均数进行标准化变形时，里面就有$\mu$</p>
+<p>单正态总体四个问题</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241437168.png"></p>
+<hr>
+<h2 id="第八章-假设检验"><a href="#第八章-假设检验" class="headerlink" title="第八章 假设检验"></a>第八章 假设检验</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241437791.png"></p>
+<hr>
+<h2 id="第九章-回归分析"><a href="#第九章-回归分析" class="headerlink" title="第九章 回归分析"></a>第九章 回归分析</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/picgoimgbed/202212241438266.png"></p>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/28d5cef4">https://skddj.github.io/article/28d5cef4</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+                                    <span class="chip bg-color">概率论与数理统计</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8A/">
+                                    <span class="chip bg-color">大二上</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/488818ef">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="量化交易与商业银行">
+                        
+                        <span class="card-title">量化交易与商业银行</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            主要介绍了量化交易和商业银行的相关知识，包括课程概述、量化交易简介、股票量化交易、期货量化交易、个人信用风险评估和消费信贷产品设计等主题。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                        <span class="chip bg-color">大二下</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E4%B8%8E%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C/">
+                        <span class="chip bg-color">量化交易与商业银行</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/7045141b">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Verilog学习笔记:基础语法与代码规范总结">
+                        
+                        <span class="card-title">Verilog学习笔记:基础语法与代码规范总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            本文对Verilog语言进行简要概览,并给出学习过程中的代码案例,旨在梳理语法要点,帮助快速入门Verilog语法。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Technology/" class="post-category">
+                                    Technology
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">编程学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">基础语法</span>
+                    </a>
+                    
+                    <a href="/tags/Verilog/">
+                        <span class="chip bg-color">Verilog</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+                        <span class="chip bg-color">计算机组成原理</span>
+                    </a>
+                    
+                    <a href="/tags/CPU/">
+                        <span class="chip bg-color">CPU</span>
+                    </a>
+                    
+                    <a href="/tags/Vivado/">
+                        <span class="chip bg-color">Vivado</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>

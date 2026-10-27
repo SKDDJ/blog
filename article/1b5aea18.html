@@ -1,0 +1,1938 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="公司金融, Yiming Shi&#39;s blog">
+    <meta name="description" content="课程笔记">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>公司金融 | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">公司金融</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%85%AC%E5%8F%B8%E9%87%91%E8%9E%8D/">
+                                <span class="chip bg-color">公司金融</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                <span class="chip bg-color">大三上</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    11 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="Lecture1-第一章：公司目标和治理"><a href="#Lecture1-第一章：公司目标和治理" class="headerlink" title="Lecture1 第一章：公司目标和治理"></a>Lecture1 第一章：公司目标和治理</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308291710304.jpg"></p>
+<p>brealey 公司金融机械工业出版社两册 tirole 公司金融理论参考</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308291710167.jpg"></p>
+<h3 id="1-1-公司财务管理的目标"><a href="#1-1-公司财务管理的目标" class="headerlink" title="1.1 公司财务管理的目标"></a>1.1 公司财务管理的目标</h3><blockquote>
+<p>股东利益最大化</p>
+</blockquote>
+<h3 id="1-2-所有权与经营权的分离"><a href="#1-2-所有权与经营权的分离" class="headerlink" title="1.2 所有权与经营权的分离"></a>1.2 所有权与经营权的分离</h3><h4 id="1-2-1-企业的组织形式"><a href="#1-2-1-企业的组织形式" class="headerlink" title="1.2.1 企业的组织形式"></a>1.2.1 企业的组织形式</h4><ol>
+<li>业主独资</li>
+<li>合伙制 普通合伙和有限合伙 以上企业对债务人承担无限责任</li>
+<li>公司 区别于其所有者的法人，股东承担有限责任 代理关系： 股东：持有股份，具有投票权和分红权，权利有限 经理：又有经营权&#x2F;控制权</li>
+</ol>
+<h4 id="1-2-2-公司的层级结构"><a href="#1-2-2-公司的层级结构" class="headerlink" title="1.2.2 公司的层级结构"></a>1.2.2 公司的层级结构</h4><ul>
+<li>公司：股东持有股份而拥有企业<ul>
+<li>个人投资者或机构投资者（养老基金、共同基金等）</li>
+</ul>
+</li>
+<li>董事会：代表股东利益的高管</li>
+</ul>
+<blockquote>
+<p>公司所有者把经营企业的责任委托给职业经理</p>
+</blockquote>
+<h4 id="1-2-3-所有权和经营权分离的好处"><a href="#1-2-3-所有权和经营权分离的好处" class="headerlink" title="1.2.3 所有权和经营权分离的好处"></a>1.2.3 所有权和经营权分离的好处</h4><ol>
+<li>现代经济需要规模化生产</li>
+<li>不确定的环境中，所有这需要分散化投资风险</li>
+<li>所有者可以降低信息收集的成本</li>
+<li>企业成为一个“持续经营（going concern）”的主体</li>
+</ol>
+<h4 id="1-2-4-董事会构成"><a href="#1-2-4-董事会构成" class="headerlink" title="1.2.4 董事会构成"></a>1.2.4 董事会构成</h4><ol>
+<li>执行董事 董事长及其利益一致者，俗称“经理”</li>
+<li>独立董事 或称外部董事（outside directors）</li>
+</ol>
+<h3 id="1-3-代理问题"><a href="#1-3-代理问题" class="headerlink" title="1.3 代理问题"></a>1.3 代理问题</h3><h4 id="1-3-1-所有者与管理层的利益冲突"><a href="#1-3-1-所有者与管理层的利益冲突" class="headerlink" title="1.3.1 所有者与管理层的利益冲突"></a>1.3.1 所有者与管理层的利益冲突</h4><p>代理关系：</p>
+<ol>
+<li>股东与经理</li>
+<li>大股东与小股东</li>
+<li>股东与债权人 代理问题：</li>
+<li>经理不努力</li>
+<li>建立庞大的帝国</li>
+<li>建立自己的护城河</li>
+<li>以权谋私</li>
+</ol>
+<h4 id="1-3-2-经理不努力"><a href="#1-3-2-经理不努力" class="headerlink" title="1.3.2 经理不努力"></a>1.3.2 经理不努力</h4><p>道德风险（moral hazard）的表现</p>
+<ul>
+<li>激励与业绩挂钩（萝卜+大棒）</li>
+<li>监控：董事会&#x2F;资本市场</li>
+</ul>
+<h4 id="1-3-3-建立庞大的帝国"><a href="#1-3-3-建立庞大的帝国" class="headerlink" title="1.3.3 建立庞大的帝国"></a>1.3.3 建立庞大的帝国</h4><ul>
+<li>由于等级年薪制度导致的做大而不做强</li>
+<li>面子工程（pet project），从事很多不能给股东带来财富的项目</li>
+</ul>
+<h4 id="1-3-4-沟壕防护战略"><a href="#1-3-4-沟壕防护战略" class="headerlink" title="1.3.4 沟壕防护战略"></a>1.3.4 沟壕防护战略</h4><ul>
+<li>选择自己最熟悉的领域，即使 NPV &#x3D; 0 甚至为负</li>
+<li>在公司实行“毒丸计划”防止公司被并购</li>
+<li>粉饰财报</li>
+</ul>
+<p>$$<br>MB &#x3D; \frac{Market Value}{Book Value}</p>
+<p>$$</p>
+<p>e.g.</p>
+<ol>
+<li>$\mathbb{X}$ ：Elon Musk 开除印度人团队</li>
+<li>平安银行：内部的保险业务（放弃了核心竞争力）</li>
+</ol>
+<h4 id="1-3-5-为自己谋取私利"><a href="#1-3-5-为自己谋取私利" class="headerlink" title="1.3.5 为自己谋取私利"></a>1.3.5 为自己谋取私利</h4><ul>
+<li>大量管理层为自己的谋私利： 在职消费（perks）：装修豪华的办公室、配豪车、奢侈度假</li>
+<li>大股东和小股东的代理：公司的控制权在几个大股东手里，外部股东可能利益受损<ul>
+<li>隧道挖掘（Tunneling）：资金占用和违规担保</li>
+<li>关联交易：e.g. 上游股东控股下游企业高价收购原材料从中获利</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>代理问题对融资难的问题的解释： 拒绝（terminate）融资–信贷配给</p>
+</blockquote>
+<h4 id="1-3-6-公司治理"><a href="#1-3-6-公司治理" class="headerlink" title="1.3.6 公司治理"></a>1.3.6 公司治理</h4><p>公司治理探讨：</p>
+<ul>
+<li>选出合格的高管</li>
+<li>投资者怎样使高管回报他们</li>
+</ul>
+<p>公司治理的目的：</p>
+<ul>
+<li>建立合理的机制：激励和监控高管；内部治理，好的信息沟通和组织设计</li>
+<li>信息披露：法律、政策、市场的良好运作</li>
+</ul>
+<h2 id="Lecture2-第二章：风险与资本成本"><a href="#Lecture2-第二章：风险与资本成本" class="headerlink" title="Lecture2 第二章：风险与资本成本"></a>Lecture2 第二章：风险与资本成本</h2><h3 id="2-1-NPV法则与资本的机会成本"><a href="#2-1-NPV法则与资本的机会成本" class="headerlink" title="2.1 NPV法则与资本的机会成本"></a>2.1 NPV法则与资本的机会成本</h3><p>$$<br>NPV &#x3D; \sum_{t &#x3D; 0}^{T} \frac{CF_t}{(1+r)^t} </p>
+<p>$$</p>
+<p>机会成本： 投资“相同风险”项目获得的预期回报率</p>
+<blockquote>
+<p>相同风险： 同行业的项目</p>
+</blockquote>
+<p>市场风险：$r_{MKT}+r_{IND}$或者 Fama-French 三因子模型反应的风险</p>
+<h4 id="2-1-1-公司的一般性投资"><a href="#2-1-1-公司的一般性投资" class="headerlink" title="2.1.1 公司的一般性投资"></a>2.1.1 公司的一般性投资</h4><p>资本支出（Capital Expenditure）的对称为“收益支出”或者“成本支出”，指企业为了长期资产而发生的支出，或为了取得为一个以上会计期间提供效益的财产或劳务所发生的支出。 e.g. 600519 一般性投资</p>
+<h3 id="2-2-资本成本的应用"><a href="#2-2-资本成本的应用" class="headerlink" title="2.2 资本成本的应用"></a>2.2 资本成本的应用</h3><h4 id="2-2-1-为什么要估计企业的资本成本"><a href="#2-2-1-为什么要估计企业的资本成本" class="headerlink" title="2.2.1 为什么要估计企业的资本成本"></a>2.2.1 为什么要估计企业的资本成本</h4><blockquote>
+<p>公司的资本成本是指公司所有资产的预期收益率</p>
+</blockquote>
+<ul>
+<li>大部分新投资的项目可能是现有资产的扩张或者升级</li>
+<li>资本成本可为新投资项目风险程度的参考</li>
+<li>可以为高管设立经营目标，考察其业绩</li>
+</ul>
+<h3 id="2-3-贝塔值测定与产业资本资本成本"><a href="#2-3-贝塔值测定与产业资本资本成本" class="headerlink" title="2.3 贝塔值测定与产业资本资本成本"></a>2.3 贝塔值测定与产业资本资本成本</h3><h4 id="2-3-1-CAPM-的两个假设"><a href="#2-3-1-CAPM-的两个假设" class="headerlink" title="2.3.1 CAPM 的两个假设"></a>2.3.1 CAPM 的两个假设</h4><ol>
+<li>信息一致，即不存在信息不对称</li>
+<li>行为一致，即所有人都是理性人选择最优决策 只存在系统风险</li>
+</ol>
+<h4 id="2-3-2-效用函数"><a href="#2-3-2-效用函数" class="headerlink" title="2.3.2 效用函数"></a>2.3.2 效用函数</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121705580.jpg"></p>
+<h4 id="2-3-3-CAPM-的理论推导"><a href="#2-3-3-CAPM-的理论推导" class="headerlink" title="2.3.3 CAPM 的理论推导"></a>2.3.3 CAPM 的理论推导</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121706830.jpg"></p>
+<h4 id="2-3-4-CAPM的实证分析"><a href="#2-3-4-CAPM的实证分析" class="headerlink" title="2.3.4 CAPM的实证分析"></a>2.3.4 CAPM的实证分析</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121708811.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121709919.jpg"></p>
+<h4 id="2-3-5-收益率"><a href="#2-3-5-收益率" class="headerlink" title="2.3.5 收益率"></a>2.3.5 收益率</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121711403.jpg"></p>
+<p>$$r_{i,t} &#x3D; lnp_{i,t} - lnp_{i,t-1}$$</p>
+<h4 id="2-3-6-风险分解"><a href="#2-3-6-风险分解" class="headerlink" title="2.3.6 风险分解"></a>2.3.6 风险分解</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121712013.jpg"></p>
+<h5 id="2-3-6-1-市场风险"><a href="#2-3-6-1-市场风险" class="headerlink" title="2.3.6.1 市场风险"></a>2.3.6.1 市场风险</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121717461.jpg"></p>
+<p>股指不能完全反应市场的 portfolio</p>
+<p>if Size is small or B&#x2F;M is big then maybe bankrupt</p>
+<h5 id="2-3-6-2-折现率的确定"><a href="#2-3-6-2-折现率的确定" class="headerlink" title="2.3.6.2 折现率的确定"></a>2.3.6.2 折现率的确定</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121718955.jpg"></p>
+<p><strong>关于折现率</strong> </p>
+<p>不能因个别风险大而调整折现率，应该调整 CF</p>
+<h5 id="2-3-6-3-市场风险的表征"><a href="#2-3-6-3-市场风险的表征" class="headerlink" title="2.3.6.3 市场风险的表征"></a>2.3.6.3 市场风险的表征</h5><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121724081.jpg"></p>
+<h3 id="2-4-Fama-French三因子模型"><a href="#2-4-Fama-French三因子模型" class="headerlink" title="2.4 Fama-French三因子模型"></a>2.4 Fama-French三因子模型</h3><h4 id="2-4-1-Fama-MacBeth二步法"><a href="#2-4-1-Fama-MacBeth二步法" class="headerlink" title="2.4.1 Fama-MacBeth二步法"></a>2.4.1 Fama-MacBeth二步法</h4><blockquote>
+<p>Fama-MacBeth二步法是一种经济学和金融学中常用的统计方法，用于估计资产定价模型中的参数。该方法是由经济学家Eugene Fama和James MacBeth在1973年提出的。</p>
+</blockquote>
+<p>Fama-MacBeth二步法的主要目标是估计资产定价模型中的截距项和各个解释变量的系数。以下是该方法的步骤：</p>
+<p>第一步：截面回归（Cross-sectional regression） 在每一个时间点上，将解释变量（例如股票收益率）与一个或多个解释变量（例如市场收益率）进行截面回归。对于每个时间点，得到解释变量的系数估计值。</p>
+<p>第二步：时间序列回归（Time-series regression） 在第一步的结果基础上，将第一步中得到的系数估计值作为因变量，将时间作为自变量进行时间序列回归。这样可以得到解释变量系数的平均值，并计算其标准误差。</p>
+<p>Fama-MacBeth二步法的估计结果可以用于判断解释变量对因变量的影响以及其统计显著性。如果系数估计值显著不为零，那么可以认为解释变量对因变量有统计显著的影响。</p>
+<p>下面是Fama-MacBeth二步法的数学公式：</p>
+<p>第一步（截面回归）：</p>
+<p>$$R_{it} &#x3D; \alpha_i + \beta_1 X_{1it} + \beta_2 X_{2it} + … + \beta_k X_{kit} + \epsilon_{it}$$</p>
+<p>其中，$R_{it}$表示在时间点$t$的因变量（例如股票收益率），$X_{jit}$表示在时间点$t$的第$j$个解释变量（例如市场收益率），$\alpha_i$表示个体$i$的截距项，$\beta_j$表示解释变量$j$的系数，$\epsilon_{it}$表示误差项。</p>
+<p>第二步（时间序列回归）：</p>
+<p>$$\beta_j &#x3D; \gamma_0 + \gamma_1 \bar{\beta}_j + \eta_j$$</p>
+<p>其中，$\beta_j$表示第一步中解释变量$j$的系数估计值，$\gamma_0$表示截距项，$\gamma_1$表示$\bar{\beta}_j$的系数，$\eta_j$表示误差项。</p>
+<p>Fama-MacBeth二步法的优点是可以同时考虑横截面和时间序列的信息，并能够提供对参数估计的统计推断。</p>
+<h4 id="2-4-2-数据匹配"><a href="#2-4-2-数据匹配" class="headerlink" title="2.4.2 数据匹配"></a>2.4.2 数据匹配</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121720854.jpg"></p>
+<ol>
+<li>$\beta$ rolling 200&#x2F;196个交易日</li>
+<li>size 市值</li>
+<li>BM</li>
+</ol>
+<h2 id="Lecture3-第三章：项目分析"><a href="#Lecture3-第三章：项目分析" class="headerlink" title="Lecture3 第三章：项目分析"></a>Lecture3 第三章：项目分析</h2><p>ch 10&#x2F;11</p>
+<h3 id="3-1-项目的敏感性分析和盈亏平衡分析"><a href="#3-1-项目的敏感性分析和盈亏平衡分析" class="headerlink" title="3.1 项目的敏感性分析和盈亏平衡分析"></a>3.1 项目的敏感性分析和盈亏平衡分析</h3><h4 id="敏感性分析"><a href="#敏感性分析" class="headerlink" title="敏感性分析"></a>敏感性分析</h4><ol>
+<li>蒙特卡罗模拟<br>$$NPV &#x3D; （收入 - 成本 -折旧）\times （1-Tax \ Rate）+ 折旧$$</li>
+</ol>
+<h3 id="3-2-项目的价值来源"><a href="#3-2-项目的价值来源" class="headerlink" title="3.2 项目的价值来源"></a>3.2 项目的价值来源</h3><h2 id="Lecture4-第四章：实物期权-Real-Option"><a href="#Lecture4-第四章：实物期权-Real-Option" class="headerlink" title="Lecture4 第四章：实物期权 Real Option"></a>Lecture4 第四章：实物期权 Real Option</h2><h3 id="4-1-风险中性定价"><a href="#4-1-风险中性定价" class="headerlink" title="4.1 风险中性定价"></a>4.1 风险中性定价</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309271719721.jpg"></p>
+<h4 id="4-1-1-构造无风险投资组合（债券）"><a href="#4-1-1-构造无风险投资组合（债券）" class="headerlink" title="4.1.1 构造无风险投资组合（债券）"></a>4.1.1 构造无风险投资组合（债券）</h4><blockquote>
+<p>买入$\Delta$份股票，卖空一份 Call，终端价值</p>
+</blockquote>
+<p>if $S_0u$ then: $\Delta S_0u - f_u &#x3D; 22\Delta - 1$</p>
+<p>if $S_0d$ then: $\Delta S_0d - f_d &#x3D; 18\Delta$</p>
+<p>无风险要求：<br>$$22\Delta - 1 &#x3D; 18\Delta \to \Delta &#x3D; 0.25$$</p>
+<blockquote>
+<p>因此复制的债券： 购买 0.25份股票，卖空一份 Call.</p>
+</blockquote>
+<h4 id="4-1-2-一般化"><a href="#4-1-2-一般化" class="headerlink" title="4.1.2 一般化"></a>4.1.2 一般化</h4><p>$$\Delta S_0u - f_u &#x3D; \Delta S_0d - f_d \to \Delta &#x3D; \frac{f_u - f_d}{S_0u - S_0d}$$</p>
+<p>组合的现值为：<br>$$S_0\Delta -f &#x3D; (S_0u\Delta - f_u)e^{-rT}$$</p>
+<p>代入$\Delta$，求 f<br>$$f &#x3D; e^{-rT}[pf_u + (1-p)f_d]$$<br>其中$p &#x3D; \frac{e^{rT}-d}{u-d}$</p>
+<p>因此<br>$$E(S_T) &#x3D; pS_0u + (1-p)S_0d$$<br>$$E(S_T) &#x3D; S_0e^{rT}$$</p>
+<p>这是期货中的成交日现货价格</p>
+<p>实际上<br>$$E(S_T) &#x3D; S_0[1+r+\beta(E(r_M) -r)]$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309271730214.jpg" alt="二叉树模型"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309271734445.jpg" alt="Black-Scholes"></p>
+<h3 id="4-2-实物期权的概念"><a href="#4-2-实物期权的概念" class="headerlink" title="4.2 实物期权的概念"></a>4.2 实物期权的概念</h3><blockquote>
+<p>投资的灵活性</p>
+</blockquote>
+<h4 id="4-2-1-以Timing-Option-类比-Call"><a href="#4-2-1-以Timing-Option-类比-Call" class="headerlink" title="4.2.1 以Timing Option 类比 Call"></a>4.2.1 以Timing Option 类比 Call</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309271736252.jpg"></p>
+<h4 id="4-2-2-择时期权（Timing-Option）"><a href="#4-2-2-择时期权（Timing-Option）" class="headerlink" title="4.2.2 择时期权（Timing Option）"></a>4.2.2 择时期权（Timing Option）</h4><blockquote>
+<p>企业的投资机会类似企业拥有的一个权利，在未来以一定价格获得或（出售）一项实物资产或投资计划</p>
+</blockquote>
+<h3 id="4-3-放弃期权、增长期权等各类型期权"><a href="#4-3-放弃期权、增长期权等各类型期权" class="headerlink" title="4.3 放弃期权、增长期权等各类型期权"></a>4.3 放弃期权、增长期权等各类型期权</h3><h4 id="4-3-1-放弃期权"><a href="#4-3-1-放弃期权" class="headerlink" title="4.3.1 放弃期权"></a>4.3.1 放弃期权</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310152312853.jpg"></p>
+<h4 id="4-3-2-扩张期权"><a href="#4-3-2-扩张期权" class="headerlink" title="4.3.2 扩张期权"></a>4.3.2 扩张期权</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310152313582.jpg"></p>
+<p>$$与投资相关 \to 投资新项目 \to 创新（低\beta）$$</p>
+<p>个别风险大、系统风险小</p>
+<p>$NPV\uparrow \to Size \uparrow \to BM \downarrow$</p>
+<blockquote>
+<p>投资收益率 ri 下降</p>
+</blockquote>
+<h2 id="第五章：代理问题、代理人薪酬与业绩评估"><a href="#第五章：代理问题、代理人薪酬与业绩评估" class="headerlink" title="第五章：代理问题、代理人薪酬与业绩评估"></a>第五章：代理问题、代理人薪酬与业绩评估</h2><h3 id="代理问题与业绩测度"><a href="#代理问题与业绩测度" class="headerlink" title="代理问题与业绩测度"></a>代理问题与业绩测度</h3><h3 id="激励和股票期权的设计"><a href="#激励和股票期权的设计" class="headerlink" title="激励和股票期权的设计"></a>激励和股票期权的设计</h3><h3 id="公司监控"><a href="#公司监控" class="headerlink" title="公司监控"></a>公司监控</h3><h2 id="Lecture-6-第六章：有效市场与非对称信息下的融资理论"><a href="#Lecture-6-第六章：有效市场与非对称信息下的融资理论" class="headerlink" title="Lecture 6 第六章：有效市场与非对称信息下的融资理论"></a>Lecture 6 第六章：有效市场与非对称信息下的融资理论</h2><h3 id="6-1-有效市场的几种形式及其检测方法"><a href="#6-1-有效市场的几种形式及其检测方法" class="headerlink" title="6.1 有效市场的几种形式及其检测方法"></a>6.1 有效市场的几种形式及其检测方法</h3><ul>
+<li>弱式有效(Weak form efficiency)<ul>
+<li>市场价格反应了所有历史的价格信息</li>
+<li>价格符合随机游走模型<ul>
+<li>测试股票的超额收益，测试定价模型和异象（anomalies）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>半强式有效(Semi-strong form efficiency)<ul>
+<li>市场价格反应了所有公开可获得的信息</li>
+<li>价格会对公开信息进行立即调整<ul>
+<li>测度异常收益率<br>$$AR_{it} &#x3D; r_{it} - E&lt;r_{it}|\Theta_t&gt;$$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Expected return &#x3D; $\alpha + \beta \times$return on market index<br>$$AR_{it} &#x3D; R_{it} - \hat{\alpha_i} - \hat{\beta_i} R_{m\tau}$$</p>
+<ul>
+<li>强式有效(Strong form efficiency)<ul>
+<li>价格反应了所有的信息，包括公开的和私人的信息</li>
+<li>没有人可以从中套利，只有幸运的投资者和不幸运的投资者</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-2-异象及其经济解释"><a href="#6-2-异象及其经济解释" class="headerlink" title="6.2 异象及其经济解释"></a>6.2 异象及其经济解释</h3><h4 id="6-2-1-随机游走假设-Random-walk-hypothesis"><a href="#6-2-1-随机游走假设-Random-walk-hypothesis" class="headerlink" title="6.2.1 随机游走假设(Random walk hypothesis)"></a>6.2.1 随机游走假设(Random walk hypothesis)</h4><blockquote>
+<p>股票价格不符合任何模式</p>
+</blockquote>
+<p>对一只股票明天价格的最佳预测，等于今天的价格加上一个纯粹的随机对冲<br>$$r_t &#x3D; r_{t-1} + \epsilon_t$$</p>
+<h4 id="6-2-2-平稳随机过程"><a href="#6-2-2-平稳随机过程" class="headerlink" title="6.2.2 平稳随机过程"></a>6.2.2 平稳随机过程</h4><blockquote>
+<p>均值和方差在所有时间上恒为常数</p>
+<p>自相关系数只与时间间隔有关，对所有的时间 t 以及滞后 s</p>
+</blockquote>
+<p>$$\gamma_{t,t-s} &#x3D; cov(r_t, r_{t-s}) &#x3D; cov(r_0, r_{|0-s|}) &#x3D;\gamma_{0,s}$$</p>
+<p>where $r_t &#x3D; \rho r_{t-1} + \epsilon_t$ and $|\rho| &lt; 1$</p>
+<h3 id="6-3-道德风险融资模型"><a href="#6-3-道德风险融资模型" class="headerlink" title="6.3 道德风险融资模型"></a>6.3 道德风险融资模型</h3><h3 id="6-4-逆向选择融资模型"><a href="#6-4-逆向选择融资模型" class="headerlink" title="6.4 逆向选择融资模型"></a>6.4 逆向选择融资模型</h3><h2 id="第七章：公司如何发行证券"><a href="#第七章：公司如何发行证券" class="headerlink" title="第七章：公司如何发行证券"></a>第七章：公司如何发行证券</h2><h3 id="风险投资与风险投资合约"><a href="#风险投资与风险投资合约" class="headerlink" title="风险投资与风险投资合约"></a>风险投资与风险投资合约</h3><h3 id="首次公开发行的程序"><a href="#首次公开发行的程序" class="headerlink" title="首次公开发行的程序"></a>首次公开发行的程序</h3><h3 id="上市公司的证券发售成本研究"><a href="#上市公司的证券发售成本研究" class="headerlink" title="上市公司的证券发售成本研究"></a>上市公司的证券发售成本研究</h3><h2 id="第八章：股利策略"><a href="#第八章：股利策略" class="headerlink" title="第八章：股利策略"></a>第八章：股利策略</h2><h3 id="股利策略及其现实中的信号含义：现金股利与股票回购"><a href="#股利策略及其现实中的信号含义：现金股利与股票回购" class="headerlink" title="股利策略及其现实中的信号含义：现金股利与股票回购"></a>股利策略及其现实中的信号含义：现金股利与股票回购</h3><h3 id="股利策略的MM定理解释"><a href="#股利策略的MM定理解释" class="headerlink" title="股利策略的MM定理解释"></a>股利策略的MM定理解释</h3><h3 id="股利策略研究的相关实证证据"><a href="#股利策略研究的相关实证证据" class="headerlink" title="股利策略研究的相关实证证据"></a>股利策略研究的相关实证证据</h3><h2 id="第九章：资本结构理论"><a href="#第九章：资本结构理论" class="headerlink" title="第九章：资本结构理论"></a>第九章：资本结构理论</h2><h3 id="MM定理"><a href="#MM定理" class="headerlink" title="MM定理"></a>MM定理</h3><h3 id="财务风险与期望收益"><a href="#财务风险与期望收益" class="headerlink" title="财务风险与期望收益"></a>财务风险与期望收益</h3><h3 id="无税加权资本成本"><a href="#无税加权资本成本" class="headerlink" title="无税加权资本成本"></a>无税加权资本成本</h3><h2 id="第十章：公司应该负债多少"><a href="#第十章：公司应该负债多少" class="headerlink" title="第十章：公司应该负债多少"></a>第十章：公司应该负债多少</h2><h3 id="公司税与个人税对资本结构的影响"><a href="#公司税与个人税对资本结构的影响" class="headerlink" title="公司税与个人税对资本结构的影响"></a>公司税与个人税对资本结构的影响</h3><h3 id="财务困境成本、资本结构的权衡理论"><a href="#财务困境成本、资本结构的权衡理论" class="headerlink" title="财务困境成本、资本结构的权衡理论"></a>财务困境成本、资本结构的权衡理论</h3><h3 id="资本结构的代理理论"><a href="#资本结构的代理理论" class="headerlink" title="资本结构的代理理论"></a>资本结构的代理理论</h3><h2 id="第十一章：融资与估值"><a href="#第十一章：融资与估值" class="headerlink" title="第十一章：融资与估值"></a>第十一章：融资与估值</h2><h3 id="税后加权平均资本成本"><a href="#税后加权平均资本成本" class="headerlink" title="税后加权平均资本成本"></a>税后加权平均资本成本</h3><h3 id="企业价值评估"><a href="#企业价值评估" class="headerlink" title="企业价值评估"></a>企业价值评估</h3><h3 id="WACC应用的要点"><a href="#WACC应用的要点" class="headerlink" title="WACC应用的要点"></a>WACC应用的要点</h3><h2 id="第十二章：短期负债与短期财务计划"><a href="#第十二章：短期负债与短期财务计划" class="headerlink" title="第十二章：短期负债与短期财务计划"></a>第十二章：短期负债与短期财务计划</h2><h3 id="公司现金管理与短期负债"><a href="#公司现金管理与短期负债" class="headerlink" title="公司现金管理与短期负债"></a>公司现金管理与短期负债</h3><h3 id="企业现金周转周期与融资"><a href="#企业现金周转周期与融资" class="headerlink" title="企业现金周转周期与融资"></a>企业现金周转周期与融资</h3><h3 id="短期融资计划"><a href="#短期融资计划" class="headerlink" title="短期融资计划"></a>短期融资计划</h3><h2 id="第十三章：兼并"><a href="#第十三章：兼并" class="headerlink" title="第十三章：兼并"></a>第十三章：兼并</h2><h3 id="兼并的动因"><a href="#兼并的动因" class="headerlink" title="兼并的动因"></a>兼并的动因</h3><h3 id="兼并的收益及成本估计"><a href="#兼并的收益及成本估计" class="headerlink" title="兼并的收益及成本估计"></a>兼并的收益及成本估计</h3><h3 id="兼并机制"><a href="#兼并机制" class="headerlink" title="兼并机制"></a>兼并机制</h3><h2 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308291710890.jpg"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/1b5aea18">https://skddj.github.io/article/1b5aea18</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%85%AC%E5%8F%B8%E9%87%91%E8%9E%8D/">
+                                    <span class="chip bg-color">公司金融</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                    <span class="chip bg-color">大三上</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/f1b79b2a">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Derivatives">
+                        
+                        <span class="card-title">Derivatives</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">金融衍生工具</span>
+                    </a>
+                    
+                    <a href="/tags/Derivatives/">
+                        <span class="chip bg-color">Derivatives</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/bae2e029">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="International Finance">
+                        
+                        <span class="card-title">International Finance</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D/">
+                        <span class="chip bg-color">国际金融</span>
+                    </a>
+                    
+                    <a href="/tags/International-Finance/">
+                        <span class="chip bg-color">International Finance</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>

@@ -1,0 +1,2022 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Econometrics, Yiming Shi&#39;s blog">
+    <meta name="description" content="课程笔记">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Econometrics | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Econometrics</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                <span class="chip bg-color">大三上</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/">
+                                <span class="chip bg-color">计量经济学</span>
+                            </a>
+                        
+                            <a href="/tags/Econometrics/">
+                                <span class="chip bg-color">Econometrics</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    15 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301038752.jpg"> <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301039303.jpg"></p>
+<h2 id="成绩构成"><a href="#成绩构成" class="headerlink" title="成绩构成"></a>成绩构成</h2><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301040122.jpg"></p>
+<h2 id="Lecture-1-Intro-第一章：计量经济学引论"><a href="#Lecture-1-Intro-第一章：计量经济学引论" class="headerlink" title="Lecture 1 Intro 第一章：计量经济学引论"></a>Lecture 1 Intro 第一章：计量经济学引论</h2><p>Outline</p>
+<ul>
+<li>The Nature and Purpose of Econometrics</li>
+<li>Data</li>
+<li>Returns in Financial Modeling</li>
+<li>Steps involved in the formulation of econometric models45</li>
+</ul>
+<h3 id="1-1-计量经济学的概念与建模"><a href="#1-1-计量经济学的概念与建模" class="headerlink" title="1.1 计量经济学的概念与建模"></a>1.1 计量经济学的概念与建模</h3><p>Econometrics &#x3D; use of statistical methods to analyze economic data</p>
+<h4 id="1-1-1-Steps-of-Econometric-Modeling"><a href="#1-1-1-Steps-of-Econometric-Modeling" class="headerlink" title="1.1.1 Steps of Econometric Modeling"></a>1.1.1 Steps of Econometric Modeling</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301047378.jpg"></p>
+<h3 id="1-2-计量经济学在金融中的应用"><a href="#1-2-计量经济学在金融中的应用" class="headerlink" title="1.2 计量经济学在金融中的应用"></a>1.2 计量经济学在金融中的应用</h3><p>Econometrics</p>
+<ul>
+<li>Econometric and financial Econometric</li>
+<li>Microeconometrics and Macroeconometrics</li>
+<li>Theoretical econometrics and applied econometrics</li>
+</ul>
+<h3 id="1-3-数据及其获取"><a href="#1-3-数据及其获取" class="headerlink" title="1.3 数据及其获取"></a>1.3 数据及其获取</h3><p>The Nature of Econometrics and Economic Data</p>
+<p>Typical goals of econometric analysis:</p>
+<ol>
+<li>Testing economic theories and hypotheses，estimating relationships between economic variables</li>
+<li>Evaluating and implementing government and business policy</li>
+<li>Forecasting economic variables</li>
+</ol>
+<p>Different kinds of economic data sets：</p>
+<ul>
+<li>Cross-sectional data</li>
+<li>Time series data</li>
+<li>Pooled cross sections</li>
+<li>Panel&#x2F;Longitudinal data</li>
+</ul>
+<h3 id="1-4-相关软件简介"><a href="#1-4-相关软件简介" class="headerlink" title="1.4 相关软件简介"></a>1.4 相关软件简介</h3><h2 id="Lecture2-A-brief-review-of-classic-linear-regression-第二章：线性回归模型"><a href="#Lecture2-A-brief-review-of-classic-linear-regression-第二章：线性回归模型" class="headerlink" title="Lecture2 A brief review of classic linear regression 第二章：线性回归模型"></a>Lecture2 A brief review of classic linear regression 第二章：线性回归模型</h2><p>Outlines:</p>
+<ul>
+<li>Linear Regression</li>
+<li>Ordinary Least Squares</li>
+<li>The Assumptions Underlying CLRM</li>
+<li>Properties of the OLS Estimator</li>
+<li>Hypothesis Test</li>
+</ul>
+<h3 id="2-0-Find-a-line-of-best-fit"><a href="#2-0-Find-a-line-of-best-fit" class="headerlink" title="2.0 Find a line of best fit"></a>2.0 Find a line of best fit</h3><p>$$y &#x3D; \alpha + \beta x  \ Equation(1)$$</p>
+<p>note: $\alpha$ and $\beta$ are “coefficients” where: $\alpha$ is a “constant” or “intercept” term $\beta$ is a “slope coefficient”.</p>
+<p>$$\beta &#x3D; \frac{\Delta y}{\Delta x} &#x3D; \frac{y_{t+1}-y_{t}}{x_{t+1}-x_t}$$</p>
+<h4 id="2-0-1-Add-a-random-disturbance-term-epsilon"><a href="#2-0-1-Add-a-random-disturbance-term-epsilon" class="headerlink" title="2.0.1 Add a random disturbance term $\epsilon$"></a>2.0.1 Add a random disturbance term $\epsilon$</h4><p>$$y &#x3D; \alpha + \beta x_t + \epsilon_t$$</p>
+<p>where: t &#x3D; 1,…,T</p>
+<p>The disturbance term can capture a number of features:</p>
+<ul>
+<li>Other potentially important explanatory variables may be missing (e.g., Z and W)</li>
+<li>Measurement error</li>
+<li>Incorrect functional form</li>
+<li>Purely random and totally unpredictable occurrences</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301055553.jpg"></p>
+<h4 id="2-0-2-Single-Equation-Linear-Model"><a href="#2-0-2-Single-Equation-Linear-Model" class="headerlink" title="2.0.2 Single Equation Linear Model"></a>2.0.2 Single Equation Linear Model</h4><p>components:</p>
+<ol>
+<li>determinstic: $\alpha + \beta x$</li>
+<li>stochastic&#x2F;random: $\epsilon_t$ why “determinstic”: conditional expectation which means expectation value of Y Given X</li>
+</ol>
+<h3 id="2-1-多元回归模型的建模与估计-Different-Ways-of-Expressing-the-Multiple-Linear-Regression-Model"><a href="#2-1-多元回归模型的建模与估计-Different-Ways-of-Expressing-the-Multiple-Linear-Regression-Model" class="headerlink" title="2.1 多元回归模型的建模与估计 Different Ways of Expressing the Multiple Linear Regression Model"></a>2.1 多元回归模型的建模与估计 Different Ways of Expressing the Multiple Linear Regression Model</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309111719018.jpg"></p>
+<h4 id="2-1-1-The-OLS-Estimator-for-the-Multiple-Regression-Model"><a href="#2-1-1-The-OLS-Estimator-for-the-Multiple-Regression-Model" class="headerlink" title="2.1.1 The OLS Estimator for the Multiple Regression Model"></a>2.1.1 The OLS Estimator for the Multiple Regression Model</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309111724086.jpg"></p>
+<h4 id="2-1-2-Calculating-the-Standard-Errors-for-the-Multiple-Regression-Model"><a href="#2-1-2-Calculating-the-Standard-Errors-for-the-Multiple-Regression-Model" class="headerlink" title="2.1.2 Calculating the Standard Errors for the Multiple Regression Model"></a>2.1.2 Calculating the Standard Errors for the Multiple Regression Model</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309111727756.jpg"></p>
+<h3 id="2-2-回归模型的拟合优度"><a href="#2-2-回归模型的拟合优度" class="headerlink" title="2.2 回归模型的拟合优度"></a>2.2 回归模型的拟合优度</h3><h3 id="2-3-OLS的经典假设与估计量性质"><a href="#2-3-OLS的经典假设与估计量性质" class="headerlink" title="2.3 OLS的经典假设与估计量性质"></a>2.3 OLS的经典假设与估计量性质</h3><h4 id="2-3-1-Ordinary-Least-Squares"><a href="#2-3-1-Ordinary-Least-Squares" class="headerlink" title="2.3.1 Ordinary Least Squares"></a>2.3.1 Ordinary Least Squares</h4><p>population regression -&gt; sample&#x2F;estimated regression</p>
+<p>The empirical counterpart to Equation(1) is</p>
+<p>$$\hat{Y_t} &#x3D; \hat{\alpha} + \hat{\beta}x_t + \hat{\epsilon_t}$$</p>
+<p>Optimized Function :</p>
+<p>$$Min\ L &#x3D; Min\sum\epsilon_t^2 &#x3D; Min ||Y_t - \hat{Y_t} ||^2 &#x3D; Min ||Y_t - \hat{\alpha} - \hat{\beta}x_t||^2$$</p>
+<pre class="line-numbers language-none"><code class="language-none">求导，微分方程等于零
+解出 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>$$\beta &#x3D; \frac{\sum x_ty_t-T\overline x \overline y}{\sum x_t^2 - \overline x^2}$$</p>
+<p>$$\alpha &#x3D; \overline Y_t - \beta \overline x_t$$</p>
+<h4 id="2-3-2-CAPM-in-Econometric"><a href="#2-3-2-CAPM-in-Econometric" class="headerlink" title="2.3.2 CAPM in Econometric"></a>2.3.2 CAPM in Econometric</h4><p>$$r_i &#x3D; r_f + \beta(E(r_m)-r_f)+\epsilon_t$$</p>
+<p>$$r_t - rf_t &#x3D; \hat \alpha + \hat \beta(E(r_m - rf_t))$$</p>
+<p>where $\hat \beta &#x3D; \frac{cov(r_m,rf_t)}{var(r_t)}$</p>
+<h4 id="2-3-3-The-relationship-between-Regression-and-Corelationship"><a href="#2-3-3-The-relationship-between-Regression-and-Corelationship" class="headerlink" title="2.3.3 The relationship between Regression and Corelationship"></a>2.3.3 The relationship between Regression and Corelationship</h4><p>$$\hat b &#x3D; \frac{cov(x,y)}{cov(x,x)} &#x3D; \frac{cov(x,y)}{\sqrt{cov(x,x)} \sqrt{cov(y,y)}} \times \frac{\sqrt{cov(y,y)}}{\sqrt{cov(x,x)}} &#x3D; r_{x,y} \frac{S_y}{S_x}$$</p>
+<ul>
+<li>PRF: Population Regression Function</li>
+</ul>
+<p>$$Y_t &#x3D; \hat \alpha + \hat \beta x_t + \hat \mu$$</p>
+<ul>
+<li>SRF: Sample Regression Function</li>
+</ul>
+<p>$$Y_t &#x3D; \hat \alpha + \hat \beta x_t $$</p>
+<blockquote>
+<p>sample is a selection set of population, we can use SRF to infer likely as PRF.</p>
+</blockquote>
+<h4 id="2-3-4-Estimators-amp-Estimates"><a href="#2-3-4-Estimators-amp-Estimates" class="headerlink" title="2.3.4 Estimators &amp; Estimates"></a>2.3.4 Estimators &amp; Estimates</h4><ul>
+<li>Estimators（估计量）: random&#x2F;stochastic</li>
+<li>Estimates（估计值）: actual numerical value</li>
+</ul>
+<h4 id="2-3-5-The-Assumptions-underlying-in-CLRM-Classic-Linear-Regression-Model"><a href="#2-3-5-The-Assumptions-underlying-in-CLRM-Classic-Linear-Regression-Model" class="headerlink" title="2.3.5 The Assumptions underlying in CLRM(Classic Linear Regression Model)"></a>2.3.5 The Assumptions underlying in CLRM(Classic Linear Regression Model)</h4><p>The seven classical assumptions are:</p>
+<ol>
+<li>The regression model is linear, is correctly specified, and has an additive error term</li>
+<li>The error term has a zero population mean</li>
+<li>All explanatory variables are uncorrelated with the error term</li>
+<li>Observations of the error term are uncorrelated with each other (no serial correlation)</li>
+<li>The error term has a constant variance (no heteroskedasticity)</li>
+<li>No explanatory variable is a perfect linear function of any other explanatory variable(s) (no perfect multicollinearity)</li>
+<li>The error term is normally distributed(this assumption is optional but usually is invoked)</li>
+</ol>
+<p>(2) $E(\epsilon_t) &#x3D; 0$</p>
+<p>(3) $E(\epsilon_t|x_t) &#x3D; 0 or cov(\epsilon_t|x_t) &#x3D; 0$</p>
+<p>(4) $cov(\epsilon_t|\epsilon_{t+k}) &#x3D; 0 \ k \geq 1$</p>
+<p>(5) $var(\epsilon_t) &#x3D; \sigma^2$ special case: $var(\epsilon_t) &#x3D; \sigma_t^2$</p>
+<p>(6) $x_i \neq r_1x_{k1} + r_2x_{k2} + r_3x_{k3}+ …$</p>
+<p>(7) $\epsilon_t \ ~ N(0,\sigma^2)$</p>
+<h4 id="2-3-6-Properties-of-OLS-Estimator"><a href="#2-3-6-Properties-of-OLS-Estimator" class="headerlink" title="2.3.6 Properties of OLS Estimator"></a>2.3.6 Properties of OLS Estimator</h4><p>If assumption 1 through 6 holds, $\hat \alpha$ and $\hat \beta$ are determined by OLS well known as BLUE</p>
+<blockquote>
+<p>BLUE: Best Linear Unbiased Estimator</p>
+</blockquote>
+<ol>
+<li>estimator: $\hat \beta$ is an estimator of the value of $\beta$</li>
+<li>linear: $\hat \beta$ is a linear variable</li>
+<li>unbiased: in average, $\hat \alpha$ and $\hat \beta$ are true value of $\alpha$ , $\beta$.</li>
+<li>best: means that the OLS estimator has minimum variance among the class of linear unbiased estimators</li>
+</ol>
+<blockquote>
+<p>The Gauss-Markov theorem proves that the OLS estimator is best.</p>
+</blockquote>
+<p>$$ri_t - rf_t &#x3D; \alpha + \beta(rm_t - rf_t) + \epsilon_t$$</p>
+<p>where $\alpha$ is market pricing and $\epsilon_t \ ~ iid (0,\sigma^2)$</p>
+<p>$$Y_t &#x3D; \hat \alpha + \hat \beta X_t + \epsilon_t$$</p>
+<p>$\epsilon_t \ ~ iid(0,\sigma^2)$ and $E(\overline X) &#x3D; 0$</p>
+<p>We have $\hat \alpha$ is the mean value of $\epsilon_t$.</p>
+<h4 id="2-3-7-Addition"><a href="#2-3-7-Addition" class="headerlink" title="2.3.7 Addition"></a>2.3.7 Addition</h4><p>$$\hat \beta &#x3D; (X’X)^{-1}X’Y &#x3D; (X’X)^{-1}X’(X\beta + \epsilon)$$</p>
+<p>$$E(\hat \beta) &#x3D; \beta + E((X’X)^{-1}X’\epsilon) $$</p>
+<p>where $E(\epsilon) &#x3D; 0$</p>
+<p>Then we get $E(\hat \beta) &#x3D; \beta$</p>
+<p>$$\hat \beta &#x3D; \beta + E((X’X)^{-1}X’\epsilon)$$</p>
+<p>We know</p>
+<p>$$Var(\hat \beta) &#x3D; Var(\beta + (X’X)^{-1}X’\epsilon) &#x3D; 0 + Var((X’X)^{-1}X’E(\epsilon \epsilon’)X(X’X)^{-1})$$</p>
+<h2 id="epsilon-x3D-begin-bmatrix-epsilon-1-epsilon-2-…-epsilon-n-end-bmatrix"><a href="#epsilon-x3D-begin-bmatrix-epsilon-1-epsilon-2-…-epsilon-n-end-bmatrix" class="headerlink" title="$$\epsilon &#x3D;\begin{bmatrix}\epsilon_1  \\epsilon_2 \… \\epsilon_n \\end{bmatrix}"></a>$$<br>\epsilon &#x3D;<br>\begin{bmatrix}<br>\epsilon_1  \<br>\epsilon_2 \<br>… \<br>\epsilon_n \<br>\end{bmatrix}</h2><p>\begin{bmatrix}<br>0 \<br>0 \<br>… \<br>0 \<br>\end{bmatrix}<br>$$</p>
+<h1 id="Var-epsilon-x3D-E-epsilon-epsilon’-x3D-E-begin-bmatrix-epsilon-1-2-amp-epsilon-1-epsilon-2-amp-…-amp-epsilon-1-epsilon-n-…-amp-epsilon-2-2-amp-…-amp-…-epsilon-n-epsilon-1-amp-…-amp-…-amp-epsilon-n-2-end-bmatrix"><a href="#Var-epsilon-x3D-E-epsilon-epsilon’-x3D-E-begin-bmatrix-epsilon-1-2-amp-epsilon-1-epsilon-2-amp-…-amp-epsilon-1-epsilon-n-…-amp-epsilon-2-2-amp-…-amp-…-epsilon-n-epsilon-1-amp-…-amp-…-amp-epsilon-n-2-end-bmatrix" class="headerlink" title="$$Var(\epsilon) &#x3D; E(\epsilon \epsilon’) &#x3D; E(\begin{bmatrix}\epsilon_1^2 &amp; \epsilon_1 \epsilon_2 &amp; … &amp; \epsilon_1 \epsilon_n  \… &amp; \epsilon_2^2 &amp; … &amp; … \\epsilon_n \epsilon_1 &amp; … &amp; … &amp; \epsilon_n^2\\end{bmatrix})"></a>$$<br>Var(\epsilon) &#x3D; E(\epsilon \epsilon’) &#x3D; E(\begin{bmatrix}<br>\epsilon_1^2 &amp; \epsilon_1 \epsilon_2 &amp; … &amp; \epsilon_1 \epsilon_n  \<br>… &amp; \epsilon_2^2 &amp; … &amp; … \<br>\epsilon_n \epsilon_1 &amp; … &amp; … &amp; \epsilon_n^2\<br>\end{bmatrix})</h1><h1 id="begin-bmatrix-sigma-2-amp-0-amp-…-amp-0-…-amp-…-amp-…-amp-…-0-amp-…-amp-…-amp-sigma-2-end-bmatrix"><a href="#begin-bmatrix-sigma-2-amp-0-amp-…-amp-0-…-amp-…-amp-…-amp-…-0-amp-…-amp-…-amp-sigma-2-end-bmatrix" class="headerlink" title="\begin{bmatrix}\sigma^2 &amp; 0 &amp; … &amp; 0  \… &amp; …&amp; … &amp; … \0 &amp; … &amp; … &amp; \sigma^2 \\end{bmatrix}"></a>\begin{bmatrix}<br>\sigma^2 &amp; 0 &amp; … &amp; 0  \<br>… &amp; …&amp; … &amp; … \<br>0 &amp; … &amp; … &amp; \sigma^2 \<br>\end{bmatrix}</h1><p>\sigma^2 I<br>&#x3D; \sigma^2(X’X)^{-1}<br>$$</p>
+<p>We get $Var(\hat \beta) &#x3D; \sigma^2 \epsilon(X’X)^{-1}$</p>
+<p>Cz</p>
+<p>$$y &#x3D; \beta x + \epsilon$$</p>
+<p>owing to $\epsilon\ iid(0,\sigma^2)$</p>
+<p>and</p>
+<p>$$y &#x3D; \hat \beta x + \hat \epsilon$$</p>
+<p>owing to $\hat \sigma^2$</p>
+<h4 id="2-3-8-Precision-and-Standard-Errors"><a href="#2-3-8-Precision-and-Standard-Errors" class="headerlink" title="2.3.8 Precision and Standard Errors"></a>2.3.8 Precision and Standard Errors</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309111735728.jpg"></p>
+<h3 id="2-4-假设检验-Hypothesis-Testing"><a href="#2-4-假设检验-Hypothesis-Testing" class="headerlink" title="2.4 假设检验 Hypothesis Testing"></a>2.4 假设检验 Hypothesis Testing</h3><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121944650.jpg"></p>
+<h4 id="2-4-1-One-Sided-Hypothesis-Tests"><a href="#2-4-1-One-Sided-Hypothesis-Tests" class="headerlink" title="2.4.1 One-Sided Hypothesis Tests"></a>2.4.1 One-Sided Hypothesis Tests</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121946221.jpg"></p>
+<h4 id="2-4-2-The-Probability-Distribution-of-the-Least-Squares-Estimators"><a href="#2-4-2-The-Probability-Distribution-of-the-Least-Squares-Estimators" class="headerlink" title="2.4.2 The Probability Distribution of the Least Squares Estimators"></a>2.4.2 The Probability Distribution of the Least Squares Estimators</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121948559.jpg"></p>
+<h4 id="2-4-3-Testing-Hypotheses-The-Test-of-Significance-Approach"><a href="#2-4-3-Testing-Hypotheses-The-Test-of-Significance-Approach" class="headerlink" title="2.4.3 Testing Hypotheses: The Test of Significance Approach"></a>2.4.3 Testing Hypotheses: The Test of Significance Approach</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309121951487.jpg"></p>
+<h4 id="2-4-4-The-Confidence-Interval-Approach-to-Hypothesis-Testing"><a href="#2-4-4-The-Confidence-Interval-Approach-to-Hypothesis-Testing" class="headerlink" title="2.4.4 The Confidence Interval Approach to Hypothesis Testing"></a>2.4.4 The Confidence Interval Approach to Hypothesis Testing</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309122002415.jpg"></p>
+<h4 id="2-4-5-Test-Hypothesis"><a href="#2-4-5-Test-Hypothesis" class="headerlink" title="2.4.5 Test Hypothesis"></a>2.4.5 Test Hypothesis</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309122004226.jpg"></p>
+<h4 id="2-4-6-The-Errors-That-We-Can-Make-Using-Hypothesis-Tests"><a href="#2-4-6-The-Errors-That-We-Can-Make-Using-Hypothesis-Tests" class="headerlink" title="2.4.6 The Errors That We Can Make Using Hypothesis Tests"></a>2.4.6 The Errors That We Can Make Using Hypothesis Tests</h4><p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309122005883.jpg"></p>
+<h3 id="2-5-实践性教学环节"><a href="#2-5-实践性教学环节" class="headerlink" title="2.5 实践性教学环节"></a>2.5 实践性教学环节</h3><h2 id="Lecture-3-Further-development-and-analysis-of-the-classical-linear-regression-model-第三章：模型诊断检验"><a href="#Lecture-3-Further-development-and-analysis-of-the-classical-linear-regression-model-第三章：模型诊断检验" class="headerlink" title="Lecture 3: Further development and analysis of the classical linear regression model 第三章：模型诊断检验"></a>Lecture 3: Further development and analysis of the classical linear regression model 第三章：模型诊断检验</h2><p>Classical linear regression model assumption and diagnositics</p>
+<ol>
+<li>The regression model is linear, is correctly specified, and has an additive error term</li>
+<li>The error term has a zero population mean</li>
+<li>All explanatory variables are uncorrelated with the error term</li>
+<li>Observations of the error term are uncorrelated with each other (no serial correlation)</li>
+<li>The error term has a constant variance (no heteroskedasticity)</li>
+<li>No explanatory variable is a perfect linear function of any other explanatory variable(s) (no perfect multicollinearity)</li>
+<li>The error term is normally distributed(this assumption is optional but usually is invoked)</li>
+</ol>
+<h3 id="3-1-违背经典假设的情形"><a href="#3-1-违背经典假设的情形" class="headerlink" title="3.1 违背经典假设的情形"></a>3.1 违背经典假设的情形</h3><p>$$Y &#x3D; X\beta + \epsilon_t$$<br>$$\hat{\beta} &#x3D; (X’X)^{-1}X’Y &#x3D; \beta + (X’X)^{-1}X’\epsilon_t$$</p>
+<p>$$Z &#x3D; Var(\hat{\beta}) &#x3D; E[(X’X)^{-1}X’\epsilon X(X’X)^{-1}] $$<br>$$&#x3D;(X’X)^{-1}X’E(\epsilon \epsilon’)X(X’X)^{-1} $$<br>$$&#x3D;(X’X)^{-1}X’\Omega X(X’X)^{-1}$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182037860.jpg" alt="case1"><br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182037190.jpg" alt="case2"><br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182038750.jpg" alt="case3"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182051700.jpg"></p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182051690.jpg"></p>
+<h3 id="3-2-多重共线性-Multicollinearity"><a href="#3-2-多重共线性-Multicollinearity" class="headerlink" title="3.2 多重共线性 Multicollinearity"></a>3.2 多重共线性 Multicollinearity</h3><h4 id="3-2-1-Types-of-multicollinearity"><a href="#3-2-1-Types-of-multicollinearity" class="headerlink" title="3.2.1 Types of multicollinearity"></a>3.2.1 Types of multicollinearity</h4><ul>
+<li>Perfect multicollinearity<br>$$x_3 &#x3D; 2x_2$$</li>
+<li>Imperfect multicollinearity<br>$$x_{1i} &#x3D; x_{2i} + w$$</li>
+</ul>
+<h4 id="3-2-2-5-Consequences-of-Multicollinearity"><a href="#3-2-2-5-Consequences-of-Multicollinearity" class="headerlink" title="3.2.2 5 Consequences of Multicollinearity"></a>3.2.2 5 Consequences of Multicollinearity</h4><ol>
+<li>Estimates will <strong>remain unbiased</strong></li>
+<li>Variances and Standard errors will <strong>increase</strong></li>
+<li><strong>t-scores</strong> will fall</li>
+<li>Estimates will be very <strong>sensitive</strong> to changes in specification</li>
+<li>Overfit</li>
+</ol>
+<h4 id="3-2-3-Detection"><a href="#3-2-3-Detection" class="headerlink" title="3.2.3 Detection"></a>3.2.3 Detection</h4><ol>
+<li><p>High Simple Correlation coefficients<br><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182048701.jpg"></p>
+</li>
+<li><p>High Variance Inflation Factors(VIFs)</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182048459.jpg"></p>
+<h4 id="3-2-4-Solutions-to-the-Problems-of-Multicollinearity"><a href="#3-2-4-Solutions-to-the-Problems-of-Multicollinearity" class="headerlink" title="3.2.4 Solutions to the Problems of Multicollinearity"></a>3.2.4 Solutions to the Problems of Multicollinearity</h4><ol>
+<li>Ridge Regression&#x2F; PCA</li>
+<li>Collect more data</li>
+<li>Data Transform</li>
+<li>drop one of the collinear variables</li>
+</ol>
+<h3 id="3-3-序列相关性-Serial-Correlationor-or-Autocorrelation"><a href="#3-3-序列相关性-Serial-Correlationor-or-Autocorrelation" class="headerlink" title="3.3 序列相关性 Serial Correlationor or Autocorrelation"></a>3.3 序列相关性 Serial Correlationor or Autocorrelation</h3><blockquote>
+<p>We assumed of the 	CLRM’s 	errors that $Cov(u_i,u_j)&#x3D;0$ for $i\neq j$ ,i.e.This is essentially the same as saying there is no pattern in the errors.</p>
+<p> Obviously we never have the actual u’s,so we use their sample counterpart, the residuals (the$\hat u$). If there are patterns in the residuals from a model, we say that they are autocorrelated.</p>
+</blockquote>
+<h4 id="3-3-1-Serial-Correlated"><a href="#3-3-1-Serial-Correlated" class="headerlink" title="3.3.1 Serial Correlated"></a>3.3.1 Serial Correlated</h4><ol>
+<li>Pure serial correlation</li>
+</ol>
+<p>$$\epsilon_t &#x3D; \rho \epsilon_{t-1} + \mu$$<br>where $\rho$ is the first order autocorrelation coefficient</p>
+<p>and we can state that<br>$$ -1 &lt; \rho &lt; 1$$<br>2. Impure serial correlation</p>
+<p>caused by specification error such as:</p>
+<ul>
+<li>an omitted variable </li>
+<li>an incorrect functional form</li>
+</ul>
+<h4 id="3-3-2-Detection-Autocorrelation"><a href="#3-3-2-Detection-Autocorrelation" class="headerlink" title="3.3.2 Detection Autocorrelation"></a>3.3.2 Detection Autocorrelation</h4><h5 id="3-3-2-1-The-Durbin-Watson-Test"><a href="#3-3-2-1-The-Durbin-Watson-Test" class="headerlink" title="3.3.2.1 The Durbin-Watson Test"></a>3.3.2.1 The Durbin-Watson Test</h5><blockquote>
+<p>The Durbin-Watson(DW) is a test for first order autocorrelation-i.e.it assumes that the relationship is between an error and the previous one</p>
+</blockquote>
+<p>$$u_t &#x3D; \rho u_{t-1} + v_t$$<br>where $v_t\ N(0,\sigma_v^2)$</p>
+<p>The DW test statistic actually tests<br>$$H_0: \rho &#x3D; 0 \ and\ H_1: \rho \neq 0$$</p>
+<p>The test statistic is calculated by<br>$$DW &#x3D; \frac{\sum_{t&#x3D;2}^{T}(\hat{u_t} - \hat{u_{t-1}})^2}{\sum_{t&#x3D;2}^T\hat{u_t}^2}$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310181950339.jpg"></p>
+<p>we can also write<br>$$DW \approx 2(1-\rho)$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310181955883.jpg"></p>
+<h5 id="3-3-2-2-The-Breusch-Godfrey-Test"><a href="#3-3-2-2-The-Breusch-Godfrey-Test" class="headerlink" title="3.3.2.2 The Breusch-Godfrey Test"></a>3.3.2.2 The Breusch-Godfrey Test</h5><p>It’s a more general test for $r^{th}$ order autocorrelation<br>$$u_t &#x3D; \rho_1u_{t-1} + \rho_2u_{t-2} + … + \rho_ru_{t-r} + v_t$$<br>where $v_t \ N(0,\sigma_v^2)$</p>
+<p>The Null and alternative hypotheses are:</p>
+<ul>
+<li>$H_0: \rho_1 &#x3D; 0 \ and\ \rho_2 &#x3D; 0 \ and … and\ \rho_r &#x3D; 0$</li>
+<li>$H_1: \rho_1 \neq 0 \ or \ \rho_2 \neq 0\ or … or\ \rho_r \neq 0$</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182004620.jpg"></p>
+<h5 id="3-3-2-3-LM-Test"><a href="#3-3-2-3-LM-Test" class="headerlink" title="3.3.2.3 LM-Test"></a>3.3.2.3 LM-Test</h5><h4 id="3-3-3-Remedies-for-Autocorrelation"><a href="#3-3-3-Remedies-for-Autocorrelation" class="headerlink" title="3.3.3 Remedies for Autocorrelation"></a>3.3.3 Remedies for Autocorrelation</h4><h5 id="3-3-3-1-Quasi-differenced"><a href="#3-3-3-1-Quasi-differenced" class="headerlink" title="3.3.3.1 Quasi-differenced"></a>3.3.3.1 Quasi-differenced</h5><p> <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182030815.jpg"></p>
+<h5 id="3-3-3-2-GLS"><a href="#3-3-3-2-GLS" class="headerlink" title="3.3.3.2 GLS"></a>3.3.3.2 GLS</h5><p> $$y_t &#x3D; \beta x_t + \epsilon_t \ (1)$$<br> $$\epsilon_t &#x3D; \rho \epsilon_{t-1} + v_t \ (2)$$<br> Build<br> $$\rho y_{t-1} &#x3D; \rho \beta x_{t-1} + v_t\ (3)$$</p>
+<p> $(1) - (3)$ we obtain<br> $$y_t - \rho y_{t-1} &#x3D; \beta(x_t - \rho x_{t-1}) + v_t\ (4)$$</p>
+<p> $\beta$s in (1) and (4)  are not same one.</p>
+<h5 id="3-3-3-3-Add-lag-dependent-variable"><a href="#3-3-3-3-Add-lag-dependent-variable" class="headerlink" title="3.3.3.3 Add lag dependent variable"></a>3.3.3.3 Add lag dependent variable</h5><h5 id="3-3-3-4-Newey-West-Heteroscedasticity-Autocorrelation-Consistent-Covariance-Estimator"><a href="#3-3-3-4-Newey-West-Heteroscedasticity-Autocorrelation-Consistent-Covariance-Estimator" class="headerlink" title="3.3.3.4 Newey-West Heteroscedasticity Autocorrelation Consistent Covariance Estimator"></a>3.3.3.4 Newey-West Heteroscedasticity Autocorrelation Consistent Covariance Estimator</h5><p> <img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202310182035374.jpg"></p>
+<h4 id="3-3-4"><a href="#3-3-4" class="headerlink" title="3.3.4"></a>3.3.4</h4><h5 id="3-3-4-1-Dynamic-Models"><a href="#3-3-4-1-Dynamic-Models" class="headerlink" title="3.3.4.1 Dynamic Models"></a>3.3.4.1 Dynamic Models</h5><p>Static models:<br>$$y_t &#x3D; \beta_1 + \beta_2x_{2t} + … + \beta_kx_{kt} + u_t$$</p>
+<p>Dynamic models:<br>$$y_t &#x3D; \beta_1 + \beta_2x_{2t} + … + \beta_kx_{kt} + \gamma_1y_{t-1} +…+\gamma_kx_{kt-1} + u_t$$</p>
+<p>which includes $(y_t - \rho y_{t-1})$ or $(y_t - \gamma_1 y_{t-1})$</p>
+<h5 id="3-3-4-2-Models-in-First-Difference-Form"><a href="#3-3-4-2-Models-in-First-Difference-Form" class="headerlink" title="3.3.4.2 Models in First Difference Form"></a>3.3.4.2 Models in First Difference Form</h5><p>Denote the first difference of $\Delta y_t &#x3D; y_t - y_{t-1}$<br>and $\Delta x_{2t} &#x3D; x_{2t} - x_{2t-1}$</p>
+<p>The model would now be:<br>$$\Delta y_t &#x3D; \beta_1 + \beta_2 \Delta x_{2t} + … + \beta_k \Delta x_{kt} + u_t$$</p>
+<p>Sometimes the change in y purported to depend on previous values of y or xt as well as changes in x:<br>$$\Delta y_t &#x3D; \beta_1 + \beta_2 \Delta x_{2t-1} + … + \beta_k \Delta y_{t-1} + u_t$$</p>
+<h3 id="3-4-异方差性-Heteroscedastisity"><a href="#3-4-异方差性-Heteroscedastisity" class="headerlink" title="3.4 异方差性 Heteroscedastisity"></a>3.4 异方差性 Heteroscedastisity</h3><h4 id="3-4-0-Difference-between-Heteroskedasiticity-and-Homoskedasiticity"><a href="#3-4-0-Difference-between-Heteroskedasiticity-and-Homoskedasiticity" class="headerlink" title="3.4.0 Difference between Heteroskedasiticity and Homoskedasiticity"></a>3.4.0 Difference between Heteroskedasiticity and Homoskedasiticity</h4><ol>
+<li>Homoskedasiticity<br>$$\Omega &#x3D; E(\epsilon \epsilon’) &#x3D; \begin{bmatrix}<br>\epsilon_1  \<br>\epsilon_2 \<br>… \<br>\epsilon_n \<br>\end{bmatrix}</li>
+</ol>
+<p>[\epsilon_1, … , \epsilon_n] $$</p>
+<p>$$&#x3D;\begin{bmatrix}<br>\sigma_1^2, … , 0 \<br>… \<br>0,…, \sigma_n^2 \<br>\end{bmatrix}<br>$$</p>
+<p>$$&#x3D;\sigma^2\begin{bmatrix}<br>1, … , 0 \<br>… \<br>0,…, 1 \<br>\end{bmatrix}<br>$$</p>
+<p>$$&#x3D;\sigma^2I$$</p>
+<p>And<br>$$Var(\hat{\beta}) &#x3D; (X’X)^{-1}X’\sigma^2IX(X’X)^{-1} &#x3D; \sigma^2(X’X)^{-1}$$</p>
+<ol start="2">
+<li>Heteroskedasiticity<br>$Cov(X_i,X_j) &#x3D; 0$<br>and<br>$Var(\epsilon_t) &#x3D; \sigma_t^2 &lt; \infty$</li>
+</ol>
+<p>$$\Omega &#x3D; E(\epsilon \epsilon’) &#x3D; \begin{bmatrix}<br>\sigma_1^2, … , 0 \<br>… \<br>0,…, \sigma_i^2 \<br>\end{bmatrix}<br>$$</p>
+<h4 id="3-4-1-Pure-and-Impure-heteroscedastisity"><a href="#3-4-1-Pure-and-Impure-heteroscedastisity" class="headerlink" title="3.4.1 Pure and Impure heteroscedastisity"></a>3.4.1 Pure and Impure heteroscedastisity</h4><p>Impure caused by omitting explainary variable.</p>
+<h4 id="3-4-2-Assumption-1-4-amp-5"><a href="#3-4-2-Assumption-1-4-amp-5" class="headerlink" title="3.4.2 Assumption 1-4 &amp; 5"></a>3.4.2 Assumption 1-4 &amp; 5</h4><p>If model observes 1-4 then we can say the model is BLUE If model observes 5 we can use test-statistic</p>
+<h4 id="3-4-3-Detectation-of-heteroscedastisity"><a href="#3-4-3-Detectation-of-heteroscedastisity" class="headerlink" title="3.4.3 Detectation of heteroscedastisity"></a>3.4.3 Detectation of heteroscedastisity</h4><ol>
+<li>Graphic Test</li>
+<li>GQ-Test</li>
+</ol>
+<p>split samples into 2 parts and compare the varirance of these two parts. The null hypothesis is that the variances of the disturbances are equal,</p>
+<p>$$H_0 : \sigma_1^2 &#x3D; \sigma_2^2$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309251646310.jpg"></p>
+<ol start="3">
+<li>Park-Test</li>
+</ol>
+<p>$$e_i &#x3D; Y_i - \hat{Y_i} &#x3D; Y_i - (\hat{\beta_0} + \hat{\beta_1}X_{1i} +\hat{\beta_2}X_{2i})$$</p>
+<p>$$ln(e_1^2) &#x3D; \alpha_0 + \alpha_a lnZ_1 + u_i$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309251647591.jpg"></p>
+<ol start="4">
+<li>White-Test</li>
+</ol>
+<p>$$e_i^2 &#x3D; \alpha + \beta(X_1 + X_2 + X_3 + X_1X_2 + …) + u$$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309251649078.jpg"></p>
+<blockquote>
+<p>The 3 and 4 mean that there’s omitted variable in error iterm.</p>
+</blockquote>
+<p><strong>LIKE</strong></p>
+<p>$$Y &#x3D; \alpha + \beta X + u$$</p>
+<p>and $u$ is composed of $x_i$ and $z_i$ which $z_i$ we don’t add it to explainary variable.</p>
+<h4 id="3-4-4-Remedies-for-heteroskedastisity"><a href="#3-4-4-Remedies-for-heteroskedastisity" class="headerlink" title="3.4.4 Remedies for heteroskedastisity"></a>3.4.4 Remedies for heteroskedastisity</h4><p>There are two main remedies for pure heteroskedasticit:</p>
+<p>1.Heteroskedasticity-corrected standard errors</p>
+<p>2.Redefining the variables</p>
+<p>$$\frac{y}{z_i} &#x3D; \frac{\alpha}{z_i} + \beta_1 \frac{x_1}{z_i} + …$$</p>
+<ol>
+<li>use $logs$ 缩放量纲</li>
+<li>理论上 White</li>
+</ol>
+<p>$$Var(\hat{\beta}) &#x3D; \sigma^2(X’X)^{-1}$$</p>
+<p>实际上由于异方差性，我们“数据驱动”的用实际数据计算：</p>
+<p>Calculate $Var(\epsilon*) &#x3D; Var(\beta - \hat{\beta})$ directly.</p>
+<p>$$Var(\hat{\beta}) &#x3D; E[(X’X)^{-1}X’(\epsilon \epsilon’)X(X’X)^{-1}]$$</p>
+<p>$$&#x3D; (X’X)^{-1}X’E(\epsilon \epsilon’)X(X’X)^{-1}$$</p>
+<p>$$&#x3D; (X’X)^{-1}(\sum\hat{\epsilon_i}^2X_iX_i’)(X’X)^{-1}$$</p>
+<p>$$\to^{\beta}$$</p>
+<p>依概率收敛于$(\sum\epsilon_iX_iX_i’)$</p>
+<p><img src="https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309251639698.jpg"></p>
+<ol>
+<li><p>Refomulating the Equation<br>$$\frac{Y_i}{Pop} &#x3D; \alpha_0 + \beta_1\frac{Reg_i}{Pop} + \beta_2 Price_i + \epsilon_i$$</p>
+</li>
+<li><p>Weighted Least Square<br>$$\frac{Y_i}{Abs(\epsilon_i)} &#x3D; \alpha_0 + \beta_1Reg_i+ \beta_2 Price_i + \frac{\epsilon_i}{Abs(\epsilon_i)}$$</p>
+</li>
+<li><p>A double-log functional form<br>$$Y &#x3D; \alpha_0 + \beta_1lnReg_i + \beta_2 ln Price_i + \epsilon_i $$</p>
+</li>
+<li><p>White Method above</p>
+</li>
+</ol>
+<h3 id="3-5-模型设定问题"><a href="#3-5-模型设定问题" class="headerlink" title="3.5 模型设定问题"></a>3.5 模型设定问题</h3><h3 id="3-6-参数稳定性检验"><a href="#3-6-参数稳定性检验" class="headerlink" title="3.6 参数稳定性检验"></a>3.6 参数稳定性检验</h3><h3 id="3-7-测量误差"><a href="#3-7-测量误差" class="headerlink" title="3.7 测量误差"></a>3.7 测量误差</h3><h3 id="3-8-计量经济学建模策略"><a href="#3-8-计量经济学建模策略" class="headerlink" title="3.8 计量经济学建模策略"></a>3.8 计量经济学建模策略</h3><h3 id="3-9-实践性教学环节"><a href="#3-9-实践性教学环节" class="headerlink" title="3.9 实践性教学环节"></a>3.9 实践性教学环节</h3><h2 id="第四章：含虚拟变量的回归模型"><a href="#第四章：含虚拟变量的回归模型" class="headerlink" title="第四章：含虚拟变量的回归模型"></a>第四章：含虚拟变量的回归模型</h2><h3 id="虚拟变量模型的设计"><a href="#虚拟变量模型的设计" class="headerlink" title="虚拟变量模型的设计"></a>虚拟变量模型的设计</h3><h3 id="虚拟变量的应用"><a href="#虚拟变量的应用" class="headerlink" title="虚拟变量的应用"></a>虚拟变量的应用</h3><h3 id="二元选择模型"><a href="#二元选择模型" class="headerlink" title="二元选择模型"></a>二元选择模型</h3><h3 id="多元选择模型"><a href="#多元选择模型" class="headerlink" title="多元选择模型"></a>多元选择模型</h3><h3 id="实践性教学环节"><a href="#实践性教学环节" class="headerlink" title="实践性教学环节"></a>实践性教学环节</h3><h2 id="Lecture-5-Autorelation-第五章：时间序列模型"><a href="#Lecture-5-Autorelation-第五章：时间序列模型" class="headerlink" title="Lecture 5 Autorelation 第五章：时间序列模型"></a>Lecture 5 Autorelation 第五章：时间序列模型</h2><h3 id="ARMA模型"><a href="#ARMA模型" class="headerlink" title="ARMA模型"></a>ARMA模型</h3><h3 id="平稳性与单位根检验"><a href="#平稳性与单位根检验" class="headerlink" title="平稳性与单位根检验"></a>平稳性与单位根检验</h3><h3 id="ARIMA模型"><a href="#ARIMA模型" class="headerlink" title="ARIMA模型"></a>ARIMA模型</h3><h3 id="时间序列模型预测"><a href="#时间序列模型预测" class="headerlink" title="时间序列模型预测"></a>时间序列模型预测</h3><h3 id="协整及其检验"><a href="#协整及其检验" class="headerlink" title="协整及其检验"></a>协整及其检验</h3><h3 id="误差修正模型"><a href="#误差修正模型" class="headerlink" title="误差修正模型"></a>误差修正模型</h3><h3 id="实践性教学环节-1"><a href="#实践性教学环节-1" class="headerlink" title="实践性教学环节"></a>实践性教学环节</h3><h2 id="第六章：多方程模型"><a href="#第六章：多方程模型" class="headerlink" title="第六章：多方程模型"></a>第六章：多方程模型</h2><h3 id="联立方程模型"><a href="#联立方程模型" class="headerlink" title="联立方程模型"></a>联立方程模型</h3><h3 id="向量自回归模型"><a href="#向量自回归模型" class="headerlink" title="向量自回归模型"></a>向量自回归模型</h3><h3 id="脉冲响应和方差分解"><a href="#脉冲响应和方差分解" class="headerlink" title="脉冲响应和方差分解"></a>脉冲响应和方差分解</h3><h3 id="实践性教学环节-2"><a href="#实践性教学环节-2" class="headerlink" title="实践性教学环节"></a>实践性教学环节</h3><h2 id="第七章：波动性与相关性建模"><a href="#第七章：波动性与相关性建模" class="headerlink" title="第七章：波动性与相关性建模"></a>第七章：波动性与相关性建模</h2><h3 id="波动率建模"><a href="#波动率建模" class="headerlink" title="波动率建模"></a>波动率建模</h3><h3 id="ARCH模型与GARCH模型"><a href="#ARCH模型与GARCH模型" class="headerlink" title="ARCH模型与GARCH模型"></a>ARCH模型与GARCH模型</h3><h3 id="GARCH模型的扩展"><a href="#GARCH模型的扩展" class="headerlink" title="GARCH模型的扩展"></a>GARCH模型的扩展</h3><h3 id="多元GARCH模型"><a href="#多元GARCH模型" class="headerlink" title="多元GARCH模型"></a>多元GARCH模型</h3><h3 id="实践性教学环节-3"><a href="#实践性教学环节-3" class="headerlink" title="实践性教学环节"></a>实践性教学环节</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/f6199005">https://skddj.github.io/article/f6199005</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                                    <span class="chip bg-color">大三上</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/">
+                                    <span class="chip bg-color">计量经济学</span>
+                                </a>
+                            
+                                <a href="/tags/Econometrics/">
+                                    <span class="chip bg-color">Econometrics</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/dbeddcc1">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="计算机操作系统">
+                        
+                        <span class="card-title">计算机操作系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">计算机操作系统</span>
+                    </a>
+                    
+                    <a href="/tags/Operating-System/">
+                        <span class="chip bg-color">Operating System</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/53aac4c6">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="金融市场与机构">
+                        
+                        <span class="card-title">金融市场与机构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            课程笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-10-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/">
+                        <span class="chip bg-color">大三上</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%87%91%E8%9E%8D%E5%B8%82%E5%9C%BA%E4%B8%8E%E6%9C%BA%E6%9E%84/">
+                        <span class="chip bg-color">金融市场与机构</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>

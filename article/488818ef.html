@@ -1,0 +1,2247 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="量化交易与商业银行, Yiming Shi&#39;s blog">
+    <meta name="description" content="主要介绍了量化交易和商业银行的相关知识，包括课程概述、量化交易简介、股票量化交易、期货量化交易、个人信用风险评估和消费信贷产品设计等主题。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>量化交易与商业银行 | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">量化交易与商业银行</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                                <span class="chip bg-color">大二下</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E4%B8%8E%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C/">
+                                <span class="chip bg-color">量化交易与商业银行</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-12-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2023-01-03
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    6.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    27 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-1-Chapter1-课程概述"><a href="#1-1-Chapter1-课程概述" class="headerlink" title="1.1. Chapter1 课程概述"></a>1.1. Chapter1 课程概述</h2><h3 id="1-1-1-课程简介"><a href="#1-1-1-课程简介" class="headerlink" title="1.1.1. 课程简介"></a>1.1.1. 课程简介</h3><ul>
+<li>小组作业与汇报（4次）：60%</li>
+<li>期货交易仿真（1次）：20%</li>
+<li>期末设计报告（1次）：20%<ul>
+<li>加分：讲义的修改</li>
+</ul>
+</li>
+</ul>
+<h4 id="PPT注意事项"><a href="#PPT注意事项" class="headerlink" title="PPT注意事项"></a>PPT注意事项</h4><ul>
+<li>Dark背景，白色字体和蓝色字体和黄色字体足矣</li>
+<li>右上角的课程logo</li>
+<li>less than 5 colors</li>
+<li>注明分工</li>
+<li>background</li>
+<li>图表标注说明</li>
+<li>页码添加</li>
+</ul>
+<h3 id="1-1-2-量化交易简介"><a href="#1-1-2-量化交易简介" class="headerlink" title="1.1.2. 量化交易简介"></a>1.1.2. 量化交易简介</h3><blockquote>
+<p>量化交易是指以数据为基础，以数量化手段为核心，利用计算机技术进行程序化交易的投资方式。这里的数量化手段，包括对整个交易流程和交易目标的数量刻画、数学模型的构建、对 量化目标的最优化、对策略结果的数量化评价等方式方法。</p>
+</blockquote>
+<p>量化交易的缺点和优点</p>
+<h4 id="金融学逻辑"><a href="#金融学逻辑" class="headerlink" title="金融学逻辑"></a>金融学逻辑</h4><ul>
+<li>有效市场假说<ul>
+<li>人们会因为情绪和对信息的理解，导致时间上股价的内在价值的偏移，由于定价误差的存在，量化交易可以捕捉到投资的机会。</li>
+</ul>
+</li>
+<li>行为经济学<ul>
+<li>人们会对自己的行为过度自信，导致股价的变化并不是即时性的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-3-商业银行简介"><a href="#1-1-3-商业银行简介" class="headerlink" title="1.1.3. 商业银行简介"></a>1.1.3. 商业银行简介</h3><h2 id="1-2-Chapter2-股票量化交易"><a href="#1-2-Chapter2-股票量化交易" class="headerlink" title="1.2. Chapter2 股票量化交易"></a>1.2. Chapter2 股票量化交易</h2><h3 id="1-2-1-选股逻辑与交易策略"><a href="#1-2-1-选股逻辑与交易策略" class="headerlink" title="1.2.1. 选股逻辑与交易策略"></a>1.2.1. 选股逻辑与交易策略</h3><ul>
+<li>多因子模型<ul>
+<li>套利定价理论为基础，买入满足因子条件的股票卖出不满足的（如市盈率因子）</li>
+<li>多因子组合可以使用加权打分法和收益回归法</li>
+</ul>
+</li>
+<li>套利类策略<ul>
+<li>Call Option</li>
+<li>Put Option</li>
+</ul>
+</li>
+<li>统计套利(Statistical Arbitrage)<ul>
+<li>Pairs Trading</li>
+</ul>
+</li>
+<li>衍生品策略</li>
+<li>事件驱动策略</li>
+</ul>
+<h3 id="1-2-2-因子分析"><a href="#1-2-2-因子分析" class="headerlink" title="1.2.2. 因子分析"></a>1.2.2. 因子分析</h3><p>There are a few different ways to determine factors in quantitative trading:</p>
+<ul>
+<li><strong>Backtesting.</strong> Backtesting involves running a historical simulation of a trading strategy to see how it would have performed in the past. This can help you to identify factors that were historically associated with success.</li>
+<li><strong>Statistical analysis.</strong> Statistical analysis can be used to identify factors that are correlated with stock prices. This can help you to develop a model that can predict future stock prices.</li>
+<li><strong>Expert opinion.</strong> You can also consult with experts in the field of quantitative trading to get their recommendations on factors.</li>
+</ul>
+<p>Once you have identified some potential factors, you need to test them to see if they are actually effective in predicting stock prices. This can be done by running a backtest or by using statistical analysis.</p>
+<p>It is important to note that there is no one-size-fits-all answer to this question. The best way to determine factors will vary depending on your specific investment goals and objectives.</p>
+<p>There are a few things you can do to determine your stock pool when using a multi-factor strategy:</p>
+<ol>
+<li><strong>Identify your factors.</strong> What factors do you want to use to select stocks? Some common factors include price momentum, value, and technical indicators.</li>
+<li><strong>Rank your factors.</strong> Once you have identified your factors, you need to rank them in order of importance. This will help you to narrow down your stock pool.</li>
+<li><strong>Screen for stocks.</strong> Once you have ranked your factors, you can screen for stocks that meet your criteria. This will help you to identify a smaller pool of stocks to further analyze.</li>
+<li><strong>Analyze your stocks.</strong> Once you have screened for stocks, you need to analyze them further. This will help you to identify the best stocks to include in your portfolio.</li>
+</ol>
+<p>It is important to note that there is no one-size-fits-all answer to this question. The best way to determine your stock pool will vary depending on your specific investment goals and objectives.<br>#<br>Here are some additional tips for determining your stock pool:</p>
+<ul>
+<li><strong>Consider your risk tolerance.</strong> The stocks you choose should be consistent with your risk tolerance. If you are a conservative investor, you will want to choose stocks with a lower risk profile.</li>
+<li><strong>Diversify your portfolio.</strong> It is important to diversify your portfolio to reduce risk. This means investing in a variety of different stocks from different sectors.</li>
+<li><strong>Monitor your portfolio.</strong> Once you have chosen your stocks, you need to monitor your portfolio regularly. This will help you to identify any stocks that are no longer meeting your criteria and make changes as needed.</li>
+</ul>
+<h1 id><a href="#" class="headerlink" title></a></h1><blockquote>
+<p>So isn’t this a contradiction? In quantitative trading, my stock selection needs to be determined by factors, but the determination of factors needs to be determined by the backtest data of the stock pool</p>
+</blockquote>
+<p>Not necessarily. You can use backtesting to identify factors that were historically associated with success, but you can also use other methods, such as expert opinion or statistical analysis. Ultimately, the decision of which factors to use is up to you.</p>
+<p>Backtesting can be a helpful tool, but it is important to remember that it is not a perfect tool. There are a number of limitations to backtesting, such as the fact that it uses historical data and does not take into account current market conditions. However, backtesting can be a valuable tool for identifying potential problems with a trading strategy and for identifying factors that were historically associated with success.</p>
+<p>If you are using backtesting to identify factors, it is important to use a variety of different data sets and to backtest your strategy over a long period of time. This will help you to get a more accurate picture of how your strategy would have performed in the past.</p>
+<p>It is also important to remember that backtesting is just one tool that you can use to make investment decisions. You also need to consider your own risk tolerance, your investment goals, and your investment horizon. Ultimately, the decision of whether or not to use a particular trading strategy is up to you.</p>
+<h3 id="1-2-3-交易策略的编程实现"><a href="#1-2-3-交易策略的编程实现" class="headerlink" title="1.2.3. 交易策略的编程实现"></a>1.2.3. 交易策略的编程实现</h3><p>聚宽量化交易平台</p>
+<h2 id="1-3-Chapter3-期货量化交易"><a href="#1-3-Chapter3-期货量化交易" class="headerlink" title="1.3. Chapter3 期货量化交易"></a>1.3. Chapter3 期货量化交易</h2><h3 id="1-3-1-期货和期权的简介"><a href="#1-3-1-期货和期权的简介" class="headerlink" title="1.3.1. 期货和期权的简介"></a>1.3.1. 期货和期权的简介</h3><h4 id="远期协议Forward-Contact"><a href="#远期协议Forward-Contact" class="headerlink" title="远期协议Forward Contact"></a>远期协议Forward Contact</h4><h5 id="期货-Future"><a href="#期货-Future" class="headerlink" title="期货 Future"></a>期货 Future</h5><h6 id="两大功能："><a href="#两大功能：" class="headerlink" title="两大功能："></a>两大功能：</h6><ul>
+<li><p>价格发现<br>投资者可以准确掌握未来市场的供求信息，提高资本市场的效率</p>
+</li>
+<li><p>风险规避<br>投资者可以通过套期保值来规避市场价格风险，促进金融服务实体经济</p>
+</li>
+<li><p>交易所中介（降低信用风险）</p>
+</li>
+<li><p>标准化的合同更具流动性</p>
+</li>
+<li><p>风险对冲（hedging）</p>
+</li>
+<li><p>杠杆交易原理</p>
+</li>
+</ul>
+<h5 id="保证金（margin）-amp-盯市（mark-to-market）"><a href="#保证金（margin）-amp-盯市（mark-to-market）" class="headerlink" title="保证金（margin）&amp;盯市（mark to market）"></a>保证金（margin）&amp;盯市（mark to market）</h5><p>如果保证金不足，将会发生强行平仓</p>
+<h5 id="期货功能"><a href="#期货功能" class="headerlink" title="期货功能"></a>期货功能</h5><ul>
+<li>风险规避</li>
+<li>价格发现</li>
+</ul>
+<h5 id="商品期货的定价公式"><a href="#商品期货的定价公式" class="headerlink" title="商品期货的定价公式"></a>商品期货的定价公式</h5><p>$$F &#x3D; S_0(1+r_f+h)^T$$<br>where $S_0$是现货价格<br>$r_f$是无风险利率Risk Free<br>$h$是存储成本</p>
+<p>两种套利方法</p>
+<h3 id="1-3-2-期货量化交易"><a href="#1-3-2-期货量化交易" class="headerlink" title="1.3.2. 期货量化交易"></a>1.3.2. 期货量化交易</h3><h3 id="1-3-3-期货的基本面分析"><a href="#1-3-3-期货的基本面分析" class="headerlink" title="1.3.3. 期货的基本面分析"></a>1.3.3. 期货的基本面分析</h3><h2 id="1-4-Chapter4-商业银行经营与业务逻辑"><a href="#1-4-Chapter4-商业银行经营与业务逻辑" class="headerlink" title="1.4. Chapter4 商业银行经营与业务逻辑"></a>1.4. Chapter4 商业银行经营与业务逻辑</h2><h3 id="1-4-1-商业银行业务概述"><a href="#1-4-1-商业银行业务概述" class="headerlink" title="1.4.1. 商业银行业务概述"></a>1.4.1. 商业银行业务概述</h3><h4 id="职能与作用"><a href="#职能与作用" class="headerlink" title="职能与作用"></a>职能与作用</h4><ul>
+<li>融资</li>
+<li>信用中心</li>
+</ul>
+<h4 id="基本业务"><a href="#基本业务" class="headerlink" title="基本业务"></a>基本业务</h4><ul>
+<li>直接贷款 表内业务</li>
+<li>贷款承诺 表外业务</li>
+<li>委托贷款 中间业务</li>
+</ul>
+<h3 id="1-4-2-商业银行的经营绩效评估"><a href="#1-4-2-商业银行的经营绩效评估" class="headerlink" title="1.4.2. 商业银行的经营绩效评估"></a>1.4.2. 商业银行的经营绩效评估</h3><h4 id="三大原则"><a href="#三大原则" class="headerlink" title="三大原则"></a>三大原则</h4><ul>
+<li>流动性前提</li>
+<li>安全性保障</li>
+<li>盈利性目标</li>
+</ul>
+<h3 id="1-4-3-上市商业银行的财务报表分析"><a href="#1-4-3-上市商业银行的财务报表分析" class="headerlink" title="1.4.3. 上市商业银行的财务报表分析"></a>1.4.3. 上市商业银行的财务报表分析</h3><h2 id="1-5-Chapter5-个人信用风险评估与消费信贷产品设计"><a href="#1-5-Chapter5-个人信用风险评估与消费信贷产品设计" class="headerlink" title="1.5. Chapter5 个人信用风险评估与消费信贷产品设计"></a>1.5. Chapter5 个人信用风险评估与消费信贷产品设计</h2><h3 id="1-5-1-个人信用风险评估原理与方法"><a href="#1-5-1-个人信用风险评估原理与方法" class="headerlink" title="1.5.1. 个人信用风险评估原理与方法"></a>1.5.1. 个人信用风险评估原理与方法</h3><h3 id="1-5-2-个人信用分类训练模型"><a href="#1-5-2-个人信用分类训练模型" class="headerlink" title="1.5.2. 个人信用分类训练模型"></a>1.5.2. 个人信用分类训练模型</h3><h1 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h1><h2 id="数据预处理："><a href="#数据预处理：" class="headerlink" title="数据预处理："></a>数据预处理：</h2><p>加载训练样本和测试样本数据<br>检查并处理缺失值，可以使用填充、删除或插值等方法<br>对类别型特征进行编码，例如独热编码或标签编码<br>对数值型特征进行标准化或归一化处理</p>
+<h2 id="特征选择："><a href="#特征选择：" class="headerlink" title="特征选择："></a>特征选择：</h2><p>使用相关性分析、递归特征消除（RFE）或基于模型的方法（例如LASSO回归）进行特征选择，以减少特征维度并提高模型性能</p>
+<h2 id="处理不均衡样本："><a href="#处理不均衡样本：" class="headerlink" title="处理不均衡样本："></a>处理不均衡样本：</h2><p>采用过采样（例如SMOTE算法）或欠采样（例如随机欠采样）方法，使各类别样本数量接近平衡</p>
+<h2 id="选择至少两种机器学习方法构建模型，例如："><a href="#选择至少两种机器学习方法构建模型，例如：" class="headerlink" title="选择至少两种机器学习方法构建模型，例如："></a>选择至少两种机器学习方法构建模型，例如：</h2><p>神经网络（例如多层感知机）<br>随机森林决策树<br>XgboostLightGBM<br>CatBoost</p>
+<h2 id="描述所选机器学习算法的原理："><a href="#描述所选机器学习算法的原理：" class="headerlink" title="描述所选机器学习算法的原理："></a>描述所选机器学习算法的原理：</h2><p>对于每种选定的算法，描述它们的工作原理、优缺点和在此任务中的适用性</p>
+<h2 id="训练并评估模型："><a href="#训练并评估模型：" class="headerlink" title="训练并评估模型："></a>训练并评估模型：</h2><p>将预处理后的训练数据集划分为训练集和验证集<br>使用各种选定的算法训练模型，并在验证集上评估模型性能，记录准确性、精确度、召回率、F1分数等评价指标</p>
+<h2 id="与支持向量机（SVM）和Logistic回归进行比较："><a href="#与支持向量机（SVM）和Logistic回归进行比较：" class="headerlink" title="与支持向量机（SVM）和Logistic回归进行比较："></a>与支持向量机（SVM）和Logistic回归进行比较：</h2><p>训练支持向量机和Logistic回归模型，并在验证集上评估性能<br>将所选方法的性能与SVM和Logistic回归的性能进行比较，找出最佳模型</p>
+<h2 id="使用最佳模型在预处理后的测试数据集上进行预测"><a href="#使用最佳模型在预处理后的测试数据集上进行预测" class="headerlink" title="使用最佳模型在预处理后的测试数据集上进行预测"></a>使用最佳模型在预处理后的测试数据集上进行预测</h2><p>分析预测结果，提出可能的优化方法（如参数调优、特征选择、不同模型结合等）</p>
+<h2 id="撰写报告："><a href="#撰写报告：" class="headerlink" title="撰写报告："></a>撰写报告：</h2><p>总结整个过程，包括数据预处理、特征选择、模型训练、评估和预测<br>描述所选方法的原理以及与SVM和Logistic回归的比较<br>提出改进和优化的建议</p>
+<h1 id="以下为具体操作"><a href="#以下为具体操作" class="headerlink" title="以下为具体操作"></a>以下为具体操作</h1><h2 id="数据预处理：-1"><a href="#数据预处理：-1" class="headerlink" title="数据预处理："></a>数据预处理：</h2><p>加载训练样本和测试样本数据<br>检查并处理缺失值，可以使用填充、删除或插值等方法<br>对类别型特征进行编码，例如独热编码或标签编码<br>对数值型特征进行标准化或归一化处理</p>
+<p>首先导入必要的库，并加载训练样本和测试样本数据。假设训练集位于”train.csv”，测试集位于”test.csv”。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler<span class="token punctuation">,</span> MinMaxScaler
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>impute <span class="token keyword">import</span> SimpleImputer
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> OneHotEncoder<span class="token punctuation">,</span> LabelEncoder
+
+<span class="token comment"># 加载数据</span>
+train_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"train.csv"</span><span class="token punctuation">)</span>
+test_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"test.csv"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 查看数据</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>train_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>test_data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>接下来检查并处理缺失值。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">handle_missing_values</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 使用均值填充数值型特征的缺失值</span>
+    num_imputer <span class="token operator">=</span> SimpleImputer<span class="token punctuation">(</span>strategy<span class="token operator">=</span><span class="token string">"mean"</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span> <span class="token operator">=</span> num_imputer<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">)</span>
+
+    <span class="token comment"># 使用众数填充类别型特征的缺失值</span>
+    cat_imputer <span class="token operator">=</span> SimpleImputer<span class="token punctuation">(</span>strategy<span class="token operator">=</span><span class="token string">"most_frequent"</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">[</span>cat_cols<span class="token punctuation">]</span> <span class="token operator">=</span> cat_imputer<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">[</span>cat_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> data
+
+train_data <span class="token operator">=</span> handle_missing_values<span class="token punctuation">(</span>train_data<span class="token punctuation">)</span>
+test_data <span class="token operator">=</span> handle_missing_values<span class="token punctuation">(</span>test_data<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对类别型特征进行编码。这里以独热编码为例。首先确定类别型特征。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">one_hot_encoding</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> cat_cols<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ohe <span class="token operator">=</span> OneHotEncoder<span class="token punctuation">(</span>handle_unknown<span class="token operator">=</span><span class="token string">"ignore"</span><span class="token punctuation">)</span>
+    ohe_array <span class="token operator">=</span> ohe<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">[</span>cat_cols<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>toarray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> ohe_array
+
+cat_cols <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'cat_col_1'</span><span class="token punctuation">,</span> <span class="token string">'cat_col_2'</span><span class="token punctuation">,</span> <span class="token string">'cat_col_3'</span><span class="token punctuation">]</span>  <span class="token comment"># 根据实际数据集中的类别型特征列名替换</span>
+train_ohe <span class="token operator">=</span> one_hot_encoding<span class="token punctuation">(</span>train_data<span class="token punctuation">,</span> cat_cols<span class="token punctuation">)</span>
+test_ohe <span class="token operator">=</span> one_hot_encoding<span class="token punctuation">(</span>test_data<span class="token punctuation">,</span> cat_cols<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>接着#对数值型特征进行标准化处理。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">standardize_numeric_features</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> num_cols<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    scaler <span class="token operator">=</span> StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span> <span class="token operator">=</span> scaler<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> data
+
+num_cols <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'num_col_1'</span><span class="token punctuation">,</span> <span class="token string">'num_col_2'</span><span class="token punctuation">,</span> <span class="token string">'num_col_3'</span><span class="token punctuation">]</span>  <span class="token comment"># 根据实际数据集中的数值型特征列名替换</span>
+train_data <span class="token operator">=</span> standardize_numeric_features<span class="token punctuation">(</span>train_data<span class="token punctuation">,</span> num_cols<span class="token punctuation">)</span>
+test_data <span class="token operator">=</span> standardize_numeric_features<span class="token punctuation">(</span>test_data<span class="token punctuation">,</span> num_cols<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>最后将处理后的数值型特征和独热编码后的类别型特征结合。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">train_final <span class="token operator">=</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>train_data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">,</span> train_ohe<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+test_final <span class="token operator">=</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>test_data<span class="token punctuation">[</span>num_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>values<span class="token punctuation">,</span> test_ohe<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Processed train data shape: "</span><span class="token punctuation">,</span> train_final<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Processed test data shape: "</span><span class="token punctuation">,</span> test_final<span class="token punctuation">.</span>shape<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>至此完成了数据预处理过程，接下来可以使用处理后的数据在训练集上训练模型，然后在测试集上进行评估。</p>
+<h2 id="特征选择：-1"><a href="#特征选择：-1" class="headerlink" title="特征选择："></a>特征选择：</h2><p>使用相关性分析、递归特征消除（RFE）或基于模型的方法（例如LASSO回归）进行特征选择，以减少特征维度并提高模型性能</p>
+<ol>
+<li>相关性分析：<br> 可以计算特征之间的相关性，选择与目标变量相关性较高的特征。这里 可以使用Pearson相关系数（在数值型特征之间）和Spearman相关系数（在类别型和数值型特征之间）来衡量相关性。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token comment"># 假设数据已经经过预处理（缺失值、编码和标准化）</span>
+<span class="token comment"># X_train为训练集特征，y_train为训练集标签</span>
+
+<span class="token comment"># 计算特征与目标变量之间的相关系数</span>
+correlations <span class="token operator">=</span> X_train<span class="token punctuation">.</span>corrwith<span class="token punctuation">(</span>y_train<span class="token punctuation">)</span>
+
+<span class="token comment"># 选取与目标变量相关系数绝对值较高的特征</span>
+selected_features <span class="token operator">=</span> correlations<span class="token punctuation">[</span><span class="token builtin">abs</span><span class="token punctuation">(</span>correlations<span class="token punctuation">)</span> <span class="token operator">></span> threshold<span class="token punctuation">]</span><span class="token punctuation">.</span>index<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>递归特征消除（RFE）：<br>递归特征消除是一种递归地移除特征并通过模型精度来评估特征重要性的方法。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>feature_selection <span class="token keyword">import</span> RFE
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
+
+<span class="token comment"># 初始化逻辑回归模型</span>
+model <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 初始化RFE，并选取要保留的特征数量。在这里 选择保留前10个特征</span>
+rfe <span class="token operator">=</span> RFE<span class="token punctuation">(</span>model<span class="token punctuation">,</span> n_features_to_select<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 使用训练数据进行拟合</span>
+rfe<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+
+<span class="token comment"># 获取选定的特征</span>
+selected_features <span class="token operator">=</span> X_train<span class="token punctuation">.</span>columns<span class="token punctuation">[</span>rfe<span class="token punctuation">.</span>support_<span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>基于模型的特征选择（例如LASSO回归）：<br>使用带有L1正则化的线性模型（如LASSO回归）进行特征选择时，伴随着正则化参数的增加，L1正则化会将某些特征的系数逼近为零，从而实现特征选择。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> Lasso
+
+<span class="token comment"># 初始化LASSO回归模型（可以微调正则化参数alpha）</span>
+lasso <span class="token operator">=</span> Lasso<span class="token punctuation">(</span>alpha<span class="token operator">=</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 用训练数据拟合模型</span>
+lasso<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+
+<span class="token comment"># 获取非零系数特征</span>
+selected_features <span class="token operator">=</span> X_train<span class="token punctuation">.</span>columns<span class="token punctuation">[</span>lasso<span class="token punctuation">.</span>coef_ <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上三种特征选择方法可以根据实际情况进行选择。</p>
+<h2 id="处理不均衡样本：-1"><a href="#处理不均衡样本：-1" class="headerlink" title="处理不均衡样本："></a>处理不均衡样本：</h2><p>采用过采样（例如SMOTE算法）或欠采样（例如随机欠采样）方法，使各类别样本数量接近平衡</p>
+<p>处理不平衡数据集是很重要的，因为在许多实际问题中，类别分布是不均衡的。在这种情况下，过采样和欠采样技术可以提高分类器的性能。</p>
+<ol>
+<li>过采样（如SMOTE算法）：</li>
+</ol>
+<p>SMOTE（合成少数类过采样技术）是处理不平衡数据集的一种有效方法。它通过生成少数类的合成样本来平衡类别。这里是一个简单的实现过程：</p>
+<pre><code>1.1. 导入所需的库和数据拆分：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">from imblearn.over_sampling import SMOTE
+from sklearn.model_selection import train_test_split<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>1.2. 拆分数据集为训练集和测试集：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">X_train, X_test, y_train, y_test &#x3D; train_test_split(X, y, test_size&#x3D;0.3, random_state&#x3D;42)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>1.3. 使用SMOTE过采样：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">smote &#x3D; SMOTE(random_state&#x3D;42)
+X_train_resampled, y_train_resampled &#x3D; smote.fit_resample(X_train, y_train)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>1.4. 在重采样后的数据上训练模型并验证性能
+</code></pre>
+<ol start="2">
+<li>欠采样（例如随机欠采样）：</li>
+</ol>
+<p>欠采样是另一种平衡类别的方法，它通过减少多数类的样本数量。随机欠采样是执行欠采样的一种方法。这里是一个简单的实现过程：</p>
+<pre><code>2.1. 导入所需的库和数据拆分：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">from imblearn.under_sampling import RandomUnderSampler
+from sklearn.model_selection import train_test_split<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>2.2. 拆分数据集为训练集和测试集：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">X_train, X_test, y_train, y_test &#x3D; train_test_split(X, y, test_size&#x3D;0.3, random_state&#x3D;42)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>2.3. 使用随机欠采样：
+</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">rus &#x3D; RandomUnderSampler(random_state&#x3D;42)
+X_train_resampled, y_train_resampled &#x3D; rus.fit_resample(X_train, y_train)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>2.4. 在重采样后的数据上训练模型并验证性能
+</code></pre>
+<p>在这两种方法中，过采样保留了更多的信息，因此它可能导致更好的性能。然而，这也可能导致过度拟合，因此使用交叉验证来评估模型性能。欠采样对于非常不平衡的数据集和计算资源有限的情况很有用，但它可能会丢失一些有价值的信息。</p>
+<h2 id="选择至少两种机器学习方法构建模型，例如：-1"><a href="#选择至少两种机器学习方法构建模型，例如：-1" class="headerlink" title="选择至少两种机器学习方法构建模型，例如："></a>选择至少两种机器学习方法构建模型，例如：</h2><p>神经网络（例如多层感知机）<br>随机森林决策树<br>XgboostLightGBM<br>CatBoost</p>
+<p>使用神经网络（多层感知机）和XGBoost进行建模。</p>
+<h4 id="神经网络（多层感知机）："><a href="#神经网络（多层感知机）：" class="headerlink" title="神经网络（多层感知机）："></a>神经网络（多层感知机）：</h4><ol>
+<li><p>准备数据：在训练神经网络之前，确保 已完成数据预处理和特征选择的前两个任务。另外，对输入数据进行归一化处理，使其值介于0和1之间，以便神经网络更快地收敛。</p>
+</li>
+<li><p>创建神经网络：使用Python的<code>keras</code>库定义一个多层感知机。可以以以下方式创建多层感知机：</p>
+</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Dense
+
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">,</span> input_dim<span class="token operator">=</span>X_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>编译模型：选择适当的损失函数、优化器和评估指标：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>loss<span class="token operator">=</span><span class="token string">'binary_crossentropy'</span><span class="token punctuation">,</span> optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span> metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="4">
+<li>训练模型：将训练数据集划分为训练和验证集，然后使用<code>fit</code>方法训练模型，并设置合适数字轮次和批量大小：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">history <span class="token operator">=</span> model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> validation_data<span class="token operator">=</span><span class="token punctuation">(</span>X_val<span class="token punctuation">,</span> y_val<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="5">
+<li><p>评估模型性能：查看训练和验证准确率，根据需要调整模型结构和参数。</p>
+</li>
+<li><p>应用模型：使用<code>predict</code>方法预测新数据的标签。</p>
+</li>
+</ol>
+<h4 id="XGBoost："><a href="#XGBoost：" class="headerlink" title="XGBoost："></a>XGBoost：</h4><ol>
+<li><p>准备数据：确保 已完成数据预处理和特征选择的前两个任务。对于XGBoost，不需要对输入数据进行归一化处理。</p>
+</li>
+<li><p>创建模型：使用<code>xgboost</code>库创建一个XGBoost分类器：</p>
+</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> xgboost <span class="token keyword">as</span> xgb
+
+model <span class="token operator">=</span> xgb<span class="token punctuation">.</span>XGBClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>训练模型：使用<code>fit</code>方法训练模型，并将训练数据集划分为训练和验证集：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> eval_set<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span>X_val<span class="token punctuation">,</span> y_val<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> early_stopping_rounds<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="4">
+<li><p>调整超参数：使用网格搜索或随机搜索等技术调整超参数，以优化模型性能。</p>
+</li>
+<li><p>评估模型性能：根据准确率、精确率、召回率等指标评估模型性能。</p>
+</li>
+<li><p>应用模型：使用<code>predict</code>方法预测新数据的标签。</p>
+</li>
+</ol>
+<p>这就是如何使用多层感知机和XGBoost构建模型的概述。注意，这两种方法都涉及到很多可调整的参数和设置，因此建议对这些方法进行深入了解，以便根据 具体问题获得最佳性能。在实践中， 也可以同时尝试其他机器学习方法，如随机森林决策树、LightGBM和CatBoost，以评估哪种方法在 问题上表现最佳。</p>
+<h2 id="描述所选机器学习算法的原理：-1"><a href="#描述所选机器学习算法的原理：-1" class="headerlink" title="描述所选机器学习算法的原理："></a>描述所选机器学习算法的原理：</h2><p>对于每种选定的算法，描述它们的工作原理、优缺点和在此任务中的适用性</p>
+<ol>
+<li>神经网络（Neural Networks）</li>
+</ol>
+<ul>
+<li>工作原理：神经网络是一种模仿人脑神经元结构的机器学习方法。它由多个节点（神经元）和连接它们的权重组成，分为输入层、隐藏层和输出层。神经网络通过改变权重和激活函数来进行学习。当输入数据进入网络时，权重和激活函数将数据从一层传递到另一层，直到生成输出。学习过程通常使用反向传播算法更新权重，并依靠梯度下降优化算法（如Adam或RMSprop）最小化损失函数。</li>
+<li>优点：<ul>
+<li>可以处理复杂、非线性数据。</li>
+<li>适合处理图像、文本、语音等领域的问题。</li>
+<li>可以通过调整网络结构和参数以适应各种任务。</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>训练时间较长，尤其是对于大型网络和大量数据。</li>
+<li>容易过拟合，尤其是在较小的数据集上。</li>
+<li>需要大量的调参和验证以达到最佳性能。</li>
+</ul>
+</li>
+<li>适用性：神经网络适用于 任务，因为它们能够捕捉复杂的关系和模式。在预处理数据并进行特征选择之后，可以尝试构建一个简单的神经网络来解决 问题。随着 了解需要学习的模式的复杂性，可以逐渐增加网络的大小，并尝试不同的激活函数和优化器。</li>
+</ul>
+<ol>
+<li>XGBoost（eXtreme Gradient Boosting）</li>
+</ol>
+<ul>
+<li>工作原理：XGBoost是一种基于梯度提升决策树（Gradient Boosted Decision Trees，GBDT）的机器学习算法。梯度提升是一种集成学习方法，通过将多个基本模型（通常是决策树）组合起来提高预测性能。在每一轮迭代中，都会按顺序添加一个新的基本模型，并对该模型的预测结果与实际值之间的误差进行拟合。XGBoost通过梯度提升来进行优化。更具体地说，它使用领英之间梯度下降的原理来最小化损失函数，并发挥集成模型的最大优势。</li>
+<li>优点：<ul>
+<li>高性能，常常在比赛和实际应用中展现优越的表现。</li>
+<li>可以很好地处理离散数值、分类型和缺失值。</li>
+<li>能够解决回归、分类、排序和自定义损失函数等问题。</li>
+<li>提供了很多调</li>
+</ul>
+</li>
+</ul>
+<h2 id="训练并评估模型：-1"><a href="#训练并评估模型：-1" class="headerlink" title="训练并评估模型："></a>训练并评估模型：</h2><p>将预处理后的训练数据集划分为训练集和验证集<br>使用各种选定的算法训练模型，并在验证集上评估模型性能，记录准确性、精确度、召回率、F1分数等评价指标</p>
+<ol>
+<li>将预处理后的训练数据集划分为训练集和验证集：<br>使用sklearn库的train_test_split方法，将数据集划分为训练集（例如，80%的数据）和验证集（例如，20%的数据）。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+X_train<span class="token punctuation">,</span> X_val<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_val <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>使用神经网络训练模型：<br>使用Keras或PyTorch等库构建神经网络，并使用训练集对模型进行训练。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tensorflow <span class="token keyword">as</span> tf
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> tensorflow<span class="token punctuation">.</span>keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Dense
+
+<span class="token comment"># 定义神经网络结构</span>
+model <span class="token operator">=</span> Sequential<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    Dense<span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">,</span> input_dim<span class="token operator">=</span>X_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Dense<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'relu'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Dense<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 编译模型</span>
+model<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span>optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">,</span> loss<span class="token operator">=</span><span class="token string">'binary_crossentropy'</span><span class="token punctuation">,</span> metrics<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'accuracy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 训练神经网络</span>
+model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> validation_data<span class="token operator">=</span><span class="token punctuation">(</span>X_val<span class="token punctuation">,</span> y_val<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>使用XGBoost训练模型：<br>安装并引入XGBoost库，然后使用训练集对模型进行训练。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> xgboost <span class="token keyword">as</span> xgb
+
+<span class="token comment"># 创建XGBoost分类器</span>
+xgb_clf <span class="token operator">=</span> xgb<span class="token punctuation">.</span>XGBClassifier<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 训练模型</span>
+xgb_clf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>评估模型性能：<br>在验证集上评估模型性能，记录准确性、精确度、召回率、F1分数等评价指标。</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score<span class="token punctuation">,</span> precision_score<span class="token punctuation">,</span> recall_score<span class="token punctuation">,</span> f1_score
+
+<span class="token comment"># 神经网络预测</span>
+y_pred_nn <span class="token operator">=</span> model<span class="token punctuation">.</span>predict_classes<span class="token punctuation">(</span>X_val<span class="token punctuation">)</span>
+
+<span class="token comment"># XGBoost预测</span>
+y_pred_xgb <span class="token operator">=</span> xgb_clf<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_val<span class="token punctuation">)</span>
+
+<span class="token comment"># 评估指标</span>
+<span class="token keyword">def</span> <span class="token function">evaluate_model</span><span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    accuracy <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+    precision <span class="token operator">=</span> precision_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+    recall <span class="token operator">=</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+    f1 <span class="token operator">=</span> f1_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+    
+    <span class="token keyword">return</span> accuracy<span class="token punctuation">,</span> precision<span class="token punctuation">,</span> recall<span class="token punctuation">,</span> f1
+
+accuracy_nn<span class="token punctuation">,</span> precision_nn<span class="token punctuation">,</span> recall_nn<span class="token punctuation">,</span> f1_nn <span class="token operator">=</span> evaluate_model<span class="token punctuation">(</span>y_val<span class="token punctuation">,</span> y_pred_nn<span class="token punctuation">)</span>
+accuracy_xgb<span class="token punctuation">,</span> precision_xgb<span class="token punctuation">,</span> recall_xgb<span class="token punctuation">,</span> f1_xgb <span class="token operator">=</span> evaluate_model<span class="token punctuation">(</span>y_val<span class="token punctuation">,</span> y_pred_xgb<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Neural Network: Accuracy: &#123;&#125;, Precision: &#123;&#125;, Recall: &#123;&#125;, F1-score: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>accuracy_nn<span class="token punctuation">,</span> precision_nn<span class="token punctuation">,</span> recall_nn<span class="token punctuation">,</span> f1_nn<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"XGBoost: Accuracy: &#123;&#125;, Precision: &#123;&#125;, Recall: &#123;&#125;, F1-score: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>accuracy_xgb<span class="token punctuation">,</span> precision_xgb<span class="token punctuation">,</span> recall_xgb<span class="token punctuation">,</span> f1_xgb<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="与支持向量机（SVM）和Logistic回归进行比较：-1"><a href="#与支持向量机（SVM）和Logistic回归进行比较：-1" class="headerlink" title="与支持向量机（SVM）和Logistic回归进行比较："></a>与支持向量机（SVM）和Logistic回归进行比较：</h2><p>训练支持向量机和Logistic回归模型，并在验证集上评估性能<br>将所选方法的性能与SVM和Logistic回归的性能进行比较，找出最佳模型<br>使用最佳模型在测试数据上进行预测：</p>
+<ol>
+<li>神经网络</li>
+<li>XGBoost</li>
+</ol>
+<p>添加支持向量机（SVM）和Logistic回归模型，并在验证集上评估它们的性能。</p>
+<ol>
+<li>导入所需的库：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score<span class="token punctuation">,</span> classification_report<span class="token punctuation">,</span> confusion_matrix
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>svm <span class="token keyword">import</span> SVC<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li><p>加载数据并进行预处理（ 根据数据更改此部分代码）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 使用自己的数据替换这一部分</span>
+data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'your_data.csv'</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'target'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token string">'target'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 如果还没有执行过特征选择和数据集不平衡处理， 在此处执行</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>将数据拆分为训练集和验证集：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">X_train<span class="token punctuation">,</span> X_validation<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_validation <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>训练支持向量机（SVM）模型：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">svm_model <span class="token operator">=</span> SVC<span class="token punctuation">(</span>kernel<span class="token operator">=</span><span class="token string">'rbf'</span><span class="token punctuation">)</span>
+svm_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>评估SVM模型在验证集上的性能：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">y_valid_pred_svm <span class="token operator">=</span> svm_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_validation<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Support Vector Machine validation accuracy:"</span><span class="token punctuation">,</span> accuracy_score<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_svm<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>classification_report<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_svm<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>confusion_matrix<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_svm<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>训练Logistic回归模型：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">logistic_regression_model <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span>random_state<span class="token operator">=</span><span class="token number">42</span><span class="token punctuation">,</span> max_iter<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">)</span>
+logistic_regression_model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>评估Logistic回归模型在验证集上的性能：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">y_valid_pred_logistic <span class="token operator">=</span> logistic_regression_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_validation<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Logistic Regression validation accuracy:"</span><span class="token punctuation">,</span> accuracy_score<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_logistic<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>classification_report<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_logistic<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>confusion_matrix<span class="token punctuation">(</span>y_validation<span class="token punctuation">,</span> y_valid_pred_logistic<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>比较模型性能：</p>
+<p>对于之前已经训练的神经网络和XGBoost模型， 确保 已经针对验证集评估了它们的性能。现在 可以比较这四种模型（神经网络、XGBoost、SVM和Logistic回归）在验证集上的性能，以确定最佳模型。最佳模型可以根据准确率、精确度、召回率、F1得分等多个指标进行评估。</p>
+</li>
+</ol>
+<h1 id="使用最佳模型在预处理后的测试数据集上进行预测-1"><a href="#使用最佳模型在预处理后的测试数据集上进行预测-1" class="headerlink" title="使用最佳模型在预处理后的测试数据集上进行预测"></a>使用最佳模型在预处理后的测试数据集上进行预测</h1><p>分析预测结果，提出可能的优化方法（如参数调优、特征选择、不同模型结合等）</p>
+<ol>
+<li><p>加载测试数据并进行预处理（根据 数据集自行修改）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#  使用 的数据替换这一部分</span>
+test_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'your_test_data.csv'</span><span class="token punctuation">)</span>
+X_test <span class="token operator">=</span> test_data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'target'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+y_test <span class="token operator">=</span> test_data<span class="token punctuation">[</span><span class="token string">'target'</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 如果需要，根据 之前的策略对测试数据执行预处理和特征选择</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>使用最佳模型对测试数据进行预测（将<code>best_model</code>替换为 根据验证集性能选择的最佳模型实例）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">y_test_pred <span class="token operator">=</span> best_model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>评估最佳模型在测试集上的性能：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Test accuracy:"</span><span class="token punctuation">,</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_test_pred<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>classification_report<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_test_pred<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>confusion_matrix<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span> y_test_pred<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<p>分析预测结果后， 可以根据测试集上的表现提出一些建议以改进模型，方法包括：</p>
+<ol>
+<li><p>参数调优：通过网格搜索、随机搜索或贝叶斯优化等方法，调整最佳模型的超参数，以在测试集上实现更好的性能。</p>
+</li>
+<li><p>特征选择：重新审视特征选择过程，并尝试其他技术，如递归特征消除（RFE）、正则化方法（如L1或L2）等，以选择更具预测能力的特征子集。</p>
+</li>
+<li><p>不同模型的组合：尝试集成方法，如投票分类器、bagging或随机森林等，将多个模型的预测能力结合起来。这种组合可以让多个模型的优点相互补充，并在某些情况下提高预测性能。</p>
+</li>
+<li><p>更复杂的模型：如果目前的最佳模型无法捕捉到数据中的某些复杂模式， 可以尝试一些更复杂的模型，如深度学习模型。 注意，在采用更复杂的模型时，要防止过拟合，并确保 有足够的数据供模型学习。</p>
+</li>
+<li><p>数据增强：尝试通过数据可视化和探索性数据分析来深入了解数据，并考虑执行额外的特征工程和数据变换，以提取和利用数据中的更多信息。</p>
+</li>
+</ol>
+<h2 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h2><p>在这份报告中， 概述在不平衡数据集上进行模型训练、评估和预测的整个过程，包括数据预处理、特征选择、模型训练、评估和预测。 还将描述所选方法的原理，并与支持向量机（SVM）和逻辑回归进行比较。最后， 提出可能的改进和优化建议。</p>
+<ol>
+<li><p>数据预处理：<br>在进行模型训练之前， 首先对数据集进行预处理。这包括以下几个步骤：<br> a) 处理缺失值： 采用插值或丢弃缺失值的方法来处理数据中的缺失值。<br> b) 数据标准化： 对数据进行标准化，使其服从标准正态分布，以提高模型性能。<br> c) 处理类别不平衡问题：由于数据集存在严重的类别不平衡问题， 采用过采样（如SMOTE）和&#x2F;或欠采样方法以平衡数据。</p>
+</li>
+<li><p>特征选择：<br>特征选择是选择最重要和最有意义的特征以提高模型性能的过程。 使用了以下方法：<br> a) 基于统计的特征选择：如皮尔逊相关系数和卡方检验等。<br> b) 基于模型的特征选择：如使用随机森林或XGBoost等模型进行特征重要性排序。</p>
+</li>
+</ol>
+<p>通过特征选择， 能够减少特征的数量，从而减少模型的训练时间，同时提高模型性能。</p>
+<ol start="3">
+<li>模型训练：<br> 选择了神经网络和XGBoost作为建模方法，并在预处理后的数据上进行了训练。 还分析了SVM和Logistic回归作为参考。</li>
+</ol>
+<p> a) 神经网络：基于大量神经元互相连接并形成网络的一种深度学习方法。具有强大的学习能力，特别适合学习在传统机器学习算法中难以学习的复杂规律。<br> b) XGBoost：一种基于梯度提升树的集成学习方法，能够很好地处理不平衡数据。具有优秀的性能、速度和准确率。</p>
+<ol start="4">
+<li>模型评估和预测：<br>通过交叉验证和其他评估指标如准确率、F1-score、ROC-AUC等，对不同模型进行了比较。 选择性能最佳的模型，在预处理后的测试数据集上进行预测并分析结果。</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/488818ef">https://skddj.github.io/article/488818ef</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                                    <span class="chip bg-color">大二下</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E4%B8%8E%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C/">
+                                    <span class="chip bg-color">量化交易与商业银行</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/4eb64ed2">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="软件技术基础">
+                        
+                        <span class="card-title">软件技术基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            流程
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                        <span class="chip bg-color">大二下</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">软件技术基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/28d5cef4">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="概率论与数理统计">
+                        
+                        <span class="card-title">概率论与数理统计</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简要介绍了概率论与数理统计的基础知识。第一章讨论了随机事件及其概率、条件概率、全概率公式、贝叶斯公式和独立性等内容。第二章则介绍了...
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+                        <span class="chip bg-color">概率论与数理统计</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8A/">
+                        <span class="chip bg-color">大二上</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>

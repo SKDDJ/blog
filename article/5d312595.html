@@ -1,0 +1,2464 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="数据挖掘与大数据分析, Yiming Shi&#39;s blog">
+    <meta name="description" content="主要介绍了数据挖掘与大数据分析的基础知识，包括大数据的定义与理念、数据挖掘的产生背景及原因、数据挖掘的应用、数据挖掘的主要功能、数据挖掘面临的挑战等内容。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>数据挖掘与大数据分析 | Yiming Shi&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <style>
+        body{
+            background-image: url(https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/thinkpositive.jpg);
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment:fixed;
+        }
+    </style>
+
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yiming Shi's blog" type="application/atom+xml">
+</head>
+
+
+
+    <style type="text/css" lang="css">
+    #loading-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #FFF;
+        text-align: center;
+        /* loader页面消失采用渐隐的方式*/
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
+    }
+    .loading-image{
+        width: 120px;
+        height: 50px;
+        transform: translate(-50%);
+    }
+
+    .loading-image div:nth-child(2) {
+        -webkit-animation: pacman-balls 1s linear 0s infinite;
+        animation: pacman-balls 1s linear 0s infinite
+    }
+
+    .loading-image div:nth-child(3) {
+        -webkit-animation: pacman-balls 1s linear .33s infinite;
+        animation: pacman-balls 1s linear .33s infinite
+    }
+
+    .loading-image div:nth-child(4) {
+        -webkit-animation: pacman-balls 1s linear .66s infinite;
+        animation: pacman-balls 1s linear .66s infinite
+    }
+
+    .loading-image div:nth-child(5) {
+        -webkit-animation: pacman-balls 1s linear .99s infinite;
+        animation: pacman-balls 1s linear .99s infinite
+    }
+
+   .loading-image div:first-of-type {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+        animation: rotate_pacman_half_up .5s 0s infinite;
+    }
+    .loading-image div:nth-child(2) {
+        width: 0;
+        height: 0;
+        border: 25px solid #49b1f5;
+        border-right-color: transparent;
+        border-radius: 25px;
+        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+        animation: rotate_pacman_half_down .5s 0s infinite;
+        margin-top: -50px;
+    }
+    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+    .loading-image div:nth-child(3),
+    .loading-image div:nth-child(4),
+    .loading-image div:nth-child(5),
+    .loading-image div:nth-child(6){
+        background-color: #49b1f5;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        margin: 2px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: translateY(-6.25px);
+        top: 25px;
+        left: 100px;
+    }
+    .loading-text{
+        margin-bottom: 20vh;
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    @media only screen and (max-width: 500px) {
+         .loading-text{
+            font-size: 1.5rem;
+         }
+    }
+    .fadeout {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    /* logo出现动画 */
+    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+ </style>
+ <script>
+(function () {
+    const loaded = function(){
+       setTimeout(function(){
+            const loader = document.getElementById("loading-container");
+            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
+            // document.getElementById("body-wrap").style.display="flex";
+            setTimeout(function(){
+                loader.style.display="none";
+            },2500); 
+        },1000);//强制显示loading page 1s  
+    };
+    loaded();
+})()
+</script>
+
+ 
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4243849397150409"
+ crossorigin="anonymous"></script>
+
+<body>
+    
+        <div id="loading-container">
+             <p class="loading-text">Hang on a sec... </p> 
+             <div class="loading-image">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+                 <div></div> 
+                 <div></div>
+             </div>
+        </div>
+    
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Yiming Shi's blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-project-diagram" style="zoom: 0.6;"></i>
+      
+      <span>Projects</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://github.com/SKDDJ">
+          
+          <span>self-introduction</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yiming Shi&#39;s blog</div>
+        <div class="logo-desc">
+            
+            The people here lack not opportunities, but perseverance.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-project-diagram"></i>
+			
+			Projects
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://github.com/SKDDJ " style="margin-left:75px">
+				  
+		          <span>self-introduction</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/SKDDJ" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Hi
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/SKDDJ" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Hi" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">数据挖掘与大数据分析</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Machine-Learning/">
+                                <span class="chip bg-color">Machine Learning</span>
+                            </a>
+                        
+                            <a href="/tags/Big-Data/">
+                                <span class="chip bg-color">Big Data</span>
+                            </a>
+                        
+                            <a href="/tags/Data-Mining/">
+                                <span class="chip bg-color">Data Mining</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                                <span class="chip bg-color">大二下</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Course/" class="post-category">
+                                Course
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-12-27
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
+                    2026-10-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    4.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    18 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-1-Chapter1-数据挖掘与大数据简介"><a href="#1-1-Chapter1-数据挖掘与大数据简介" class="headerlink" title="1.1. Chapter1 数据挖掘与大数据简介"></a>1.1. Chapter1 数据挖掘与大数据简介</h2><h3 id="1-1-1-什么是大数据"><a href="#1-1-1-什么是大数据" class="headerlink" title="1.1.1. 什么是大数据"></a>1.1.1. 什么是大数据</h3><blockquote>
+<p>Big data is a buzzword, or catch-phrase, used to describe a massive volume of both structed and unstructured data that is so large that it’s difficult to process using traditional database and software techniques.</p>
+</blockquote>
+<h3 id="1-1-2-大数据的定义与理念"><a href="#1-1-2-大数据的定义与理念" class="headerlink" title="1.1.2. 大数据的定义与理念"></a>1.1.2. 大数据的定义与理念</h3><p>Four features of Big data:</p>
+<ul>
+<li>Volume<ul>
+<li>Scale of data</li>
+</ul>
+</li>
+<li>Variety:<ul>
+<li>Different forms of data</li>
+</ul>
+</li>
+<li>Velocity:<ul>
+<li>Analysis of streaming data</li>
+</ul>
+</li>
+<li>Veracity:<ul>
+<li>Uncertainy of data</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-1-3-数据挖掘产生的背景及原因"><a href="#1-1-3-数据挖掘产生的背景及原因" class="headerlink" title="1.1.3. 数据挖掘产生的背景及原因"></a>1.1.3. 数据挖掘产生的背景及原因</h3><ul>
+<li>存储能力的提升</li>
+<li>计算能力的提升</li>
+<li>海量的数据生成</li>
+</ul>
+<blockquote>
+<p>我们浸没在数据的海洋, 却渴望知识的淡水</p>
+</blockquote>
+<p>通过数据挖掘从矿山中获得有用的信息</p>
+<h3 id="1-1-4-什么是数据挖掘以及在何种数据上挖掘"><a href="#1-1-4-什么是数据挖掘以及在何种数据上挖掘" class="headerlink" title="1.1.4. 什么是数据挖掘以及在何种数据上挖掘"></a>1.1.4. 什么是数据挖掘以及在何种数据上挖掘</h3><blockquote>
+<p>Data mining consists of applying data analysis and discovery algorithms that, under acceptable computational efficiency limitations, produce a particular enumeration of patterns over the data.</p>
+</blockquote>
+<p>KDD过程:</p>
+<p>$$数据清洗\to 数据集成\to 数据选择\to 变换\to 数据挖掘\to 模式评估\to 知识表示(可视化)$$</p>
+<h3 id="1-1-5-数据挖掘的应用"><a href="#1-1-5-数据挖掘的应用" class="headerlink" title="1.1.5. 数据挖掘的应用"></a>1.1.5. 数据挖掘的应用</h3><ul>
+<li>流感预测</li>
+<li>电信推销</li>
+<li>银行借贷</li>
+<li>保险识别</li>
+<li>等</li>
+</ul>
+<h3 id="1-1-6-数据挖掘的主要功能"><a href="#1-1-6-数据挖掘的主要功能" class="headerlink" title="1.1.6. 数据挖掘的主要功能"></a>1.1.6. 数据挖掘的主要功能</h3><ol>
+<li>关联规则挖掘(关联分析)</li>
+</ol>
+<blockquote>
+<p>发现数据之间的关联规则, 这些规则展示属性&#x2F;值频繁的再给定的数据中所一起出现的条件</p>
+</blockquote>
+<p>应用: 每当暴风季节来临, 美国沃尔玛的飓风用品和蛋挞销量都会增加,所以把二者放在一起销售可以提高销量.</p>
+<p>Example: 空气质量与气象之间的关联挖掘<br>2. 聚类分析 （无标签）</p>
+<blockquote>
+<p>把类似的数据归类到一起,形成一个新的类别进行分析</p>
+</blockquote>
+<p>   Example: 大脑神经纤维聚类<br>3. 分类&#x2F;预测 （有标签</p>
+<blockquote>
+<p>找出描述和区分数据类&#x2F;概念的模型, 用以使模型能预测未知的对象类标签</p>
+</blockquote>
+<ol start="4">
+<li>孤立点(离群点)检测</li>
+</ol>
+<blockquote>
+<p>孤立点:一些与数据的一般行为或模型不一致的孤立数据</p>
+</blockquote>
+<p>   通常孤立点被作为”噪声”或异常被丢弃, 但是在欺骗检测中可以通过对罕见事件进行孤立点分析得到结论</p>
+<h3 id="1-1-7-数据挖掘面临的挑战"><a href="#1-1-7-数据挖掘面临的挑战" class="headerlink" title="1.1.7. 数据挖掘面临的挑战"></a>1.1.7. 数据挖掘面临的挑战</h3><ul>
+<li>数据容量(Scale of Data)<ul>
+<li>Scalable Data Mining Algorithms<ul>
+<li>Novel scalable algorithms(Sampling, Hashing, Divide-and-Conquer, etc)</li>
+<li>Map-reduce oriented Parallell platforms(Hadoop, Spark, GraphLab)</li>
+<li>Speed-up Hardwares(GPUs&#x2F;Clouds&#x2F;Clusters)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据实时性(Data Stream)<ul>
+<li>Data Stream Mining<ul>
+<li>Handle Evolving Data Streams</li>
+<li>Clustering on Massive Data Streams</li>
+<li>Classification&#x2F;Regression on Data Streams</li>
+<li>Outlier Detection on Data Streams</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据多样性(Different types of data)<ul>
+<li>Multi-source or multi-type data mining<ul>
+<li>Different types of data(Categorical&#x2F;nominal data, mixed-type data mining)</li>
+<li>Different forms of data(vector data, graph data, image data, text data, hetergeneous data)</li>
+<li>Learning on different sources of data(Multi-view learning, Transfer learning, Multi-task learning, etc)</li>
+<li>Data fusion or data integration(multiple-kernel learning)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据不确定性(Uncertainty, missing value)<ul>
+<li>Uncertainty Analysis, Link&#x2F;Missing value prediction<ul>
+<li>Uncertain data Clustering(Probability-function based)</li>
+<li>Link Prediction(Clustering-based, Structure-based, Multi-view based)</li>
+<li>Recommender System(Missing items prediction,…)</li>
+<li>Robust Machine Learning(Adversarial Examples)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-Chapter2-认识数据与数据预处理"><a href="#1-2-Chapter2-认识数据与数据预处理" class="headerlink" title="1.2. Chapter2 认识数据与数据预处理"></a>1.2. Chapter2 认识数据与数据预处理</h2><h3 id="1-2-1-认识数据"><a href="#1-2-1-认识数据" class="headerlink" title="1.2.1. 认识数据"></a>1.2.1. 认识数据</h3><h4 id="数据相似性度量"><a href="#数据相似性度量" class="headerlink" title="数据相似性度量"></a>数据相似性度量</h4><h5 id="标称"><a href="#标称" class="headerlink" title="标称"></a>标称</h5><ul>
+<li>标称</li>
+</ul>
+<p>$d(i,j) &#x3D; \frac{p-m}{p}$</p>
+<ul>
+<li>非对称</li>
+</ul>
+<p>$d(i,j) &#x3D; \frac{\ Differences}{Total -(0)}$<br>雅各比距离</p>
+<ul>
+<li>序数：转换到（0，1）</li>
+</ul>
+<p>$Z_1 &#x3D; \frac{Z_{n-r}-1}{R(Rank)-1}$</p>
+<h5 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h5><p>闵可夫斯基距离</p>
+<ul>
+<li>曼哈顿距离 p &#x3D; 1</li>
+<li>欧氏距离 p &#x3D; 2</li>
+</ul>
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul>
+<li>余弦相似性</li>
+<li>相关系数</li>
+<li>马氏距离（不考 考虑局部分布的距离）</li>
+<li>KL散度（复杂 计算分布的差异性）</li>
+</ul>
+<h3 id="1-2-2-为什么要预处理数据"><a href="#1-2-2-为什么要预处理数据" class="headerlink" title="1.2.2. 为什么要预处理数据"></a>1.2.2. 为什么要预处理数据</h3><h3 id="1-2-3-数据清洗"><a href="#1-2-3-数据清洗" class="headerlink" title="1.2.3. 数据清洗"></a>1.2.3. 数据清洗</h3><ul>
+<li>空缺值 <ul>
+<li>平均值代替空值</li>
+<li>直接删去</li>
+<li>矩阵分解（不考）<ul>
+<li>如果是nominal类型的数据就是采用大多数类型赋值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>去噪<ul>
+<li>平滑值</li>
+<li>利用中值滤波</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-4-数据集成和变换"><a href="#1-2-4-数据集成和变换" class="headerlink" title="1.2.4. 数据集成和变换"></a>1.2.4. 数据集成和变换</h3><ul>
+<li>数值值 相关分析</li>
+<li>标称型 卡方分析（考试计算）</li>
+</ul>
+<p>$$\chi^2 &#x3D; \frac{\sum_{i&#x3D;1}^{n}(a_{ij}-e_{ij})^2}{e_{ij}}$$<br>$$e_{ij} &#x3D; \frac{cout(a_i&#x3D;a)\times cout(b_i &#x3D; b)}{N}$$</p>
+<p>变换是为了规范化</p>
+<ul>
+<li>最小最大规范化<br>$$Z_i &#x3D; \frac{x_i - minV}{maxV - minV}$$</li>
+<li>z- score 把变量当成正态分布进行标准化操作<br>$$\frac{x_i - \mu}{\delta}$$</li>
+</ul>
+<h3 id="1-2-5-数据归约"><a href="#1-2-5-数据归约" class="headerlink" title="1.2.5. 数据归约"></a>1.2.5. 数据归约</h3><h4 id="维度归约"><a href="#维度归约" class="headerlink" title="维度归约"></a>维度归约</h4><ul>
+<li>降维<ul>
+<li>PCA主成分分析（方差最大化）</li>
+<li>小波分析</li>
+</ul>
+</li>
+<li>特征筛选<ul>
+<li>信息增益 - 信息熵</li>
+<li>（均匀分布熵最大）</li>
+</ul>
+</li>
+</ul>
+<h4 id="数量归约"><a href="#数量归约" class="headerlink" title="数量归约"></a>数量归约</h4><ul>
+<li>直方图</li>
+<li>聚类</li>
+<li>采样</li>
+</ul>
+<h3 id="数据离散化处理"><a href="#数据离散化处理" class="headerlink" title="数据离散化处理"></a>数据离散化处理</h3><p>比如年龄、身高、体重</p>
+<h2 id="1-3-Chapter3-关联规则挖掘"><a href="#1-3-Chapter3-关联规则挖掘" class="headerlink" title="1.3. Chapter3 关联规则挖掘"></a>1.3. Chapter3 关联规则挖掘</h2><h3 id="1-3-1-关联规则概述"><a href="#1-3-1-关联规则概述" class="headerlink" title="1.3.1. 关联规则概述"></a>1.3.1. 关联规则概述</h3><ul>
+<li>支持度</li>
+<li>置信度</li>
+<li>频繁项集<ul>
+<li>项集<ul>
+<li>项 其中（少青老、高低、胖瘦）属于nominal</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Brute Force 蛮力算法（类似于决策树）<ul>
+<li>降低候选集需要使用Aprior算法，利用两条性质<ul>
+<li>频繁子集也频繁</li>
+<li>不频繁超急也不频繁</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-2-由事务数据库挖掘关联规则"><a href="#1-3-2-由事务数据库挖掘关联规则" class="headerlink" title="1.3.2. 由事务数据库挖掘关联规则"></a>1.3.2. 由事务数据库挖掘关联规则</h3><h3 id="1-3-3-FP增长树算法"><a href="#1-3-3-FP增长树算法" class="headerlink" title="1.3.3. FP增长树算法"></a>1.3.3. FP增长树算法</h3><h3 id="1-3-4-关联模式的评估"><a href="#1-3-4-关联模式的评估" class="headerlink" title="1.3.4. 关联模式的评估"></a>1.3.4. 关联模式的评估</h3><p>不重要</p>
+<h2 id="1-4-Chapter4-分类"><a href="#1-4-Chapter4-分类" class="headerlink" title="1.4. Chapter4 分类"></a>1.4. Chapter4 分类</h2><h3 id="1-4-1-分类和预测概述"><a href="#1-4-1-分类和预测概述" class="headerlink" title="1.4.1. 分类和预测概述"></a>1.4.1. 分类和预测概述</h3><ul>
+<li>有监督学习（连续型数据，既有feature也有label）</li>
+<li>无监督学习（离散型数据，只有feature没有label）<ul>
+<li>Generative Model<ul>
+<li>Naive Bayers</li>
+</ul>
+</li>
+<li>Discriminative Model<ul>
+<li>SVM、Decision Tree</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-2-决策树分类算法"><a href="#1-4-2-决策树分类算法" class="headerlink" title="1.4.2. 决策树分类算法"></a>1.4.2. 决策树分类算法</h3><h4 id="信息增益选择划分节点（ID3）"><a href="#信息增益选择划分节点（ID3）" class="headerlink" title="信息增益选择划分节点（ID3）"></a><strong>信息增益</strong>选择划分节点（ID3）</h4><p>信息增益率（C4.5）<br>$$信息熵E &#x3D; -\sum_{i &#x3D;1}^{n}p_ilogp_i$$<br>信息增益率为两次作差再比上第一次的信息熵<br>Gini率（CART）<br>$$Gini(D) &#x3D; 1-\sum_{i&#x3D;1}^{n}p_i^2$$<br>测算不纯度，和信息增益反过来</p>
+<h4 id="过拟合问题"><a href="#过拟合问题" class="headerlink" title="过拟合问题"></a>过拟合问题</h4><p>过拟合原因是数据量太小<br>剪枝可以降低过拟合</p>
+<h3 id="1-4-3-KNN最邻近算法"><a href="#1-4-3-KNN最邻近算法" class="headerlink" title="1.4.3. KNN最邻近算法"></a>1.4.3. KNN最邻近算法</h3><p>K-nearest-neighbor<br>优缺点<br>性能问题</p>
+<h3 id="1-4-4-朴素贝叶斯分类算法"><a href="#1-4-4-朴素贝叶斯分类算法" class="headerlink" title="1.4.4. 朴素贝叶斯分类算法"></a>1.4.4. 朴素贝叶斯分类算法</h3><p>Naive-Bayers<br>$$Pr(c|x) &#x3D; \frac{Pr(c\cap x)}{Pr(x)} &#x3D; \frac{Pr(c)Pr(x|c)}{Pr(x)}$$<br>Where $Pr(c|x)$ is Posterior  probability and $Pr(c)$ is Prior probability.<br>And $Pr(x|c)$ is 似然概率.</p>
+<h3 id="1-4-5-SVM和其他经典分类方法"><a href="#1-4-5-SVM和其他经典分类方法" class="headerlink" title="1.4.5. SVM和其他经典分类方法"></a>1.4.5. SVM和其他经典分类方法</h3><p>Support Vector Machine<br>$Y^* &#x3D; H(x|\theta)$<br>for Training :<br>Empired Risk<br>$$min\sum_{i &#x3D; 1}^{n}(Y_i^*-Y_i)^2 \to loss$$<br>核心问题：最大间隔化</p>
+<h3 id="w、b使分类正确"><a href="#w、b使分类正确" class="headerlink" title="w、b使分类正确"></a>w、b使分类正确</h3><p> $wx_i +b\geq 1$<br> $wx_i+b\leq 1$<br> $\to$ $y_i(wx_i+b)\geq 1$</p>
+<h3 id="距离最大间隔"><a href="#距离最大间隔" class="headerlink" title="距离最大间隔"></a>距离最大间隔</h3><p>$$d(x_0,wx+b &#x3D; 0) &#x3D; \frac{|wx_0+b|}{||w||} &#x3D; \frac{1}{||w||}$$<br>使用拉格朗日乘子法<br>求解凸二次规划问题</p>
+<ul>
+<li>convex	</li>
+<li>KTT condition<br>从极大值求极小值</li>
+</ul>
+<h3 id="核函数"><a href="#核函数" class="headerlink" title="核函数"></a>核函数</h3><p>Kernel Function<br>$$K(x_1,x_2) &#x3D; \Phi (x_1) * \Phi(x_2)$$<br>通过低维到高维的映射，使线性不可分 $\to$ 线性可分</p>
+<h3 id="ANN"><a href="#ANN" class="headerlink" title="ANN"></a>ANN</h3><p>Artificial Nerual Nerwork</p>
+<h4 id="作用函数"><a href="#作用函数" class="headerlink" title="作用函数"></a>作用函数</h4><ul>
+<li>阈值型<br>等两个</li>
+</ul>
+<h4 id="拓扑结构"><a href="#拓扑结构" class="headerlink" title="拓扑结构"></a>拓扑结构</h4><ul>
+<li>FeedForward(一般神经元都是全连接)</li>
+<li>FeedBack（类似于时序逻辑电路，输入受输出的影响）</li>
+</ul>
+<h4 id="优化模型"><a href="#优化模型" class="headerlink" title="优化模型"></a>优化模型</h4><ul>
+<li>调整权重<ul>
+<li>相关学习（旧方法）</li>
+<li>误差修正学习<br>$\delta$学习规则（改权值）<br>$$w_{ji}(t+1)&#x3D;w_{ji}(t)+\eta[d_j-y_j(t)]x_i(t)$$</li>
+</ul>
+</li>
+</ul>
+<h3 id="感知机"><a href="#感知机" class="headerlink" title="感知机"></a>感知机</h3><h3 id="后向传播算法（BP）"><a href="#后向传播算法（BP）" class="headerlink" title="后向传播算法（BP）"></a>后向传播算法（BP）</h3><ul>
+<li>信息的正向输入</li>
+<li>误差的反向传播<ul>
+<li>利用梯度下降</li>
+</ul>
+</li>
+</ul>
+<h3 id="集成学习"><a href="#集成学习" class="headerlink" title="集成学习"></a>集成学习</h3><ul>
+<li>同质（多）&#x2F;异质（少）<ul>
+<li>增加学习器的多样性</li>
+</ul>
+</li>
+<li>Bagging<ul>
+<li>Random Forest<ul>
+<li>传统决策树节点利用信息增益选出划分</li>
+<li>RF算法随机选每个节点中的k个属性，再选最优划分（增加随机性）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Boosting<ul>
+<li>(Ada-Boost)	由弱到强<ul>
+<li>关注错误，增大权重，调整样本，n个学习器套娃</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Stacking <ul>
+<li>对初始样本集–处理后的新样本集（经过初级学习器）</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-6-分类算法评估"><a href="#1-4-6-分类算法评估" class="headerlink" title="1.4.6. 分类算法评估"></a>1.4.6. 分类算法评估</h3><h4 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h4><ul>
+<li>精确度<br>$$Accuracy &#x3D; (TP+TN)&#x2F;ALL$$</li>
+<li>误差率<br>$$(FP+FN)&#x2F;ALL$$</li>
+<li>$F_1$分数<br>$$F_1 &#x3D; \frac{2\times Precision\times Recall}{Precision+Recall}$$</li>
+<li>Precision<br>$$Precision &#x3D; \frac{TP}{TP+FP}$$</li>
+<li>Recall<br>$$Recall &#x3D; \frac{TP}{TP+FN}$$</li>
+</ul>
+<h2 id="1-5-Chapter5-聚类分析和噪声检测"><a href="#1-5-Chapter5-聚类分析和噪声检测" class="headerlink" title="1.5. Chapter5 聚类分析和噪声检测"></a>1.5. Chapter5 聚类分析和噪声检测</h2><h3 id="1-5-1-聚类分析概述"><a href="#1-5-1-聚类分析概述" class="headerlink" title="1.5.1. 聚类分析概述"></a>1.5.1. 聚类分析概述</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
+<p>聚类分析是一种数据挖掘技术，将数据集中的对象按照相似性分成不同的簇（cluster），每个簇内的对象都具有较高的相似性，而不同簇之间的对象则具有较大的差异性。<br>应用巨大：</p>
+</blockquote>
+<ul>
+<li>价格歧视为用户制定画像</li>
+<li>数据预处理</li>
+<li>离群点检测</li>
+<li>等等</li>
+</ul>
+<h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p>找出数据中潜在的自然规律</p>
+<h4 id="划分方法（Partitioning-method）"><a href="#划分方法（Partitioning-method）" class="headerlink" title="划分方法（Partitioning method）"></a>划分方法（Partitioning method）</h4><h5 id="K-means"><a href="#K-means" class="headerlink" title="K-means"></a>K-means</h5><p>目标函数：<br>$$min\sum_{i&#x3D;1}^{k}\sum_{x_i-x_j}(x_i-x_j)^2-\sum_{i&#x3D;1}^k\sum_{x_i\in C_k}\sum_{x_j\in C_m}(x_i-x_j)^2$$<br>这玩意谁算的过来，so<br>$$E &#x3D; \sum_{i&#x3D;1}^k\sum_{x\in C_i}|x-\hat{x_i}|^2$$<br>which:<br>$\hat{x_i}$ 是第 $i$个簇的均值</p>
+<p>$C_i$为第 $i$ 个簇</p>
+<h3 id="1-5-2-聚类分析中的数据类型"><a href="#1-5-2-聚类分析中的数据类型" class="headerlink" title="1.5.2. 聚类分析中的数据类型"></a>1.5.2. 聚类分析中的数据类型</h3><h4 id="基于划分"><a href="#基于划分" class="headerlink" title="基于划分"></a>基于划分</h4><h4 id="基于层次"><a href="#基于层次" class="headerlink" title="基于层次"></a>基于层次</h4><ul>
+<li>凝聚<ul>
+<li>AGNES</li>
+</ul>
+</li>
+<li>分裂<ul>
+<li>DIANA</li>
+</ul>
+</li>
+</ul>
+<h4 id="距离度量"><a href="#距离度量" class="headerlink" title="距离度量"></a>距离度量</h4><ul>
+<li>minimum distance</li>
+<li>maximum distance</li>
+<li>mean distance</li>
+</ul>
+<h3 id="1-5-3-聚类分析方法"><a href="#1-5-3-聚类分析方法" class="headerlink" title="1.5.3. 聚类分析方法"></a>1.5.3. 聚类分析方法</h3><h4 id="DBSCAN-Destiny-Based-Spatial-Clusters-of-Applications-with-Noise"><a href="#DBSCAN-Destiny-Based-Spatial-Clusters-of-Applications-with-Noise" class="headerlink" title="DBSCAN Destiny-Based Spatial Clusters of Applications with Noise"></a>DBSCAN Destiny-Based Spatial Clusters of Applications with Noise</h4><ul>
+<li>$\epsilon$邻域</li>
+<li>核心对象</li>
+<li>直接密度可达</li>
+<li>间接密度可达</li>
+</ul>
+<p>从k的选取改为$\epsilon$与MinPst的选取<br>I&#x2F;O开销比较大</p>
+<h4 id="网格聚类"><a href="#网格聚类" class="headerlink" title="网格聚类"></a>网格聚类</h4><h5 id="STING算法"><a href="#STING算法" class="headerlink" title="STING算法"></a>STING算法</h5><p>Statistical Information Grid-based Method<br>多分辨率聚类技术</p>
+<h3 id="补充内容（无监督学习）"><a href="#补充内容（无监督学习）" class="headerlink" title="* 补充内容（无监督学习）"></a>* 补充内容（无监督学习）</h3><h4 id="Auto-Encoder"><a href="#Auto-Encoder" class="headerlink" title="Auto Encoder"></a>Auto Encoder</h4><p>$$X \to Encoder \to E \to Decoder \to X’$$<br>Expection: $min||X-X’||$</p>
+<h4 id="Word2Vector-词向量"><a href="#Word2Vector-词向量" class="headerlink" title="Word2Vector(词向量)"></a>Word2Vector(词向量)</h4><p>相似性度量<br>由词带模型推广<br>缺点：<br>    举个例子，you love I， I love you<br>    都可以表示为101，但是词义不同</p>
+<h4 id="提示补全"><a href="#提示补全" class="headerlink" title="提示补全"></a>提示补全</h4><p>比如 I love __ , 这个__ 就是利用极大似然估计推断可能是“you”。<br>$$f(x|\theta) &#x3D; \prod_{i&#x3D;1}^{n}f(x_i|\theta)$$<br>使得联合概率密度最大</p>
+<p>$$Pr(\omega_1,\omega_2,…,\omega_n|context(\omega_i))$$<br>$$log\prod_{i&#x3D;1}^{N}Pr(\omega_i|context(\omega_i))$$<br>$$max\sum_{i&#x3D;1}^{N}logPr(\omega_i|context(\omega_i))$$<br>然后使用$sigmoid$函数</p>
+<h3 id="异常点检测"><a href="#异常点检测" class="headerlink" title="异常点检测"></a>异常点检测</h3><h4 id="基于距离的检测"><a href="#基于距离的检测" class="headerlink" title="基于距离的检测"></a>基于距离的检测</h4><p>低维中使用</p>
+<ul>
+<li>基于单元（cell- based）的算法</li>
+</ul>
+<h4 id="基于统计量的检测"><a href="#基于统计量的检测" class="headerlink" title="基于统计量的检测"></a>基于统计量的检测</h4><p>需要知道分布（现实情况中有些不知道）</p>
+<h4 id="基于偏离的检测"><a href="#基于偏离的检测" class="headerlink" title="基于偏离的检测"></a>基于偏离的检测</h4><ul>
+<li>基于序列<ul>
+<li>模仿人类推理、去除方差</li>
+<li>平滑因子（smoothing factor）</li>
+</ul>
+</li>
+<li>异常集（exception set）</li>
+</ul>
+<h4 id="基于密度的方法（LOF）"><a href="#基于密度的方法（LOF）" class="headerlink" title="基于密度的方法（LOF）"></a>基于密度的方法（LOF）</h4><ul>
+<li>对象p的k距离（$k- distance$）</li>
+<li>对象p的k邻域（$N_k-distance$）<ul>
+<li>关于这个$N_k-distance$有个计算公式</li>
+</ul>
+</li>
+<li>对象p相对于O的可达距离<ul>
+<li>$$reach-distance(p,o) &#x3D; max{k-distance(p),d(p,o)}$$</li>
+</ul>
+</li>
+<li>对象p的局部可达密度（Local Reachable Distance）<ul>
+<li>$$lrdMinPst(p) &#x3D; 1&#x2F; \frac{o\in N_MinPst(p)\sum reach-distMinPst(p,o)}{NMinPst(p)}$$</li>
+</ul>
+</li>
+<li>对象p的局部异常因子（Local Outlier Factor）<ul>
+<li>$$LOF_{MinPts}(p)&#x3D;\frac{\sum_{o\in N_{MinPts(p)}} \frac{lrd_{MinPts}(o)}{lrd_{MinPts}(p)}}{|N_{MinPts}(p)|}$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="Synchronization"><a href="#Synchronization" class="headerlink" title="Synchronization"></a>Synchronization</h4><p>压缩簇、最后剩下的就都是outliers</p>
+<h2 id="1-6-Chapter6-大数据分析"><a href="#1-6-Chapter6-大数据分析" class="headerlink" title="1.6. Chapter6 大数据分析"></a>1.6. Chapter6 大数据分析</h2><ol>
+<li>哈希的作用</li>
+<li>k- shingling（k from 3-10）</li>
+<li>MinHash<br> 3.1 定义：首次提出行号<br> 3.2 如何计算签名矩阵<br> 3.3 可选&#x2F;近似<br>$$sim(c_1,c_2) &#x3D; \frac{a}{a+b+c} &#x3D; Pr(h(c_1))&#x3D;h(c_2)$$</li>
+<li>LSH（局部敏感哈希）<br> 4.1 基本思想： Hash Bond<br> take the similarities into different bucket</li>
+</ol>
+<h3 id="1-6-1-大数据简介"><a href="#1-6-1-大数据简介" class="headerlink" title="1.6.1. 大数据简介"></a>1.6.1. 大数据简介</h3><h3 id="1-6-2-哈希技术"><a href="#1-6-2-哈希技术" class="headerlink" title="1.6.2. 哈希技术"></a>1.6.2. 哈希技术</h3><ul>
+<li>信息检索</li>
+<li>存储</li>
+<li>最邻近点检索</li>
+</ul>
+<h4 id="局部敏感哈希（LSH）"><a href="#局部敏感哈希（LSH）" class="headerlink" title="局部敏感哈希（LSH）"></a>局部敏感哈希（LSH）</h4><ol>
+<li>shingling： convert document emails … – sets</li>
+<li>Minhashing: large sets -&gt; signature</li>
+<li>locality-sensitive hashing:focus on pairs of signatures</li>
+</ol>
+<h3 id="1-6-3-数据流挖掘"><a href="#1-6-3-数据流挖掘" class="headerlink" title="1.6.3. 数据流挖掘"></a>1.6.3. 数据流挖掘</h3><h4 id="数据流（Data-Stream）-lt-x3D-实时性"><a href="#数据流（Data-Stream）-lt-x3D-实时性" class="headerlink" title="数据流（Data Stream） &lt;&#x3D; 实时性"></a>数据流（Data Stream） &lt;&#x3D; 实时性</h4><h4 id="Concept-Drift"><a href="#Concept-Drift" class="headerlink" title="Concept Drift"></a>Concept Drift</h4><p>hyper-plane</p>
+<h4 id="Concept-Drift-Detection"><a href="#Concept-Drift-Detection" class="headerlink" title="Concept Drift Detection"></a>Concept Drift Detection</h4><ul>
+<li>Distribution-based detector<ul>
+<li>Adaptive window(ADWIN)</li>
+<li>Error-rate Based detector</li>
+<li>DDM</li>
+</ul>
+</li>
+<li>KNN(可以直接处理Concept Drift Detection，需要压缩数据)</li>
+<li>SVM等需要</li>
+</ul>
+<h4 id="VFDT-very-fast-dicision-tree"><a href="#VFDT-very-fast-dicision-tree" class="headerlink" title="VFDT(very fast dicision tree)"></a>VFDT(very fast dicision tree)</h4><p>$$\overline{G}(x_i) - \overline{G}(x_j) &gt; \epsilon$$<br>处理流式数据</p>
+<h4 id="Data-Stream-Cluster"><a href="#Data-Stream-Cluster" class="headerlink" title="Data Stream Cluster"></a>Data Stream Cluster</h4><p>The clustream framework<br>线上阶段： 压缩（数据结构）<br>线下阶段： k-means，DBSCAN、STING</p>
+<h5 id="Micro-Cluster-微簇"><a href="#Micro-Cluster-微簇" class="headerlink" title="Micro Cluster 微簇"></a>Micro Cluster 微簇</h5><h6 id="Cluster-feature"><a href="#Cluster-feature" class="headerlink" title="Cluster feature"></a>Cluster feature</h6><p>$$CF &#x3D; (N,\vec{LS},\vec{SS})$$<br>Where:<br>N : <code>data point</code><br>LS &#x3D;  $\sum_{i&#x3D;1}^{N}\vec{X_i}$<br>SS &#x3D; $\sum_{i&#x3D;1}^{N}\vec{X_i}^2$</p>
+<p> Stream:<br> $$CF(N+1,\vec{LS}+x,\vec{SS}+x^2)$$<br>     key point: additivity property</p>
+<p>压缩everything from a circle into a array</p>
+<h4 id="Clusteam-Pyramical-Time-Frame"><a href="#Clusteam-Pyramical-Time-Frame" class="headerlink" title="Clusteam : Pyramical Time Frame"></a>Clusteam : Pyramical Time Frame</h4><p>金字塔时间窗口</p>
+<h3 id="1-6-4-大数据处理平台-Hadoop-x2F-Spark"><a href="#1-6-4-大数据处理平台-Hadoop-x2F-Spark" class="headerlink" title="1.6.4. 大数据处理平台 Hadoop&#x2F;Spark"></a>1.6.4. 大数据处理平台 Hadoop&#x2F;Spark</h3><p> 复习：</p>
+<ol>
+<li>数据流面临的挑战</li>
+<li>什么是概念漂移$P(c|x)$</li>
+<li>概念漂移检测方法<br> 3.1 基于分布（缺点）<br> 3.2 基于错误率 （$3\sigma$ 原则）</li>
+<li>分类（VFDT）<br> Hoeffding Tree:<br> VFDT（Very Fast Decision Tree）算法中，有一种基于 Hoeffding 不等式的增量式决策树叫做 Hoeffding Tree。Hoeffding Tree 是 VFDT 算法的一种实现方式，它使用 Hoeffding 不等式来估计节点分裂的置信度，并在满足一定置信度要求时进行节点分裂，从而构建出决策树模型。与传统的决策树算法不同，Hoeffding Tree 可以在处理大规模数据时快速构建决策树，并且具有较好的泛化性能和可解释性。</li>
+<li>数据流聚类<br> 5.1 在线数据抽象<br> $CF(N,\vec{LS},\vec{SS}$)<br> 5.2 线下聚类（DBSCAN，k-means）</li>
+</ol>
+<h4 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h4><p>分布式并行计算 parallel<br>心跳机制判断单点故障<br>Essence：Divide and Conquer</p>
+<ul>
+<li>HDFS: Hadoop Distribution File System<ul>
+<li>Centralized namenode<ul>
+<li>maintains metedata info about files</li>
+</ul>
+</li>
+<li>Data Nodes<ul>
+<li>Files are divided into blocks</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h4><p>Reduce I&#x2F;O Costs, use cache<br>弹性分布式数据集（Resilient distributed datasets）<br>Essentials：</p>
+<ul>
+<li>Transformations</li>
+</ul>
+<h1 id="期末复习"><a href="#期末复习" class="headerlink" title="期末复习"></a>期末复习</h1><h1 id="CH1-简介"><a href="#CH1-简介" class="headerlink" title="CH1 简介"></a>CH1 简介</h1><ol>
+<li>什么是大数据</li>
+<li>大数据三大驱动力</li>
+<li>大数据4V特征</li>
+<li>什么是数据挖掘</li>
+<li>（重点）知识发现的流程是什么？（核心：数据挖掘）</li>
+<li>数据挖掘的四大任务<ol>
+<li>关联规则挖掘</li>
+<li>分类&#x2F;回归</li>
+<li>聚类分析</li>
+<li>离群点检测</li>
+</ol>
+</li>
+<li>数据挖掘与其他学科的关系<ol>
+<li>数学&#x2F;机器学习&#x2F;统计</li>
+</ol>
+</li>
+</ol>
+<h1 id="CH2-认识数据与数据预处理"><a href="#CH2-认识数据与数据预处理" class="headerlink" title="CH2 认识数据与数据预处理"></a>CH2 认识数据与数据预处理</h1><ol>
+<li>数据对象属性<ol>
+<li>分类性（离散）<ol>
+<li>标称型</li>
+<li>序数型</li>
+</ol>
+</li>
+<li>数值型（连续）</li>
+</ol>
+</li>
+<li>二值型<ol>
+<li>对称</li>
+<li>非对称</li>
+</ol>
+</li>
+<li>数据类型</li>
+<li>数据相似性度量<ol>
+<li>标称型（非对称二值型）</li>
+<li>序数型</li>
+<li>数值型<ol>
+<li>欧氏距离</li>
+<li>曼哈顿距离</li>
+<li>闵可夫斯基距离</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>其他度量<ol>
+<li>余弦距离</li>
+<li>相关系数</li>
+<li>（*）马氏距离</li>
+<li>（*）KL散度</li>
+</ol>
+</li>
+<li>数据描述<ol>
+<li>中心性描述<ol>
+<li>均值&#x2F;中位数&#x2F;中间数&#x2F;众数</li>
+</ol>
+</li>
+<li>散度描述<ol>
+<li>方差&#x2F;标准差&#x2F;百分位数&#x2F;极差</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据预处理（可选）<ol>
+<li>数据清理<ol>
+<li>缺失值填充<ol>
+<li>忽略&#x2F;NaN&#x2F;均值&#x2F;类似值&#x2F;预测</li>
+</ol>
+</li>
+<li>噪声<ol>
+<li>平滑、滤波 </li>
+<li>离群点检测</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据集成<ol>
+<li>相关分析<ol>
+<li>分类（标称）</li>
+<li>数值（相关系数）</li>
+</ol>
+</li>
+<li>卡方分析<ol>
+<li>这该有个公式</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据规约<ol>
+<li>维度压缩<ol>
+<li>PCA、小波分析 </li>
+<li>特征筛选<ol>
+<li>相关性分析（卡方、信息增益）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据量规约<ol>
+<li>采样</li>
+<li>直方图</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>数据归一化<ol>
+<li>最小最大归一化</li>
+<li>Z-Score</li>
+</ol>
+</li>
+<li>数据离散化<ol>
+<li>直方图 xmin—xmax</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="CH3-关联规则挖掘"><a href="#CH3-关联规则挖掘" class="headerlink" title="CH3 关联规则挖掘"></a>CH3 关联规则挖掘</h1><ol>
+<li>基本定义</li>
+<li>（重点）Aporior算法<ol>
+<li>性质（两大性质）</li>
+<li>流程（计算）</li>
+</ol>
+</li>
+<li>Aporiori的性能影响（支持度、置信度）</li>
+<li>Aporiori改进方法<ol>
+<li>4个（看ppt）</li>
+</ol>
+</li>
+<li>FP- Growth<ol>
+<li>范式比较（Aporiori）-》产生测试</li>
+<li>生成FP树（重点、 ）</li>
+<li>流程</li>
+</ol>
+</li>
+</ol>
+<h1 id="CH4-分类问题"><a href="#CH4-分类问题" class="headerlink" title="CH4 分类问题"></a>CH4 分类问题</h1><ol>
+<li>机器学习的分类<ol>
+<li>有监督&#x2F;无监督&#x2F;半监督</li>
+</ol>
+</li>
+<li>有监督vs无监督</li>
+<li>有监督学习<ol>
+<li>生成模型</li>
+<li>判别模型</li>
+</ol>
+</li>
+<li>经典算法<ol>
+<li>决策树<ol>
+<li>决策树的构造流程</li>
+<li>选择属性划分的准则（使得划分后的数据类别越准越好）</li>
+<li>常见的属性选择指标<ol>
+<li>信息增益</li>
+<li>信息增益率</li>
+<li>基尼指数</li>
+</ol>
+</li>
+<li>过拟合问题<ol>
+<li>原因：训练集和测试集分布不一致</li>
+<li>如何避免过拟合问题<ol>
+<li>增加样本量</li>
+<li>去除噪声</li>
+<li>降低模型复杂度</li>
+<li>加正则</li>
+<li>Train- Validation-Test</li>
+</ol>
+</li>
+<li>如何在决策树中避免过拟合<ol>
+<li>降低层数</li>
+<li>控制叶子结点个数</li>
+<li>先剪枝&#x2F;后剪枝</li>
+</ol>
+</li>
+<li>决策树优点<ol>
+<li>可解释性强IF&#x2F;Then</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>KNN<ol>
+<li>注释</li>
+<li>懒惰学习（Lazy Learning）无需训练</li>
+<li>算法优缺点<ol>
+<li>优点：适合流式增量数据</li>
+<li>适合大量类别数据</li>
+<li>准确率一般较高</li>
+<li>缺点：K值敏感</li>
+<li>类别不平衡问题</li>
+<li>测试耗时</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Naive-Bayers<ol>
+<li>思想：求后验分布</li>
+<li>优点：概率输出</li>
+</ol>
+</li>
+<li>SVM<ol>
+<li>基本思想：间隔最大化</li>
+<li>SVM为什么支持小样本（决策边界只由几个支持向量决定）</li>
+<li>SVM为什么泛化能力强（因为结构风险最小化【置信风险】）</li>
+<li>SVM如何实现线性不可分问题（核技巧，通过点积运算实现了数据从低维到高维的映射；核技巧不一定解决线性不可分问题）</li>
+</ol>
+</li>
+<li>ANN<ol>
+<li>信息正向传播，梯度反向传播</li>
+<li>优点：拟合几乎所有函数</li>
+<li>缺点：慢、过拟合</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>集成学习<ol>
+<li>准则：<ol>
+<li>基学习器足够好</li>
+<li>有多样性</li>
+</ol>
+</li>
+<li>Bagging（Random Forest）<ol>
+<li>Boosting（Ada Boost）</li>
+<li>Stacking</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>分类评估<ol>
+<li>常见指标：pre、rec、f1、acc</li>
+<li>类别不平衡：sensitivity、specificity</li>
+</ol>
+</li>
+</ol>
+<h1 id="CH5-聚类分析与离群点检测"><a href="#CH5-聚类分析与离群点检测" class="headerlink" title="CH5 聚类分析与离群点检测"></a>CH5 聚类分析与离群点检测</h1><ol>
+<li>什么是聚类分析</li>
+<li>聚类的作用（检测离群点、噪声）</li>
+<li>聚类的分类<ol>
+<li>（重点）基于划分的方法（k-means）【kmeans流程计算】 </li>
+<li>基于层次的方法（AGENS、DIANA）</li>
+<li>基于密度的方法（DBSCAN）</li>
+<li>基于网格的方法（STING）</li>
+</ol>
+</li>
+<li>k-means流程（计算）</li>
+<li>k-means优缺点<ol>
+<li>优点：快</li>
+<li>缺点：<ol>
+<li>对k值敏感</li>
+<li>对初始值敏感</li>
+<li>对噪声敏感</li>
+<li>不能发现非球形（任意形状）的簇</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>DBSCAN优缺点：<ol>
+<li>优点：<ol>
+<li>可以发现任意形状的簇</li>
+<li>无需设置k</li>
+<li>可以任意检测噪声</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>什么是离群点</li>
+<li>离群点分类<ol>
+<li>全局&#x2F;局部&#x2F;集成</li>
+</ol>
+</li>
+<li>离群点检测方法<ol>
+<li>基于统计&#x2F;距离&#x2F;密度（LOF）&#x2F;序列</li>
+</ol>
+</li>
+</ol>
+<h1 id="CH6-大数据分析"><a href="#CH6-大数据分析" class="headerlink" title="CH6 大数据分析"></a>CH6 大数据分析</h1><ol>
+<li>哈希技术<ol>
+<li>作用</li>
+<li>k- shingling </li>
+<li>minHash（定义）【如何计算签名矩阵】（近似计算； ）</li>
+<li>LSH（局部敏感哈希）思想：找哈希函数把相似的对象映射到同一个桶中</li>
+</ol>
+</li>
+<li>数据流挑战<ol>
+<li>挑战（四大） </li>
+<li>什么是概念漂移 </li>
+<li>概念漂移检测方法 <ol>
+<li>基于分布</li>
+<li>基于错误率【都有缺点】</li>
+</ol>
+</li>
+<li>分类（VFDT） </li>
+<li>数据流聚类<ol>
+<li>线上数据抽象（簇特征）</li>
+<li>线下聚类CF（N，LS，SS）可加减性</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Hadoop&amp;Spark<ol>
+<li>什么是Hadoop</li>
+<li>Hadoop设计准则</li>
+<li>Hadoop组件<ol>
+<li>HDFS（hadoop distribution file system） 存储<ol>
+<li>Meta data 《- Meta node》 + data node（实际数据）心跳机制维持</li>
+</ol>
+</li>
+<li>mapreduce</li>
+</ol>
+</li>
+<li>spark是什么<ol>
+<li>RDD（弹性分布式数据集）</li>
+<li>RDD操作（Transform &#x2F;Action）</li>
+</ol>
+</li>
+<li>MapReduce与Spark区别<ol>
+<li>mapreduce是one pass</li>
+<li>spark是多轮、共享机制、RDD内存、API</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shiym</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://skddj.github.io/article/5d312595">https://skddj.github.io/article/5d312595</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint policy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shiym</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Machine-Learning/">
+                                    <span class="chip bg-color">Machine Learning</span>
+                                </a>
+                            
+                                <a href="/tags/Big-Data/">
+                                    <span class="chip bg-color">Big Data</span>
+                                </a>
+                            
+                                <a href="/tags/Data-Mining/">
+                                    <span class="chip bg-color">Data Mining</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                                    <span class="chip bg-color">大二下</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="wechat,qq,weibo,qzone,douban,twitter,facebook,google,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">treat the author to a cup of latte?</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '3ydYdLXOEdbZ4mDD4aaIBTAe-gzGzoHsz',
+        appKey: '6YRRWdu0ICm6JFOeGERLgSYn',
+        serverURLs: 'https://3ydydlxo.lc-cn-n1-shared.com',
+        notify: 'ture' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: '说点什么...'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/article/1540240c">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Macro Economic">
+                        
+                        <span class="card-title">Macro Economic</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            宏观经济学课程的笔记，涵盖了宏观经济学概述、商品市场、货币市场、总需求和总供给、失业、通货膨胀、经济增长和开放经济等主题。解释了宏观经济学相关的基本概念、理论和模型。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                        <span class="chip bg-color">大二下</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6/">
+                        <span class="chip bg-color">宏观经济学</span>
+                    </a>
+                    
+                    <a href="/tags/Macro-Economic/">
+                        <span class="chip bg-color">Macro Economic</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/article/4eb64ed2">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="软件技术基础">
+                        
+                        <span class="card-title">软件技术基础</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            流程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Course/" class="post-category">
+                                    Course
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8B/">
+                        <span class="chip bg-color">大二下</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">软件技术基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Yiming Shi&#39;s blog<br />'
+            + 'Author: Yiming Shi<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + 'The copyright of this article belongs to the author Shi Yiming. Please indicate the source for any form of reprinting.';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2026</span>
+            
+            <a href="/about" target="_blank">Yiming Shi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
+                        class="white-color">82.6k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "12";
+                        var startDate = "16";
+                        var startHour = "3";
+                        var startMinute = "55";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'en';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行(苟存) ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行(苟存) ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/SKDDJ" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yimingshi666@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/uestcshiym" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/uestcshiym" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1192063881" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1192063881" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+
+
+    <a href="https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" class="tooltipped" target="_blank" data-tooltip="关注我的飞书: https://www.feishu.cn/invitation/page/add_contact/?token=b5eqdcdf-c2f9-47f8-869d-444c9b83f0f4&amp;amp;unique_id=gRGIEUZ_pfIWCaBY79fXxQ==" data-position="top" data-delay="50">
+        <i class="fab fa-zhihul">飞</i>
+    </a>
+</div>
+    </div>    
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+  
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+        <script src="//code.tidio.co/2uhlcf5zspiffrqxuyuje3a614dp9fx0.js"></script>
+        <script>
+            $(document).ready(function () {
+                setInterval(change_Tidio, 50);
+                function change_Tidio() {
+                    var tidio=$("#tidio-chat iframe");
+                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
+                        document.getElementById("tidio-chat-iframe").style.right="-15px";
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
+                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                    }
+                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                    }
+                }
+            });
+        </script>
+    
+
+    
+
+<!-- start webpushr tracking code --> 
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script>
+<!-- end webpushr tracking code -->
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+ 
+<script>(function (w, d, s, id) {
+            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': 'BLvsmFKuL23ydC1WSkjaQu0Bu90qbWd1WJxEIHV6YpKus0q230peskcemVE_Cx3DbszEi4OffZWgVUkjrTnDcHE' });</script></body>
+
+</html>
