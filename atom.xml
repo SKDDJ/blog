@@ -6,7 +6,7 @@
   <link href="https://skddj.github.io/atom.xml" rel="self"/>
   
   <link href="https://skddj.github.io/"/>
-  <updated>2026-10-27T13:09:25.544Z</updated>
+  <updated>2026-10-27T13:14:51.652Z</updated>
   <id>https://skddj.github.io/</id>
   
   <author>
@@ -17,196 +17,269 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>计算机操作系统</title>
-    <link href="https://skddj.github.io/article/dbeddcc1"/>
-    <id>https://skddj.github.io/article/dbeddcc1</id>
-    <published>2026-10-27T13:09:25.544Z</published>
-    <updated>2026-10-27T13:09:25.544Z</updated>
+    <title>ZCA白化 (Whitening)</title>
+    <link href="https://skddj.github.io/article/803a0aab"/>
+    <id>https://skddj.github.io/article/803a0aab</id>
+    <published>2024-11-04T08:00:45.000Z</published>
+    <updated>2026-10-27T13:14:51.652Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;第一章：概述&quot;&gt;&lt;a href=&quot;#第一章：概述&quot; class=&quot;headerlink&quot; title=&quot;第一章：概述&quot;&gt;&lt;/a&gt;第一章：概述&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h2 id=&quot;什么是ZCA白化？&quot;&gt;&lt;a href=&quot;#什么是ZCA白化？&quot; class=&quot;headerlink&quot; title=&quot;什么是ZCA白化？&quot;&gt;&lt;/a&gt;什么是ZCA白化？&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ZCA白化&lt;/strong&gt;</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
     
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
     
-    <category term="计算机操作系统" scheme="https://skddj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="Data Augmentation" scheme="https://skddj.github.io/tags/Data-Augmentation/"/>
     
-    <category term="Operating System" scheme="https://skddj.github.io/tags/Operating-System/"/>
+    <category term="Pre-Processing" scheme="https://skddj.github.io/tags/Pre-Processing/"/>
     
   </entry>
   
   <entry>
-    <title>Econometrics</title>
-    <link href="https://skddj.github.io/article/f6199005"/>
-    <id>https://skddj.github.io/article/f6199005</id>
-    <published>2026-10-27T13:09:25.544Z</published>
-    <updated>2026-10-27T13:09:25.544Z</updated>
+    <title>Diffusion Sampling Techniques</title>
+    <link href="https://skddj.github.io/article/714df5a"/>
+    <id>https://skddj.github.io/article/714df5a</id>
+    <published>2024-11-04T08:00:45.000Z</published>
+    <updated>2026-10-27T13:14:50.688Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301038752.jpg&quot;&gt; &lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;Understanding-Diffusion-Model-Sampling-Techniques&quot;&gt;&lt;a href=&quot;#Understanding-Diffusion-Model-Sampling-Techniques&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
     
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="Diffusion Models" scheme="https://skddj.github.io/tags/Diffusion-Models/"/>
     
-    <category term="计量经济学" scheme="https://skddj.github.io/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    <category term="Sampling Techniques" scheme="https://skddj.github.io/tags/Sampling-Techniques/"/>
     
-    <category term="Econometrics" scheme="https://skddj.github.io/tags/Econometrics/"/>
+    <category term="Numerical Methods" scheme="https://skddj.github.io/tags/Numerical-Methods/"/>
     
   </entry>
   
   <entry>
-    <title>金融市场与机构</title>
-    <link href="https://skddj.github.io/article/53aac4c6"/>
-    <id>https://skddj.github.io/article/53aac4c6</id>
-    <published>2026-10-27T13:09:25.544Z</published>
-    <updated>2026-10-27T13:09:25.544Z</updated>
+    <title>Recap PyTorch Tensor &amp; Einops API</title>
+    <link href="https://skddj.github.io/article/10f3127e"/>
+    <id>https://skddj.github.io/article/10f3127e</id>
+    <published>2024-09-16T08:02:22.000Z</published>
+    <updated>2026-10-27T13:14:51.223Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308311649113.jpg&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-第一章：导论&quot;&gt;&lt;a href=&quot;#1-第一章：导论&quot;</summary>
+    <summary type="html">&lt;p&gt;在深度学习中，对 Tensor 的维度和形状变换是日常操作。本文简单介绍 PyTorch 的 Tensor 自带的 API（&lt;code&gt;view&lt;/code&gt;, &lt;code&gt;reshape&lt;/code&gt;, &lt;code&gt;unsqueeze&lt;/code&gt;,</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
     
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
     
-    <category term="金融市场与机构" scheme="https://skddj.github.io/tags/%E9%87%91%E8%9E%8D%E5%B8%82%E5%9C%BA%E4%B8%8E%E6%9C%BA%E6%9E%84/"/>
+    <category term="Tensor" scheme="https://skddj.github.io/tags/Tensor/"/>
+    
+    <category term="Einops" scheme="https://skddj.github.io/tags/Einops/"/>
     
   </entry>
   
   <entry>
-    <title>Derivatives</title>
-    <link href="https://skddj.github.io/article/f1b79b2a"/>
-    <id>https://skddj.github.io/article/f1b79b2a</id>
-    <published>2026-10-27T13:09:25.544Z</published>
-    <updated>2026-10-27T13:09:25.544Z</updated>
+    <title>Vision Transformer (ViT) -&gt; Towards a Modality-Agnostic Transformer?</title>
+    <link href="https://skddj.github.io/article/8ad3e72a"/>
+    <id>https://skddj.github.io/article/8ad3e72a</id>
+    <published>2024-09-14T13:24:30.000Z</published>
+    <updated>2026-10-27T13:14:50.744Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309011440006.jpg&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;第一章：引言&quot;&gt;&lt;a href=&quot;#第一章：引言&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;Forward-Process-of-Vision-Transformer-ViT&quot;&gt;&lt;a href=&quot;#Forward-Process-of-Vision-Transformer-ViT&quot; class=&quot;headerlink&quot; title=&quot;Forward</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Idea" scheme="https://skddj.github.io/categories/Idea/"/>
     
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="Diffusion" scheme="https://skddj.github.io/tags/Diffusion/"/>
     
-    <category term="金融衍生工具" scheme="https://skddj.github.io/tags/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%B7%A5%E5%85%B7/"/>
+    <category term="Transformer" scheme="https://skddj.github.io/tags/Transformer/"/>
     
-    <category term="Derivatives" scheme="https://skddj.github.io/tags/Derivatives/"/>
+    <category term="Weight2Weight" scheme="https://skddj.github.io/tags/Weight2Weight/"/>
     
   </entry>
   
   <entry>
-    <title>公司金融</title>
-    <link href="https://skddj.github.io/article/1b5aea18"/>
-    <id>https://skddj.github.io/article/1b5aea18</id>
-    <published>2026-10-27T13:09:25.543Z</published>
-    <updated>2026-10-27T13:09:25.543Z</updated>
+    <title>梯度范数与梯度裁剪的详细解释 Gradient Norm and Clipping</title>
+    <link href="https://skddj.github.io/article/3ff1f570"/>
+    <id>https://skddj.github.io/article/3ff1f570</id>
+    <published>2024-09-08T12:40:10.000Z</published>
+    <updated>2026-10-27T13:14:51.359Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Lecture1-第一章：公司目标和治理&quot;&gt;&lt;a href=&quot;#Lecture1-第一章：公司目标和治理&quot; class=&quot;headerlink&quot; title=&quot;Lecture1 第一章：公司目标和治理&quot;&gt;&lt;/a&gt;Lecture1</summary>
+    <summary type="html">&lt;h2 id=&quot;1-梯度范数-Gradient-Norm&quot;&gt;&lt;a href=&quot;#1-梯度范数-Gradient-Norm&quot; class=&quot;headerlink&quot; title=&quot;1. 梯度范数 (Gradient Norm)&quot;&gt;&lt;/a&gt;1. 梯度范数 (Gradient</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
     
     
-    <category term="公司金融" scheme="https://skddj.github.io/tags/%E5%85%AC%E5%8F%B8%E9%87%91%E8%9E%8D/"/>
+    <category term="Neural Network" scheme="https://skddj.github.io/tags/Neural-Network/"/>
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="Training Process" scheme="https://skddj.github.io/tags/Training-Process/"/>
+    
+    <category term="Trick" scheme="https://skddj.github.io/tags/Trick/"/>
     
   </entry>
   
   <entry>
-    <title>International Finance</title>
-    <link href="https://skddj.github.io/article/bae2e029"/>
-    <id>https://skddj.github.io/article/bae2e029</id>
-    <published>2026-10-27T13:09:25.543Z</published>
-    <updated>2026-10-27T13:09:25.544Z</updated>
+    <title>[TODO]谷歌开发者日 2023 成都篇 - 体验与见解</title>
+    <link href="https://skddj.github.io/article/f0b89bcc"/>
+    <id>https://skddj.github.io/article/f0b89bcc</id>
+    <published>2024-01-30T14:09:01.000Z</published>
+    <updated>2026-10-27T13:16:23.101Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-第一章：课程概述&quot;&gt;&lt;a href=&quot;#1-第一章：课程概述&quot; class=&quot;headerlink&quot; title=&quot;1 第一章：课程概述&quot;&gt;&lt;/a&gt;1 第一章：课程概述&lt;/h2&gt;&lt;p&gt;Chapter1 Intro &lt;img</summary>
+    <summary type="html">&lt;h1 id=&quot;谷歌开发者日-2023-成都篇-体验与见解&quot;&gt;&lt;a href=&quot;#谷歌开发者日-2023-成都篇-体验与见解&quot; class=&quot;headerlink&quot; title=&quot;谷歌开发者日 2023 成都篇 - 体验与见解&quot;&gt;&lt;/a&gt;谷歌开发者日 2023 成都篇 -</summary>
         
       
     
     
     
-    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    <category term="Engineering" scheme="https://skddj.github.io/categories/Engineering/"/>
     
     
-    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    <category term="Diffusion Model" scheme="https://skddj.github.io/tags/Diffusion-Model/"/>
     
-    <category term="国际金融" scheme="https://skddj.github.io/tags/%E5%9B%BD%E9%99%85%E9%87%91%E8%9E%8D/"/>
+    <category term="AIGC" scheme="https://skddj.github.io/tags/AIGC/"/>
     
-    <category term="International Finance" scheme="https://skddj.github.io/tags/International-Finance/"/>
+    <category term="PEFT" scheme="https://skddj.github.io/tags/PEFT/"/>
+    
+    <category term="Google" scheme="https://skddj.github.io/tags/Google/"/>
+    
+    <category term="Pytorch" scheme="https://skddj.github.io/tags/Pytorch/"/>
+    
+    <category term="Fine tuning" scheme="https://skddj.github.io/tags/Fine-tuning/"/>
+    
+    <category term="Chengdu" scheme="https://skddj.github.io/tags/Chengdu/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://skddj.github.io/article/0"/>
-    <id>https://skddj.github.io/article/0</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:12:58.928Z</updated>
+    <title>[TODO]我的粤港澳湾区AI算法竞赛之旅</title>
+    <link href="https://skddj.github.io/article/d0c627b"/>
+    <id>https://skddj.github.io/article/d0c627b</id>
+    <published>2024-01-30T14:09:01.000Z</published>
+    <updated>2026-10-27T13:16:23.109Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;hr&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h1 id=&quot;我的粤港澳湾区AI算法竞赛之旅&quot;&gt;&lt;a href=&quot;#我的粤港澳湾区AI算法竞赛之旅&quot; class=&quot;headerlink&quot; title=&quot;我的粤港澳湾区AI算法竞赛之旅&quot;&gt;&lt;/a&gt;我的粤港澳湾区AI算法竞赛之旅&lt;/h1&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a</summary>
         
       
     
     
     
+    <category term="Engineering" scheme="https://skddj.github.io/categories/Engineering/"/>
+    
+    
+    <category term="Diffusion Model" scheme="https://skddj.github.io/tags/Diffusion-Model/"/>
+    
+    <category term="Competition" scheme="https://skddj.github.io/tags/Competition/"/>
+    
+    <category term="Fine tuning" scheme="https://skddj.github.io/tags/Fine-tuning/"/>
+    
+    <category term="Guangzhou" scheme="https://skddj.github.io/tags/Guangzhou/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Questions and Learnings from Exploring  Process Management</title>
+    <link href="https://skddj.github.io/article/e2f5e0f7"/>
+    <id>https://skddj.github.io/article/e2f5e0f7</id>
+    <published>2023-09-07T15:22:36.000Z</published>
+    <updated>2026-10-27T13:14:50.921Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Analyzing-Process-States&quot;&gt;&lt;a href=&quot;#1-Analyzing-Process-States&quot; class=&quot;headerlink&quot; title=&quot;1. Analyzing Process States&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="Engineering" scheme="https://skddj.github.io/categories/Engineering/"/>
+    
+    
+    <category term="Linux" scheme="https://skddj.github.io/tags/Linux/"/>
+    
+    <category term="processmanagement" scheme="https://skddj.github.io/tags/processmanagement/"/>
+    
+    <category term="Commands" scheme="https://skddj.github.io/tags/Commands/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Search Engine Tricks and Tips</title>
+    <link href="https://skddj.github.io/article/d1648c6e"/>
+    <id>https://skddj.github.io/article/d1648c6e</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:50.448Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Tricks-for-Search-Engines&quot;&gt;&lt;a href=&quot;#Tricks-for-Search-Engines&quot; class=&quot;headerlink&quot; title=&quot;Tricks for Search Engines&quot;&gt;&lt;/a&gt;Tricks for</summary>
+        
+      
+    
+    
+    
+    <category term="Skills" scheme="https://skddj.github.io/categories/Skills/"/>
+    
+    
+    <category term="Search Tips" scheme="https://skddj.github.io/tags/Search-Tips/"/>
     
   </entry>
   
@@ -214,8 +287,8 @@
     <title>Fine-Tuning Face Based on UniDiffuser</title>
     <link href="https://skddj.github.io/article/3fe63e99"/>
     <id>https://skddj.github.io/article/3fe63e99</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:50.814Z</updated>
     
     
       
@@ -249,8 +322,8 @@
     <title>Hard Disk Mounting Under Linux System</title>
     <link href="https://skddj.github.io/article/8350d4a"/>
     <id>https://skddj.github.io/article/8350d4a</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:50.866Z</updated>
     
     
       
@@ -276,31 +349,33 @@
   </entry>
   
   <entry>
-    <title>My Questions and Learnings from Exploring  Process Management</title>
-    <link href="https://skddj.github.io/article/e2f5e0f7"/>
-    <id>https://skddj.github.io/article/e2f5e0f7</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <title>Learning Diffusers Library</title>
+    <link href="https://skddj.github.io/article/d3a6f586"/>
+    <id>https://skddj.github.io/article/d3a6f586</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:51.157Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-Analyzing-Process-States&quot;&gt;&lt;a href=&quot;#1-Analyzing-Process-States&quot; class=&quot;headerlink&quot; title=&quot;1. Analyzing Process States&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;h1 id=&quot;Diffusers&quot;&gt;&lt;a href=&quot;#Diffusers&quot; class=&quot;headerlink&quot; title=&quot;Diffusers&quot;&gt;&lt;/a&gt;Diffusers&lt;/h1&gt;&lt;h2</summary>
         
       
     
     
     
-    <category term="Engineering" scheme="https://skddj.github.io/categories/Engineering/"/>
+    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
     
     
-    <category term="Linux" scheme="https://skddj.github.io/tags/Linux/"/>
+    <category term="Python" scheme="https://skddj.github.io/tags/Python/"/>
     
-    <category term="processmanagement" scheme="https://skddj.github.io/tags/processmanagement/"/>
+    <category term="Diffusers" scheme="https://skddj.github.io/tags/Diffusers/"/>
     
-    <category term="Commands" scheme="https://skddj.github.io/tags/Commands/"/>
+    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
+    
+    <category term="Large Model" scheme="https://skddj.github.io/tags/Large-Model/"/>
     
   </entry>
   
@@ -308,8 +383,8 @@
     <title>Fix entering Emergency Mode during startup</title>
     <link href="https://skddj.github.io/article/2185f868"/>
     <id>https://skddj.github.io/article/2185f868</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:51.036Z</updated>
     
     
       
@@ -337,122 +412,11 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://skddj.github.io/article/0"/>
-    <id>https://skddj.github.io/article/0</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:12:58.975Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;hr&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Recap PyTorch Tensor &amp; Einops API</title>
-    <link href="https://skddj.github.io/article/10f3127e"/>
-    <id>https://skddj.github.io/article/10f3127e</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在深度学习中，对 Tensor 的维度和形状变换是日常操作。本文简单介绍 PyTorch 的 Tensor 自带的 API（&lt;code&gt;view&lt;/code&gt;, &lt;code&gt;reshape&lt;/code&gt;, &lt;code&gt;unsqueeze&lt;/code&gt;,</summary>
-        
-      
-    
-    
-    
-    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
-    
-    
-    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
-    
-    <category term="Tensor" scheme="https://skddj.github.io/tags/Tensor/"/>
-    
-    <category term="Einops" scheme="https://skddj.github.io/tags/Einops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Learning Diffusers Library</title>
-    <link href="https://skddj.github.io/article/d3a6f586"/>
-    <id>https://skddj.github.io/article/d3a6f586</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Diffusers&quot;&gt;&lt;a href=&quot;#Diffusers&quot; class=&quot;headerlink&quot; title=&quot;Diffusers&quot;&gt;&lt;/a&gt;Diffusers&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
-    
-    
-    <category term="Python" scheme="https://skddj.github.io/tags/Python/"/>
-    
-    <category term="Diffusers" scheme="https://skddj.github.io/tags/Diffusers/"/>
-    
-    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
-    
-    <category term="Large Model" scheme="https://skddj.github.io/tags/Large-Model/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>梯度范数与梯度裁剪的详细解释 Gradient Norm and Clipping</title>
-    <link href="https://skddj.github.io/article/3ff1f570"/>
-    <id>https://skddj.github.io/article/3ff1f570</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-梯度范数-Gradient-Norm&quot;&gt;&lt;a href=&quot;#1-梯度范数-Gradient-Norm&quot; class=&quot;headerlink&quot; title=&quot;1. 梯度范数 (Gradient Norm)&quot;&gt;&lt;/a&gt;1. 梯度范数 (Gradient</summary>
-        
-      
-    
-    
-    
-    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
-    
-    
-    <category term="Neural Network" scheme="https://skddj.github.io/tags/Neural-Network/"/>
-    
-    <category term="Training Process" scheme="https://skddj.github.io/tags/Training-Process/"/>
-    
-    <category term="Trick" scheme="https://skddj.github.io/tags/Trick/"/>
-    
-  </entry>
-  
-  <entry>
     <title>彼得林奇投资经典著作读书笔记 - 长期投资的智慧</title>
     <link href="https://skddj.github.io/article/a0866f96"/>
     <id>https://skddj.github.io/article/a0866f96</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:51.416Z</updated>
     
     
       
@@ -486,8 +450,8 @@
     <title>计算机网络课程实验：手动访问 404 网站</title>
     <link href="https://skddj.github.io/article/3af5c2d7"/>
     <id>https://skddj.github.io/article/3af5c2d7</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:51.598Z</updated>
     
     
       
@@ -516,78 +480,145 @@
   </entry>
   
   <entry>
-    <title>ZCA白化 (Whitening)</title>
-    <link href="https://skddj.github.io/article/803a0aab"/>
-    <id>https://skddj.github.io/article/803a0aab</id>
-    <published>2026-10-27T13:09:25.542Z</published>
-    <updated>2026-10-27T13:09:25.542Z</updated>
+    <title>公司金融</title>
+    <link href="https://skddj.github.io/article/1b5aea18"/>
+    <id>https://skddj.github.io/article/1b5aea18</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:52.003Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;什么是ZCA白化？&quot;&gt;&lt;a href=&quot;#什么是ZCA白化？&quot; class=&quot;headerlink&quot; title=&quot;什么是ZCA白化？&quot;&gt;&lt;/a&gt;什么是ZCA白化？&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ZCA白化&lt;/strong&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;Lecture1-第一章：公司目标和治理&quot;&gt;&lt;a href=&quot;#Lecture1-第一章：公司目标和治理&quot; class=&quot;headerlink&quot; title=&quot;Lecture1 第一章：公司目标和治理&quot;&gt;&lt;/a&gt;Lecture1</summary>
         
       
     
     
     
-    <category term="Technology" scheme="https://skddj.github.io/categories/Technology/"/>
+    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
     
     
-    <category term="PyTorch" scheme="https://skddj.github.io/tags/PyTorch/"/>
+    <category term="公司金融" scheme="https://skddj.github.io/tags/%E5%85%AC%E5%8F%B8%E9%87%91%E8%9E%8D/"/>
     
-    <category term="Data Augmentation" scheme="https://skddj.github.io/tags/Data-Augmentation/"/>
-    
-    <category term="Pre-Processing" scheme="https://skddj.github.io/tags/Pre-Processing/"/>
+    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
     
   </entry>
   
   <entry>
-    <title>Search Engine Tricks and Tips</title>
-    <link href="https://skddj.github.io/article/d1648c6e"/>
-    <id>https://skddj.github.io/article/d1648c6e</id>
-    <published>2026-10-27T13:09:25.541Z</published>
-    <updated>2026-10-27T13:09:25.541Z</updated>
+    <title>计算机操作系统</title>
+    <link href="https://skddj.github.io/article/dbeddcc1"/>
+    <id>https://skddj.github.io/article/dbeddcc1</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:52.121Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Tricks-for-Search-Engines&quot;&gt;&lt;a href=&quot;#Tricks-for-Search-Engines&quot; class=&quot;headerlink&quot; title=&quot;Tricks for Search Engines&quot;&gt;&lt;/a&gt;Tricks for</summary>
+    <summary type="html">&lt;h2 id=&quot;第一章：概述&quot;&gt;&lt;a href=&quot;#第一章：概述&quot; class=&quot;headerlink&quot; title=&quot;第一章：概述&quot;&gt;&lt;/a&gt;第一章：概述&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="Skills" scheme="https://skddj.github.io/categories/Skills/"/>
+    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
     
     
-    <category term="Search Tips" scheme="https://skddj.github.io/tags/Search-Tips/"/>
+    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    
+    <category term="计算机操作系统" scheme="https://skddj.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Operating System" scheme="https://skddj.github.io/tags/Operating-System/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://skddj.github.io/article/0"/>
-    <id>https://skddj.github.io/article/0</id>
-    <published>2026-10-27T13:09:25.541Z</published>
-    <updated>2026-10-27T13:12:59.028Z</updated>
+    <title>Econometrics</title>
+    <link href="https://skddj.github.io/article/f6199005"/>
+    <id>https://skddj.github.io/article/f6199005</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:52.187Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;hr&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308301038752.jpg&quot;&gt; &lt;img</summary>
         
       
     
     
     
+    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    
+    
+    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    
+    <category term="计量经济学" scheme="https://skddj.github.io/tags/%E8%AE%A1%E9%87%8F%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
+    
+    <category term="Econometrics" scheme="https://skddj.github.io/tags/Econometrics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金融市场与机构</title>
+    <link href="https://skddj.github.io/article/53aac4c6"/>
+    <id>https://skddj.github.io/article/53aac4c6</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:52.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202308311649113.jpg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-第一章：导论&quot;&gt;&lt;a href=&quot;#1-第一章：导论&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    
+    
+    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    
+    <category term="金融市场与机构" scheme="https://skddj.github.io/tags/%E9%87%91%E8%9E%8D%E5%B8%82%E5%9C%BA%E4%B8%8E%E6%9C%BA%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Derivatives</title>
+    <link href="https://skddj.github.io/article/f1b79b2a"/>
+    <id>https://skddj.github.io/article/f1b79b2a</id>
+    <published>2023-09-03T08:51:04.000Z</published>
+    <updated>2026-10-27T13:14:52.320Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/SKDDJ/picgoimgbed/main/202309011440006.jpg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;第一章：引言&quot;&gt;&lt;a href=&quot;#第一章：引言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Course" scheme="https://skddj.github.io/categories/Course/"/>
+    
+    
+    <category term="大三上" scheme="https://skddj.github.io/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/"/>
+    
+    <category term="金融衍生工具" scheme="https://skddj.github.io/tags/%E9%87%91%E8%9E%8D%E8%A1%8D%E7%94%9F%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Derivatives" scheme="https://skddj.github.io/tags/Derivatives/"/>
     
   </entry>
   
